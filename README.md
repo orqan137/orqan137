@@ -228,7 +228,7 @@
 <br clear="all">
 <table align="left" width="400">
 <tr><td width="400" valign="top">
-<a href="https://github.com/orqan137/skillroster"><img src="./assets/skillroster-card-v3.png" alt="SkillRoster / Skills 카드를 정리하는 범고래" width="100%"></a>
+<a href="https://github.com/orqan137/skillroster"><img src="./assets/skillroster-dashboard.png" alt="SkillRoster 저장소의 실제 대시보드 화면 / 데모 데이터" width="100%"></a>
 <h3 id="project-09">09. <a href="https://github.com/orqan137/skillroster">SkillRoster ↗</a></h3>
 <p><strong>기간</strong> 2026.08</p>
 <p><strong>개인 오픈소스 프로젝트</strong></p>
@@ -236,6 +236,7 @@
 <hr>
 <h4>주요 결과</h4>
 <ul><li>opencode, Codex, Claude Code에서 사용할 Skills를 공유하도록 구성했습니다.</li><li>설치할 Skill의 버전을 고정하고, Git 쓰기 작업이 실패하면 작업 전 상태로 복구하도록 했습니다.</li></ul>
+<p><strong>아키텍처</strong><br><a href="./assets/skillroster-architecture.png"><img src="./assets/skillroster-architecture.png" alt="SkillRoster의 로컬 클라이언트, 팀 Git 저장소와 도구별 설치 흐름" width="100%"></a><br><a href="./assets/skillroster-architecture.png">아키텍처 크게 보기 ↗</a></p>
 <p><strong>사용 기술</strong><br><img src="./assets/tech/nodejs.png" alt="Node.js" height="24"> <img src="./assets/tech/react.png" alt="React" height="24"> <img src="./assets/tech/vite.png" alt="Vite" height="24"> <img src="./assets/tech/git.png" alt="Git" height="24"> <img src="./assets/tech/docker.png" alt="Docker" height="24"></p>
 </td></tr>
 </table>
