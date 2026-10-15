@@ -8,7 +8,19 @@
   <a href="https://solved.ac/profile/castleh0326"><img alt="solved.ac castleh0326" src="https://img.shields.io/badge/solved.ac-castleh0326-17CE3A?style=flat-square"></a>
 </p>
 
-## 🪸 Experience
+<a id="contents"></a>
+
+<p><strong>목차</strong><br>
+<a href="#experience">01. Experience</a> /
+<a href="#tech-stack">02. Tech Stack</a> /
+<a href="#activity">03. Activity</a> /
+<a href="#projects">04. Projects</a> /
+<a href="#community">05. Community</a> /
+<a href="#awards">06. Awards</a></p>
+
+<a id="experience"></a>
+
+## 🪸 01. Experience
 
 <table>
 <tr><td>
@@ -24,7 +36,11 @@
 </td></tr>
 </table>
 
-## 🫧 Tech Stack
+<p><a href="#contents">전체 목차 ↑</a></p>
+
+<a id="tech-stack"></a>
+
+## 🫧 02. Tech Stack
 
 <table>
 <tr><td><strong>Languages</strong></td><td><img src="./assets/tech/python.png" alt="Python" height="24"> <img src="./assets/tech/ts.png" alt="TypeScript" height="24"> <img src="./assets/tech/js.png" alt="JavaScript" height="24"> <img src="./assets/tech/java.png" alt="Java" height="24"> <img src="./assets/tech/kotlin.png" alt="Kotlin" height="24"></td></tr>
@@ -36,7 +52,11 @@
 <tr><td><strong>CI/CD &amp; Monitoring</strong></td><td><img src="./assets/tech/gitlab.png" alt="GitLab Runner" height="24"> <img src="./assets/tech/argo.png" alt="Argo CD" height="24"> <img src="./assets/tech/prometheus.png" alt="Prometheus" height="24"> <img src="./assets/tech/grafana.png" alt="Grafana" height="24"> <img src="./assets/tech/githubactions.png" alt="GitHub Actions" height="24"></td></tr>
 </table>
 
-## 🌊 Activity
+<p><a href="#contents">전체 목차 ↑</a></p>
+
+<a id="activity"></a>
+
+## 🌊 03. Activity
 
 <a href="https://solved.ac/profile/castleh0326">
   <img alt="castleh0326의 solved.ac 등급, 풀이 기록" src="./assets/solved-ac-card-20261015.png" width="400">
@@ -58,16 +78,34 @@
 </td></tr>
 </table>
 
-## 🐚 Projects
+<p><a href="#contents">전체 목차 ↑</a></p>
+
+<a id="projects"></a>
+
+## 🐚 04. Projects
+
+<p><strong>프로젝트 분류</strong><br>
+<a href="#work-projects">4.1 Work Projects</a><br>
+<a href="#apps-open-source">4.2 Apps &amp; Open Source</a><br>
+<a href="#ai-challenges">4.3 AI Challenges</a><br>
+<a href="#school-projects">4.4 School Projects</a><br>
+<a href="#community-websites">4.5 Community Websites</a></p>
 
 <a id="work-projects"></a>
 
-### Work Projects
+### 4.1 Work Projects
+
+<p><a href="#project-01">01. 식품데이터플랫폼</a><br>
+<a href="#project-02">02. COPAI / 연구자용 Agent 플랫폼</a><br>
+<a href="#project-03">03. 제주TP 연계 주문배송 관리</a><br>
+<a href="#project-04">04. Kubernetes 클러스터 구축 및 서비스 이관</a><br>
+<a href="#project-05">05. Ceph 분산 스토리지 구축 및 데이터 이관</a><br>
+<a href="#project-06">06. vLLM 기반 LLM 추론 서비스</a></p>
 
 <table align="left" width="400">
 <tr><td width="400" valign="top">
 <a href="https://data.kfri.re.kr/"><img src="./assets/data-platform-card-v7.png" alt="식품데이터플랫폼 공개 홈페이지의 소개와 검색 영역 실제 캡처" width="100%"></a>
-<h3>식품데이터플랫폼</h3>
+<h3 id="project-01">01. 식품데이터플랫폼</h3>
 <p><strong>기간</strong> 2025.09–현재</p>
 <p><strong>작성 화면 개선과 문서 초안 작성 기능 개발</strong></p>
 <p>데이터관리계획 작성 화면을 탭으로 나눠 반복적인 스크롤을 줄였습니다. 서비스 API를 개발하고, 로컬 LLM 기반 RAG로 문서 초안을 작성하는 기능을 추가했습니다.</p>
@@ -81,7 +119,7 @@
 <table align="left" width="400">
 <tr><td width="400" valign="top">
 <img src="./assets/copai-screen-redacted-v18.png" alt="사용자 제공 COPAI 화면: 대화와 파일 저장소, 식별정보와 심볼 비식별 처리" width="100%">
-<h3>COPAI / 연구자용 Agent 플랫폼</h3>
+<h3 id="project-02">02. COPAI / 연구자용 Agent 플랫폼</h3>
 <p><strong>기간</strong> 2025.09–현재</p>
 <p><strong>연구자별 AI 작업환경과 도구 공유 기능 개발</strong></p>
 <p>연구자별 독립 작업환경을 제공하고, 설정과 Skills, 도구를 공유하도록 설계하고 개발했습니다. 기관 계정 로그인과 모델 호출, 사용량 조회 기능을 구현했습니다.</p>
@@ -96,7 +134,7 @@
 <table align="left" width="400">
 <tr><td width="400" valign="top">
 <img src="./assets/jeju-card-v7.png" alt="주문배송 업무를 돕는 범고래로 그린 제주TP 프로젝트 소개 카드" width="100%">
-<h3>제주TP 연계 주문배송 관리</h3>
+<h3 id="project-03">03. 제주TP 연계 주문배송 관리</h3>
 <p><strong>기간</strong> 2026.04–2026.10</p>
 <p><strong>주문배송 업무 서비스 개발</strong></p>
 <p>담당자와 업무 흐름을 확인해 주문배송 관리 기능을 개발했습니다. 개인정보를 마스킹하고 합성데이터로 기능을 검증했습니다. 제한된 자원에서 AI 기능을 활용하도록 카카오의 Kanana 모델을 배포했습니다.</p>
@@ -110,7 +148,7 @@
 <table align="left" width="400">
 <tr><td width="400" valign="top">
 <img src="./assets/docker-to-kubernetes.drawio.png" alt="Docker에서 Kubernetes로 서비스를 이관한 구성을 실제 기술 로고로 표시" width="100%">
-<h3>Kubernetes 클러스터 구축 및 서비스 이관</h3>
+<h3 id="project-04">04. Kubernetes 클러스터 구축 및 서비스 이관</h3>
 <p><strong>수행 경력</strong> 2025.09–현재</p>
 <p><strong>물리 서버와 컨테이너 운영</strong></p>
 <hr>
@@ -124,7 +162,7 @@
 <table align="left" width="400">
 <tr><td width="400" valign="top">
 <img src="./assets/hadoop-to-ceph.drawio.png" alt="Hadoop에서 Ceph로 저장 구조를 전환하고 CephFS, RBD와 RGW를 구성한 경험" width="100%">
-<h3>Ceph 분산 스토리지 구축 및 데이터 이관</h3>
+<h3 id="project-05">05. Ceph 분산 스토리지 구축 및 데이터 이관</h3>
 <p><strong>수행 경력</strong> 2025.09–현재</p>
 <p><strong>Hadoop 기반 저장 구조를 Ceph로 전환</strong></p>
 <p>Hadoop 기반 저장 구조를 대체할 Ceph 분산 스토리지를 구축하고, Kubernetes의 영구 저장소로 연결했습니다.</p>
@@ -138,7 +176,7 @@
 <table align="left" width="400">
 <tr><td width="400" valign="top">
 <img src="./assets/llm-inference-service.drawio.png" alt="LiteLLM에서 vLLM으로 모델 호출을 연결하고 Solar Open 2와 Gemma 4 31B를 서빙하는 구성" width="100%">
-<h3>vLLM 기반 LLM 추론 서비스</h3>
+<h3 id="project-06">06. vLLM 기반 LLM 추론 서비스</h3>
 <p><strong>수행 경력</strong> 2025.09–현재</p>
 <p><strong>Solar Open 2와 Gemma 4 31B 배포 및 운영</strong></p>
 <p>Solar Open 2와 Gemma 4 31B를 원내 서버에 배포하고, 서비스에서 호출할 수 있는 LLM 추론 서비스를 구축했습니다.</p>
@@ -151,12 +189,20 @@
 </table>
 <br clear="all">
 
-### Apps &amp; Open Source
+<p><a href="#projects">프로젝트 목차 ↑</a></p>
+
+<a id="apps-open-source"></a>
+
+### 4.2 Apps &amp; Open Source
+
+<p><a href="#project-07">07. Replant</a><br>
+<a href="#project-08">08. 가야디 / Gayadi</a><br>
+<a href="#project-09">09. SkillRoster</a></p>
 
 <table align="left" width="400">
 <tr><td width="400" valign="top">
 <p align="center"><a href="https://github.com/Replant-Application"><img src="https://github.com/user-attachments/assets/c42ed7ff-245c-41e6-8036-30f2a1b63dba" alt="Replant 조직의 실제 서비스 배너" width="100%"></a></p>
-<h3><a href="https://github.com/Replant-Application">Replant ↗</a></h3>
+<h3 id="project-07">07. <a href="https://github.com/Replant-Application">Replant ↗</a></h3>
 <p><strong>기간</strong> 2025.09–2026.02</p>
 <p><strong>PM / 백엔드 개발 / 앱 출시</strong></p>
 <p>은둔형 외톨이의 일상 회복을 돕는 앱입니다.</p>
@@ -169,7 +215,7 @@
 <table align="left" width="400">
 <tr><td width="400" valign="top">
 <p align="center"><a href="https://github.com/TEAM-DOONOW"><img src="https://avatars.githubusercontent.com/u/305256572?v=4" alt="가야디 조직의 실제 여행 캐릭터" height="135" width="135"></a></p>
-<h3><a href="https://github.com/TEAM-DOONOW">가야디 / Gayadi ↗</a></h3>
+<h3 id="project-08">08. <a href="https://github.com/TEAM-DOONOW">가야디 / Gayadi ↗</a></h3>
 <p><strong>기간</strong> 2026.08–2026.10</p>
 <p><strong>백엔드 / AI 서비스 개발 / 앱 출시</strong></p>
 <p>함께 여행할 사람들의 성향에 맞는 일정을 만들고, 여행 중 상황이 바뀌면 대안을 제안하는 앱입니다.</p>
@@ -183,7 +229,7 @@
 <table align="left" width="400">
 <tr><td width="400" valign="top">
 <a href="https://github.com/orqan137/skillroster"><img src="./assets/skillroster-card-v3.png" alt="SkillRoster / Skills 카드를 정리하는 범고래" width="100%"></a>
-<h3><a href="https://github.com/orqan137/skillroster">SkillRoster ↗</a></h3>
+<h3 id="project-09">09. <a href="https://github.com/orqan137/skillroster">SkillRoster ↗</a></h3>
 <p><strong>기간</strong> 2026.08</p>
 <p><strong>개인 오픈소스 프로젝트</strong></p>
 <p>팀에서 만든 Agent Skills를 등록하고, 필요한 Skills를 찾아 설치할 수 있는 공유 도구입니다.</p>
@@ -195,14 +241,19 @@
 </table>
 <br clear="all">
 
+<p><a href="#projects">프로젝트 목차 ↑</a></p>
+
 <a id="ai-challenges"></a>
 
-### AI Challenges
+### 4.3 AI Challenges
+
+<p><a href="#project-10">10. SCPC 2026 AI Challenge</a><br>
+<a href="#project-11">11. 연금 어드바이저 / mirae_pj</a></p>
 
 <table align="left" width="400">
 <tr><td width="400" valign="top">
 <a href="./assets/scpc-safeshare-architecture.png"><img src="./assets/scpc-safeshare-architecture.png" alt="SCPC 2026 SafeShare의 공개 아키텍처" width="100%"></a>
-<h3><a href="https://github.com/orqan137/scpc2026">SCPC 2026 AI Challenge ↗</a></h3>
+<h3 id="project-10">10. <a href="https://github.com/orqan137/scpc2026">SCPC 2026 AI Challenge ↗</a></h3>
 <p><strong>기간</strong> 2026.07–2026.08</p>
 <p><strong>규칙 기반 Agent와 Android 앱 개발</strong></p>
 <p>입력된 기기 상태와 대화 기록을 바탕으로 행동 계획을 만드는 Python Agent와, 파일 공유 초안을 준비하는 Android 앱 SafeShare를 개발했습니다.</p>
@@ -216,7 +267,7 @@
 <table align="left" width="400">
 <tr><td width="400" valign="top">
 <a href="./assets/mirae-pension-architecture.png"><img src="./assets/mirae-pension-architecture.png" alt="mirae_pj 연금 상담 Agent의 공개 아키텍처" width="100%"></a>
-<h3><a href="https://github.com/orqan137/mirae_pj">연금 어드바이저 / mirae_pj ↗</a></h3>
+<h3 id="project-11">11. <a href="https://github.com/orqan137/mirae_pj">연금 어드바이저 / mirae_pj ↗</a></h3>
 <p><strong>기간</strong> 2026.08–2026.09</p>
 <p><strong>미래에셋증권 AI Festival 연금 Agent</strong></p>
 <p>연금 제도, 세금과 상품에 관한 질문을 나눠 필요한 근거를 찾고, 세액공제 계산과 상품 비교는 별도 모듈에서 처리하도록 구현했습니다.</p>
@@ -229,16 +280,23 @@
 </table>
 <br clear="all">
 
+<p><a href="#projects">프로젝트 목차 ↑</a></p>
+
 <a id="school-projects"></a>
 
-### School Projects
+### 4.4 School Projects
+
+<p><a href="#project-12">12. K-Policy-LLM</a><br>
+<a href="#project-13">13. AWS 미국 공시 및 뉴스 요약 서비스</a><br>
+<a href="#project-14">14. 조건별 장소 검색 웹서비스</a><br>
+<a href="#project-15">15. 웹서비스설계 과제</a></p>
 
 재학 중 사용한 GitHub: <a href="https://github.com/highcastle01">highcastle01 ↗</a>
 
 <table align="left" width="400">
 <tr><td width="400" valign="top">
 <a href="https://github.com/orqan137/K-Policy-LLM"><img src="./assets/kpolicy-card-v3.png" alt="K-Policy-LLM / 연구 노트를 읽는 범고래" width="100%"></a>
-<h3><a href="https://github.com/orqan137/K-Policy-LLM">K-Policy-LLM ↗</a></h3>
+<h3 id="project-12">12. <a href="https://github.com/orqan137/K-Policy-LLM">K-Policy-LLM ↗</a></h3>
 <p><strong>기간</strong> 2026.04–2026.06</p>
 <p><strong>교내 언어모델 학습 및 평가 프로젝트</strong></p>
 <p>한국어 정치, 정책, 법률 문서를 다루는 약 1.2B 규모의 언어모델을 학습하고 평가했습니다.</p>
@@ -251,7 +309,7 @@
 <table align="left" width="400">
 <tr><td width="400" valign="top">
 <a href="./assets/aws-class-architecture.png"><img src="./assets/aws-class-architecture.png" alt="AWS 공시 서비스 아키텍처 원본: EventBridge, Lambda, Bedrock, Translate, DynamoDB, SQS, SNS와 S3, CloudFront 구성" width="100%"></a>
-<h3>AWS 미국 공시 및 뉴스 요약 서비스</h3>
+<h3 id="project-13">13. AWS 미국 공시 및 뉴스 요약 서비스</h3>
 <p><strong>기간</strong> 2024.12</p>
 <p><strong>클라우드컴퓨팅 수업 프로젝트</strong></p>
 <p>미국 기업의 공시와 뉴스를 한국어로 확인하기 위해 수집, 요약, 번역과 알림 기능을 구현했습니다. 비용을 고려해 정해진 시간에 데이터를 수집하도록 구성했습니다.</p>
@@ -265,7 +323,7 @@
 <br clear="all">
 <table align="left" width="400">
 <tr><td width="400" valign="top">
-<h3>조건별 장소 검색 웹서비스</h3>
+<h3 id="project-14">14. 조건별 장소 검색 웹서비스</h3>
 <p><strong>기간</strong> 2024년 1학기</p>
 <p><strong>데이터베이스 수업 팀 프로젝트</strong></p>
 <p>음식점, 카페, 놀이시설과 술집을 인원, 위치, 가격, 시간 등의 조건으로 찾는 웹서비스를 팀으로 개발했습니다.</p>
@@ -278,7 +336,7 @@
 </table>
 <table align="left" width="400">
 <tr><td width="400" valign="top">
-<h3>웹서비스설계 과제</h3>
+<h3 id="project-15">15. 웹서비스설계 과제</h3>
 <p><strong>기간</strong> 2024.11–2024.12 / 공개 개발 기록</p>
 <p><strong>프론트엔드, API와 로그인 구현</strong></p>
 <hr>
@@ -290,12 +348,19 @@
 </table>
 <br clear="all">
 
-### Community Websites
+<p><a href="#projects">프로젝트 목차 ↑</a></p>
+
+<a id="community-websites"></a>
+
+### 4.5 Community Websites
+
+<p><a href="#project-16">16. COALA 홈페이지</a><br>
+<a href="#project-17">17. JBIG CAFE</a></p>
 
 <table align="left" width="400">
 <tr><td width="400" valign="top">
 <a href="https://coala.jbnu.ac.kr/"><img src="./assets/coala-website-v12.png" alt="COALA 홈페이지의 메뉴, 소개 배너와 콘텐츠 영역 실제 캡처" width="100%"></a>
-<h3>COALA 홈페이지</h3>
+<h3 id="project-16">16. COALA 홈페이지</h3>
 <p><strong>활동 기간</strong> 2024.03–2025.08</p>
 <hr>
 <h4>주요 결과</h4>
@@ -307,7 +372,7 @@
 <table align="left" width="400">
 <tr><td width="400" valign="top">
 <a href="https://jbig.co.kr/"><img src="./assets/jbig-website-v12.png" alt="JBIG 홈페이지의 메뉴, 동아리 소개와 활동 영역 실제 캡처" width="100%"></a>
-<h3>JBIG CAFE</h3>
+<h3 id="project-17">17. JBIG CAFE</h3>
 <p><strong>활동 기간</strong> 2023.03–2024.08</p>
 <hr>
 <h4>주요 결과</h4>
@@ -318,7 +383,11 @@
 </table>
 <br clear="all">
 
-## 🐾 Community
+<p><a href="#contents">전체 목차 ↑</a></p>
+
+<a id="community"></a>
+
+## 🐾 05. Community
 
 <table align="left" width="400">
 <tr><td width="400" valign="top">
@@ -344,7 +413,11 @@
 </table>
 <br clear="all">
 
-## ⭐ Awards
+<p><a href="#contents">전체 목차 ↑</a></p>
+
+<a id="awards"></a>
+
+## ⭐ 06. Awards
 
 - **2025** / JBNU SW·AI 경진대회 **AI 부문 장려상**
 - **2024** / 오픈소스 SW 아이디어 해커톤 캠프 **팀 최우수상** — 취약점 분석
