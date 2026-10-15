@@ -39,10 +39,12 @@
 ## 🌊 Activity
 
 <a href="https://solved.ac/profile/castleh0326">
-  <img alt="castleh0326의 solved.ac 등급, 풀이 기록" src="https://mazassumnida.wtf/api/v2/generate_badge?boj=castleh0326" width="400">
+  <img alt="castleh0326의 solved.ac 등급, 풀이 기록" src="./assets/solved-ac-card-20261015.png" width="400">
 </a>
 
 **[solved.ac / castleh0326 ↗](https://solved.ac/profile/castleh0326)**
+
+등급 카드는 2026.10.15 기준입니다. 최신 기록은 프로필에서 확인할 수 있습니다.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=orqan137&amp;show_icons=true&amp;hide_border=true&amp;hide_rank=true&amp;disable_animations=true&amp;theme=github_dark&amp;title_color=58a6ff&amp;icon_color=58a6ff">
