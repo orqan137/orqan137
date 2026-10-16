@@ -13,8 +13,8 @@
 <p><strong>목차</strong><br>
 <a href="#experience">01. Experience</a> /
 <a href="#tech-stack">02. Tech Stack</a> /
-<a href="#activity">03. Activity</a> /
-<a href="#projects">04. Projects</a> /
+<a href="#projects">03. Projects</a> /
+<a href="#activity">04. Activity</a> /
 <a href="#community">05. Community</a> /
 <a href="#awards">06. Awards</a></p>
 
@@ -26,9 +26,10 @@
 <tr><td>
 <img src="https://data.kfri.re.kr/CI_KFRI.png" alt="한국식품연구원 공식 로고" width="175">
 <h3>한국식품연구원</h3>
+<p><strong>소속 / 직위</strong> AI정보실 / 학생연구원</p>
 <p><strong>재직 기간</strong> 2025.09–현재</p>
 <p><strong>AI 서비스와 백엔드 개발, 온프레미스 인프라 구축 및 운영</strong></p>
-<p>데이터플랫폼의 작성 화면과 API를 개선한 뒤, 연구자가 자료와 지침을 다시 찾아 초안을 정리하는 작업까지 살펴보며 RAG 기능을 설계하고 연결했습니다. 이후 연구자용 Agent 플랫폼을 맡았을 때는 개별 VM 제공만으로 활용법과 도구가 흩어지는 문제를 해결하기 어렵다고 보고, 개인 작업환경과 공유 자산을 함께 관리하는 통합 플랫폼을 제안하고 직접 개발했습니다. 플랫폼을 실제로 운영하기 위해 Kubernetes와 Ceph, LLM 추론 서비스와 배포 환경도 구축하고 서비스별 동작을 확인하며 전환했습니다.</p>
+<p>데이터플랫폼과 연구자용 Agent 플랫폼을 개발하고, 이를 운영할 Kubernetes와 Ceph, LLM 추론 환경을 구축했습니다. 데이터플랫폼에는 자료 검색과 문서 초안 작성을 돕는 RAG를 연결했으며, Agent 플랫폼에서는 개인 작업환경과 공유 자산을 함께 관리하도록 설계했습니다. Agent 플랫폼과 연동해 사용자가 만든 웹을 자동 배포하고 공유하는 copai-vibe 서비스도 개발했습니다.</p>
 
 <p><a href="#work-projects">업무 프로젝트 보기 ↓</a> / <a href="https://data.kfri.re.kr/">데이터플랫폼 ↗</a></p>
 <hr>
@@ -56,48 +57,22 @@
 
 <p><a href="#contents">전체 목차 ↑</a></p>
 
-<a name="activity"></a>
-
-## 🌊 03. Activity
-
-<a href="https://solved.ac/profile/castleh0326">
-  <img alt="castleh0326의 solved.ac 등급, 풀이 기록" src="./assets/solved-ac-card-20261015.png" width="400">
-</a>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=orqan137&amp;show_icons=true&amp;hide_border=true&amp;hide_rank=true&amp;disable_animations=true&amp;theme=github_dark&amp;title_color=58a6ff&amp;icon_color=58a6ff">
-  <img alt="orqan137의 GitHub 커밋, PR, 이슈, 기여 통계" src="https://github-readme-stats.vercel.app/api?username=orqan137&amp;show_icons=true&amp;hide_border=true&amp;hide_rank=true&amp;disable_animations=true&amp;title_color=0969da&amp;icon_color=0969da" width="400">
-</picture>
-
-
-<table>
-<tr><td>
-<h3>LG Aimers 6기</h3>
-<p><strong>온라인 AI 교육 이수 / 온라인 해커톤 참여</strong></p>
-<p><strong>교육</strong> 2025.01.02–2025.01.27<br><strong>온라인 해커톤</strong> 2025.02</p>
-<p>온라인 AI 교육을 이수하고, 난임 환자의 임신 성공 여부를 예측하는 온라인 해커톤에 팀으로 참여했습니다. 관련 논문으로 도메인 지식을 보완하며 XGBoost와 앙상블 기법을 활용해 모델 개선을 시도했습니다.</p>
-<p><a href="https://www.lgaimers.ai/">프로그램 소개 ↗</a> / <a href="https://dacon.io/competitions/official/236452/overview/description">온라인 해커톤 ↗</a></p>
-</td></tr>
-</table>
-
-<p><a href="#contents">전체 목차 ↑</a></p>
-
 <a name="projects"></a>
 
-## 🐚 04. Projects
+## 🐚 03. Projects
 
 <p><strong>프로젝트 분류</strong><br>
-<a href="#work-projects">4.1 Work Projects</a><br>
-<a href="#apps-projects">4.2 Apps</a><br>
-<a href="#ai-challenges">4.3 AI Challenges</a><br>
-<a href="#school-projects">4.4 Campus Projects</a><br>
-<a href="#course-projects">4.5 Course Assignments</a><br>
-<a href="#community-websites">4.6 Community Websites</a></p>
+<a href="#work-projects">3.1 Work Projects</a><br>
+<a href="#apps-projects">3.2 Apps</a><br>
+<a href="#ai-challenges">3.3 AI Challenges</a><br>
+<a href="#school-projects">3.4 Campus Projects</a><br>
+<a href="#course-projects">3.5 Course Assignments</a><br>
+<a href="#community-websites">3.6 Community Websites</a></p>
 
 
 <a name="work-projects"></a>
 
-### 4.1 Work Projects
+### 3.1 Work Projects
 
 <p><a href="#project-01">01. 연구데이터플랫폼</a><br>
 <a href="#project-02">02. 연구자용 AI Agent 플랫폼</a><br>
@@ -130,9 +105,10 @@
 <p><strong>수행 경력</strong> 2025.09 - 현재</p>
 <p>연구자가 개인 작업공간에서 AI Agent를 실행하고, 만든 설정과 Skills, 도구를 서로 공유할 수 있는 플랫폼을 제안하고 직접 설계·개발했습니다. 초기의 연구자별 VM 제공 방식으로는 AI 활용 자산이 개인 환경에 흩어질 수 있어, 작업공간은 분리하면서 공유 기능은 함께 제공하는 구조를 선택했습니다.</p>
 <p>중앙 플랫폼에는 계정과 작업환경 관리를, 사용자별 Gateway에는 파일과 세션 관리 및 Agent 실행을 맡겼습니다. Agent를 교체할 때 중앙 서비스까지 수정하지 않도록 중간 제어 계층을 두고, 기관 계정 연동부터 모델 호출과 사용량 조회까지 연결했습니다. 운영 중에는 화면, Gateway, 모델 호출 기록을 대조해 지연 구간을 찾았으며, 요청마다 반복하던 저장소 검사를 개선해 채팅 초기 처리 시간을 4.2초에서 0.14초로 줄였습니다.</p>
+<p>Agent 플랫폼과 연동해 사용자가 만든 웹을 Kubernetes 환경에 자동 배포하고 공유하는 copai-vibe 서비스도 개발했습니다.</p>
 <hr>
 <h4>주요 결과</h4>
-<ul><li><strong>플랫폼 제안부터 실행환경과 공유 기능까지 직접 개발</strong><br>기관 계정 연동, 개인 작업환경 관리, 설정과 도구 공유, 모델 호출과 사용량 조회를 구현했습니다.</li><li><strong>채팅 초기 처리 시간 4.2초 → 0.14초</strong><br>채팅 요청마다 반복하던 저장소 검사 방식을 개선해 초기 처리 시간을 줄였습니다.</li></ul>
+<ul><li><strong>플랫폼 제안부터 실행환경과 공유 기능까지 직접 개발</strong><br>기관 계정 연동, 개인 작업환경 관리, 설정과 도구 공유, 모델 호출과 사용량 조회를 구현했습니다.</li><li><strong>copai-vibe 웹 자동 배포 및 공유 서비스 개발</strong><br>Kubernetes 환경에서 Agent 플랫폼과 연동해 사용자가 만든 웹을 자동 배포하고 공유하도록 구현했습니다.</li><li><strong>채팅 초기 처리 시간 4.2초 → 0.14초</strong><br>채팅 요청마다 반복하던 저장소 검사 방식을 개선해 초기 처리 시간을 줄였습니다.</li></ul>
 <p><strong>사용 기술</strong><br><img src="./assets/tech/nestjs.png" alt="nestjs" height="24"> <img src="./assets/tech/fastify.png" alt="fastify" height="24"> <img src="./assets/tech/vllm.png" alt="vllm" height="24"> <img src="./assets/tech/litellm.png" alt="litellm" height="24"> <img src="./assets/tech/ldap.png" alt="ldap" height="24"></p>
 <p>기관 로그인 필요 / 코드 비공개</p>
 </td></tr>
@@ -214,7 +190,7 @@
 
 <a name="apps-projects"></a>
 
-### 4.2 Apps
+### 3.2 Apps
 
 <p><a href="#project-07">07. Replant</a><br>
 <a href="#project-08">08. 가야디 / Gayadi</a></p>
@@ -239,7 +215,7 @@
 <a name="project-08"></a>
 <p align="center"><a href="https://github.com/TEAM-DOONOW"><img src="https://avatars.githubusercontent.com/u/305256572?v=4" alt="가야디 조직의 실제 여행 캐릭터" height="135" width="135"></a></p>
 <h3>08. 가야디 / Gayadi</h3>
-<p><strong>기간</strong> 2026.08 - 2026.10 / 백엔드, AI 서비스 개발</p>
+<p><strong>기간</strong> 2026.08 - 2026.09 / 백엔드, AI 서비스 개발</p>
 <p>일행의 성향을 반영해 여행 일정을 만들고 날씨와 혼잡도가 바뀌면 대체 장소를 제안하는 앱을 개발했습니다. 여행 일정을 함께 수정할 수 있어, AI가 변경안을 만드는 동안 다른 사용자가 일정을 바꿀 수 있었습니다.</p>
 <p>추천 생성과 실제 반영을 분리하고 변경안에 일정 버전을 기록했습니다. 사용자가 승인할 때 현재 버전과 다르면 이전 변경안을 거절하고, 반영한 뒤에는 기존 이동경로를 다시 계산했습니다. AI의 추천을 그대로 실행하기보다 사용자의 승인과 최신 일정 상태를 함께 확인하도록 백엔드를 구성했습니다.</p>
 <hr>
@@ -256,7 +232,7 @@
 
 <a name="ai-challenges"></a>
 
-### 4.3 AI Challenges
+### 3.3 AI Challenges
 
 <p><a href="#project-09">09. SCPC 2026 AI Challenge</a><br>
 <a href="#project-10">10. 연금 어드바이저 / mirae_pj</a><br>
@@ -336,7 +312,7 @@
 
 <a name="school-projects"></a>
 
-### 4.4 Campus Projects
+### 3.4 Campus Projects
 
 <p><a href="#project-13">13. K-Policy-LLM</a></p>
 
@@ -362,7 +338,7 @@
 
 <a name="course-projects"></a>
 
-### 4.5 Course Assignments
+### 3.5 Course Assignments
 
 <p><a href="#project-14">14. AWS 기반 미국 공시 및 뉴스 요약 서비스</a><br>
 <a href="#project-15">15. 조건별 장소 검색 웹서비스</a><br>
@@ -423,7 +399,7 @@
 
 <a name="community-websites"></a>
 
-### 4.6 Community Websites
+### 3.6 Community Websites
 
 <p><a href="#project-17">17. COALA 홈페이지</a><br>
 <a href="#project-18">18. JBIG CAFE</a></p>
@@ -462,6 +438,33 @@
 <br clear="all">
 
 <p><a href="#projects">프로젝트 목차 ↑</a></p>
+
+<a name="activity"></a>
+
+## 🌊 04. Activity
+
+<a href="https://solved.ac/profile/castleh0326">
+  <img alt="castleh0326의 solved.ac 등급, 풀이 기록" src="./assets/solved-ac-card-20261015.png" width="400">
+</a>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=orqan137&amp;show_icons=true&amp;hide_border=true&amp;hide_rank=true&amp;disable_animations=true&amp;theme=github_dark&amp;title_color=58a6ff&amp;icon_color=58a6ff">
+  <img alt="orqan137의 GitHub 커밋, PR, 이슈, 기여 통계" src="https://github-readme-stats.vercel.app/api?username=orqan137&amp;show_icons=true&amp;hide_border=true&amp;hide_rank=true&amp;disable_animations=true&amp;title_color=0969da&amp;icon_color=0969da" width="400">
+</picture>
+
+
+<table>
+<tr><td>
+<h3>LG Aimers 6기</h3>
+<p><strong>온라인 AI 교육 이수 / 온라인 해커톤 참여</strong></p>
+<p><strong>교육</strong> 2025.01.02–2025.01.27<br><strong>온라인 해커톤</strong> 2025.02</p>
+<p>온라인 AI 교육을 이수하고, 난임 환자의 임신 성공 여부를 예측하는 온라인 해커톤에 팀으로 참여했습니다. 관련 논문으로 도메인 지식을 보완하며 XGBoost와 앙상블 기법을 활용해 모델 개선을 시도했습니다.</p>
+<p><a href="https://www.lgaimers.ai/">프로그램 소개 ↗</a> / <a href="https://dacon.io/competitions/official/236452/overview/description">온라인 해커톤 ↗</a></p>
+</td></tr>
+</table>
+
+<p><a href="#contents">전체 목차 ↑</a></p>
+
 
 <a name="community"></a>
 
