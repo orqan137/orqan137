@@ -8,7 +8,7 @@
   <a href="https://solved.ac/profile/castleh0326"><img alt="solved.ac castleh0326" src="https://img.shields.io/badge/solved.ac-castleh0326-17CE3A?style=flat-square"></a>
 </p>
 
-<a id="contents"></a>
+<a name="contents"></a>
 
 <p><strong>목차</strong><br>
 <a href="#experience">01. Experience</a> /
@@ -18,7 +18,7 @@
 <a href="#community">05. Community</a> /
 <a href="#awards">06. Awards</a></p>
 
-<a id="experience"></a>
+<a name="experience"></a>
 
 ## 🪸 01. Experience
 
@@ -48,7 +48,7 @@
 
 <p><a href="#contents">전체 목차 ↑</a></p>
 
-<a id="tech-stack"></a>
+<a name="tech-stack"></a>
 
 ## 🫧 02. Tech Stack
 
@@ -64,7 +64,7 @@
 
 <p><a href="#contents">전체 목차 ↑</a></p>
 
-<a id="activity"></a>
+<a name="activity"></a>
 
 ## 🌊 03. Activity
 
@@ -90,7 +90,7 @@
 
 <p><a href="#contents">전체 목차 ↑</a></p>
 
-<a id="projects"></a>
+<a name="projects"></a>
 
 ## 🐚 04. Projects
 
@@ -103,7 +103,7 @@
 <a href="#community-websites">4.6 Community Websites</a></p>
 
 
-<a id="work-projects"></a>
+<a name="work-projects"></a>
 
 ### 4.1 Work Projects
 
@@ -116,13 +116,15 @@
 
 <table align="left" width="400">
 <tr><td width="400" valign="top">
+<a name="project-01"></a>
 <a href="https://data.kfri.re.kr/"><img src="./assets/data-platform-card-v7.png" alt="식품데이터플랫폼 공개 홈페이지의 소개와 검색 영역 실제 캡처" width="100%"></a>
-<h3 id="project-01">01. 식품데이터플랫폼</h3>
+<h3>01. 식품데이터플랫폼</h3>
 <p><strong>기간</strong> 수행 경력 2025.09 - 현재</p>
-<p>입력 화면과 API를 개선한 뒤, 연구자가 관련 자료와 지침을 다시 찾아 초안을 정리하는 작업까지 살펴봤습니다. 기존 플랫폼에 AI 기능을 연결하기 위해 FastAPI로 별도 AI 서비스를 구성하고 LlamaIndex로 자료 검색과 초안 작성을 연결했습니다. 외부 반출이 제한된 연구자료를 다루므로 로컬 LLM을 사용했습니다.</p>
+<h4>설계 선택과 이유</h4>
+<p>기존 React와 Spring Boot 플랫폼을 유지하면서 Python 기반 문서 처리와 검색을 연결해야 했습니다. AI 처리를 기존 서버에 묶기보다 FastAPI 서비스로 분리하고 LlamaIndex로 문서 검색과 초안 작성을 구성했습니다. 연구자료를 외부 API로 보낼 수 없어 로컬 LLM을 선택했습니다.</p>
 <hr>
 <h4>주요 결과</h4>
-<ul><li><strong>자료 검색부터 초안 작성까지 연결</strong><br>FastAPI와 LlamaIndex로 RAG 서비스를 설계하고 기존 플랫폼에 연결했습니다. 외부 반출이 제한된 연구자료를 다루기 위해 로컬 LLM을 활용했습니다.</li><li><strong>문서 처리 시간 10분 이상 → 약 4분 단축</strong><br>처리 과정에서 반복되던 LLM 호출을 줄여 문서 처리 시간을 단축했습니다.</li><li><strong>데이터관리계획 작성 화면 개선</strong><br>긴 화면을 반복해서 스크롤하던 입력 방식을 탭 구조로 바꾸고, 연구자와 팀원들이 실제 작성 순서에 따라 기능을 확인하도록 함께 검수했습니다.</li></ul>
+<ul><li><strong>기존 서비스에 문서 검색과 초안 작성 연결</strong><br>문서 검색과 생성이 끝날 때까지 화면을 멈춰 두지 않도록 SSE로 진행 상태와 중간 결과를 전달했습니다. 서버에서 화면으로 상태를 전달하는 흐름에 맞춰 기존 HTTP 요청 구조와 연결했습니다.</li><li><strong>문서 처리 시간 10분 이상 → 약 4분 단축</strong><br>처리 과정에서 반복되던 LLM 호출을 줄여 문서 처리 시간을 단축했습니다.</li><li><strong>작성 화면 개선에서 후속 업무 지원으로 확장</strong><br>긴 입력 화면을 탭으로 바꾼 뒤, 연구자가 자료와 지침을 다시 찾아 초안을 만드는 작업까지 개선 범위를 넓혔습니다. 연구자와 팀원들이 실제 작성 순서에 따라 기능을 확인하도록 함께 검수했습니다.</li></ul>
 <p><strong>사용 기술</strong><br><img src="./assets/tech/react.png" alt="react" height="24"> <img src="./assets/tech/springboot.png" alt="springboot" height="24"> <img src="./assets/tech/fastapi.png" alt="fastapi" height="24"> <img src="./assets/tech/llamaindex.png" alt="llamaindex" height="24"> <img src="./assets/tech/sse.png" alt="sse" height="24"></p>
 <p><a href="https://data.kfri.re.kr/">공개 웹사이트 ↗</a><br>업무 프로젝트 / 코드 비공개</p>
 </td></tr>
@@ -130,10 +132,12 @@
 
 <table align="left" width="400">
 <tr><td width="400" valign="top">
+<a name="project-02"></a>
 <img src="./assets/copai-screen-redacted-v18.png" alt="사용자 제공 COPAI 화면: 대화와 파일 저장소, 식별정보와 심볼 비식별 처리" width="100%">
-<h3 id="project-02">02. COPAI / 연구자용 Agent 플랫폼</h3>
+<h3>02. COPAI / 연구자용 Agent 플랫폼</h3>
 <p><strong>기간</strong> 수행 경력 2025.09 - 현재</p>
-<p>초기 논의는 연구자마다 AI 활용 VM을 제공하는 방식이었습니다. 하지만 환경만 나눠 제공하면 활용법과 검증된 도구가 개인에게 흩어지는 문제는 남는다고 판단했습니다. 개인 작업공간은 분리하면서 설정, Skills, 도구는 공유하는 통합 Agent 플랫폼을 제안하고 직접 설계와 개발을 맡았습니다.</p>
+<h4>설계 선택과 이유</h4>
+<p>연구자마다 VM을 제공하면 작업환경은 나눌 수 있어도, 각자가 만든 활용법과 도구를 함께 축적하기는 어려웠습니다. 개인 작업공간의 분리와 활용 자산의 재사용을 함께 해결하려고 통합 Agent 플랫폼을 선택했습니다. 중앙 플랫폼이 사용자 환경을 관리하고, AI Agent는 별도 계층으로 연결해 교체 가능한 구조로 설계했습니다.</p>
 <h4>경험과 변화</h4>
 <p>개인 업무에 AI Agent를 활용하던 경험을 연구자들이 함께 쓰는 서비스 개발로 넓혔습니다. 모델을 연결하는 기능뿐 아니라 계정, 작업환경, 도구 공유와 운영까지 함께 다루게 됐습니다.</p>
 <hr>
@@ -148,8 +152,9 @@
 
 <table align="left" width="400">
 <tr><td width="400" valign="top">
+<a name="project-03"></a>
 <img src="./assets/jeju-card-v7.png" alt="주문배송 업무를 돕는 범고래로 그린 제주TP 프로젝트 소개 카드" width="100%">
-<h3 id="project-03">03. 제주TP 연계 주문배송 관리</h3>
+<h3>03. 제주TP 연계 주문배송 관리</h3>
 <p><strong>기간</strong> 2026.04 - 2026.10</p>
 <p>초기에는 요청받은 기능을 구현하는 데 집중했지만, 실제 주문 처리 방식과 맞지 않는다는 피드백을 받았습니다. 담당자와 주문 접수부터 취소, 배송, 재고 확인까지 업무 순서를 다시 짚고 화면 용어와 상태 구분을 수정했습니다.</p>
 <h4>경험과 변화</h4>
@@ -164,10 +169,12 @@
 
 <table align="left" width="400">
 <tr><td width="400" valign="top">
+<a name="project-04"></a>
 <img src="./assets/docker-to-kubernetes.drawio.png" alt="Docker에서 Kubernetes로 서비스를 이관한 구성을 실제 기술 로고로 표시" width="100%">
-<h3 id="project-04">04. Kubernetes 클러스터 구축 및 서비스 이관</h3>
+<h3>04. Kubernetes 클러스터 구축 및 서비스 이관</h3>
 <p><strong>기간</strong> 수행 경력 2025.09 - 현재</p>
-<p>연구자용 Agent 플랫폼과 서비스 배포 환경을 마련하면서, 서버별 컨테이너 관리를 통합할 필요가 있었습니다. 서비스 배치와 자원을 함께 관리하도록 Kubernetes 전환을 제안했습니다. 클러스터를 직접 구축하고 기존 컨테이너 서비스를 모두 이관한 뒤, GitLab Runner의 빌드와 Argo CD의 배포를 연결했습니다.</p>
+<h4>설계 선택과 이유</h4>
+<p>Portainer와 CLI로 서버별 컨테이너를 관리하던 환경에서, 연구자가 만든 서비스까지 배포할 환경이 필요했습니다. 서버마다 배포 구성을 관리하는 방식보다 서비스 배치와 자원을 클러스터 단위로 관리하는 방식이 적합하다고 판단해 Kubernetes를 선택하고 기존 컨테이너 서비스를 모두 이관했습니다.</p>
 <h4>경험과 변화</h4>
 <p>서비스 개발에 더해 실행환경과 배포 인프라까지 직접 다루게 됐습니다. 생소한 영역은 관련 자료를 찾아보고 인프라 업무를 하는 동기와 교수님께도 문의하며 구축을 진행했습니다.</p>
 <hr>
@@ -182,13 +189,15 @@
 
 <table align="left" width="400">
 <tr><td width="400" valign="top">
+<a name="project-05"></a>
 <img src="./assets/hadoop-to-ceph.drawio.png" alt="Hadoop에서 Ceph로 저장 구조를 전환하고 CephFS, RBD와 RGW를 구성한 경험" width="100%">
-<h3 id="project-05">05. Ceph 분산 스토리지 구축 및 데이터 이관</h3>
+<h3>05. Ceph 분산 스토리지 구축 및 데이터 이관</h3>
 <p><strong>기간</strong> 수행 경력 2025.09 - 현재</p>
-<p>서비스마다 데이터 접근 방식이 달라 저장소도 용도에 맞게 구분했습니다. Ceph를 직접 구축한 뒤 함께 접근하는 파일은 CephFS, 개별 작업공간의 블록 저장소는 RBD, S3 방식으로 접근하는 객체는 RGW로 나눴습니다. Kubernetes의 저장소 요청을 CephFS와 RBD에 연결하기 위해 Ceph CSI를 연동했습니다.</p>
+<h4>설계 선택과 이유</h4>
+<p>Hadoop의 파일 중심 저장 구조에서 나아가, Kubernetes 서비스에 블록 저장소와 S3 호환 객체 저장소도 제공해야 했습니다. 파일, 블록, 객체 저장을 같은 분산 저장 기반에서 제공할 수 있어 Ceph를 선택했습니다.</p>
 <hr>
 <h4>주요 결과</h4>
-<ul><li><strong>서비스 용도에 맞춘 분산 스토리지 구성</strong><br>공유 파일은 CephFS, 블록 스토리지는 RBD, S3 호환 객체 저장소는 RGW로 구분해 구성했습니다.</li><li><strong>Kubernetes와 영구 저장소 연결</strong><br>Ceph CSI를 연동해 서비스에서 저장 공간을 요청하고 사용할 수 있도록 구성했습니다. Pod가 다시 생성되거나 실행 노드가 바뀌어도 기존 데이터를 사용할 수 있는지 확인했습니다.</li><li><strong>서비스별 데이터 이관 진행</strong><br>기존 저장소의 데이터를 서비스별로 옮기고 파일 접근과 데이터베이스 응답을 확인하며 저장소 전환을 진행했습니다.</li></ul>
+<ul><li><strong>공유 기능과 공유 파일시스템을 구분해 저장소 선택</strong><br>공용 CephFS를 고려했지만 개인 작업공간은 공유할 필요가 없었습니다. 개인 파일과 SQLite, 세션 상태의 복구 시점을 맞추려고 RBD를 선택하고, 공동 자료에만 CephFS를 쓰도록 설계했습니다. S3 호환 객체 저장에는 RGW를 선택했습니다.</li><li><strong>실행 위치가 바뀌어도 같은 저장소에 연결</strong><br>노드의 로컬 경로에 의존하지 않도록 Ceph CSI로 Kubernetes의 저장소 요청과 CephFS, RBD를 연결했습니다. Pod 재생성과 실행 노드 변경 후에도 기존 데이터에 접근하는지 확인했습니다.</li><li><strong>서비스별 데이터 이관과 동작 확인</strong><br>저장소를 연결하는 데서 끝내지 않고 기존 파일과 데이터를 서비스별로 옮긴 뒤, 파일 접근과 데이터베이스 응답을 확인하며 전환을 진행했습니다.</li></ul>
 <p><strong>사용 기술</strong><br><img src="./assets/tech/ceph.png" alt="ceph" height="24"> <img src="./assets/tech/cephcsi.png" alt="cephcsi" height="24"> <img src="./assets/tech/cephfs.png" alt="cephfs" height="24"> <img src="./assets/tech/rbd.png" alt="rbd" height="24"> <img src="./assets/tech/rgw.png" alt="rgw" height="24"> <img src="./assets/tech/kubernetes.png" alt="kubernetes" height="24"></p>
 <p>업무 프로젝트 / 코드 비공개</p>
 </td></tr>
@@ -196,10 +205,12 @@
 
 <table align="left" width="400">
 <tr><td width="400" valign="top">
+<a name="project-06"></a>
 <img src="./assets/llm-inference-service.drawio.png" alt="LiteLLM에서 vLLM으로 모델 호출을 연결하고 Solar Open 2와 Gemma 4 31B를 서빙하는 구성" width="100%">
-<h3 id="project-06">06. vLLM 기반 LLM 추론 서비스</h3>
+<h3>06. vLLM 기반 LLM 추론 서비스</h3>
 <p><strong>기간</strong> 수행 경력 2025.09 - 현재</p>
-<p>Agent가 계획과 실행을 반복하며 보내는 추론 요청을 병렬로 처리하기 위해 vLLM으로 로컬 모델을 서빙했습니다. 서비스마다 모델 호출을 따로 구현하는 부담을 줄이도록 LiteLLM으로 호출 방식을 통합하고, 모델별 요청과 토큰 사용량도 함께 확인하도록 구성했습니다.</p>
+<h4>설계 선택과 이유</h4>
+<p>Agent가 계획과 실행을 반복하므로 동시 추론 요청과 GPU 메모리 관리를 고려해야 했습니다. 요청을 지속적으로 묶어 처리하는 continuous batching과 KV 캐시 메모리 관리를 제공하는 vLLM을 선택했습니다. 모델 호출 주소와 사용량 집계를 서비스마다 흩어 두지 않도록 LiteLLM을 공통 호출 지점으로 구성했습니다.</p>
 <hr>
 <h4>주요 결과</h4>
 <ul><li><strong>로컬 LLM 추론 서비스 구축</strong><br>vLLM으로 Solar Open 2와 Gemma 4 31B를 배포하고 병렬 요청을 처리하도록 구성했습니다.</li><li><strong>LiteLLM으로 모델 호출 방식 통합</strong><br>서비스에서 공통된 호출 방식으로 모델을 이용할 수 있도록 연결했습니다.</li><li><strong>모델 사용 현황을 확인할 수 있는 운영 환경 구축</strong><br>모델별 요청과 토큰 사용량을 Prometheus와 Grafana에 연결해 실제 운영 로그와 함께 확인하도록 구성했습니다.</li></ul>
@@ -213,7 +224,7 @@
 <p><a href="#projects">프로젝트 목차 ↑</a></p>
 
 
-<a id="apps-projects"></a>
+<a name="apps-projects"></a>
 
 ### 4.2 Apps
 
@@ -222,8 +233,9 @@
 
 <table align="left" width="400">
 <tr><td width="400" valign="top">
+<a name="project-07"></a>
 <p align="center"><a href="https://github.com/Replant-Application"><img src="https://github.com/user-attachments/assets/c42ed7ff-245c-41e6-8036-30f2a1b63dba" alt="Replant 조직의 실제 서비스 배너" width="100%"></a></p>
-<h3 id="project-07">07. Replant</h3>
+<h3>07. Replant</h3>
 <p><strong>기간</strong> 2025.09 - 2026.02 / PM, 백엔드 개발</p>
 <p>사회적 고립을 겪는 사용자의 일상 회복을 돕는 앱에서 PM과 백엔드 개발을 맡았습니다. 팀 내에서 게임과 라이프케어 중 어느 쪽을 중심에 둘지 의견이 갈렸고, 라이프케어를 중심으로 일일 미션과 감정 기록에 캐릭터 성장 요소를 연결해 앱을 출시했습니다.</p>
 <h4>이후 달라진 행동</h4>
@@ -237,9 +249,11 @@
 
 <table align="left" width="400">
 <tr><td width="400" valign="top">
+<a name="project-08"></a>
 <p align="center"><a href="https://github.com/TEAM-DOONOW"><img src="https://avatars.githubusercontent.com/u/305256572?v=4" alt="가야디 조직의 실제 여행 캐릭터" height="135" width="135"></a></p>
-<h3 id="project-08">08. 가야디 / Gayadi</h3>
+<h3>08. 가야디 / Gayadi</h3>
 <p><strong>기간</strong> 2026.08 - 2026.10 / 백엔드, AI 서비스 개발</p>
+<h4>설계 선택과 이유</h4>
 <p>일행의 성향에 맞는 여행 일정을 추천하고, 여행 중 상황이 바뀌면 대안을 제안하는 앱을 개발했습니다. 함께 여행하는 사용자가 일정을 수정할 수 있어, AI가 만든 변경안을 그대로 적용하면 최신 일정과 충돌할 수 있다는 점을 고려했습니다.</p>
 <h4>설계에서 고려한 점</h4>
 <p>추천과 실제 일정 변경을 분리하고 승인 시점에 일정 버전을 다시 확인했습니다. AI의 제안뿐 아니라 사용자의 선택과 그사이에 바뀐 상태까지 서비스에 반영하도록 설계했습니다.</p>
@@ -255,7 +269,7 @@
 <p><a href="#projects">프로젝트 목차 ↑</a></p>
 
 
-<a id="ai-challenges"></a>
+<a name="ai-challenges"></a>
 
 ### 4.3 AI Challenges
 
@@ -266,9 +280,11 @@
 
 <table align="left" width="400">
 <tr><td width="400" valign="top">
+<a name="project-09"></a>
 <a href="./assets/scpc-safeshare-architecture.png"><img src="./assets/scpc-safeshare-architecture.png" alt="SCPC 2026 SafeShare의 공개 아키텍처" width="100%"></a>
-<h3 id="project-09">09. SCPC 2026 AI Challenge</h3>
+<h3>09. SCPC 2026 AI Challenge</h3>
 <p><strong>기간</strong> 2026.07 - 2026.08</p>
+<h4>설계 선택과 이유</h4>
 <p>AI Agent를 직접 개발하고 활용 방식을 익히기 위해 참여했습니다. 기기 상태와 대화 내용을 실행 계획으로 바꾸는 Agent와 Android 앱 SafeShare를 만들었습니다. 같은 조건을 반복해서 묻지 않도록 공유 조건을 저장하되, 목적이나 권한이 바뀌면 이전 확인을 그대로 적용하지 않고 다시 묻도록 설계했습니다.</p>
 <hr>
 <h4>주요 결과</h4>
@@ -280,10 +296,12 @@
 
 <table align="left" width="400">
 <tr><td width="400" valign="top">
+<a name="project-10"></a>
 <a href="./assets/mirae-pension-architecture.png"><img src="./assets/mirae-pension-architecture.png" alt="mirae_pj 연금 상담 Agent의 공개 아키텍처" width="100%"></a>
-<h3 id="project-10">10. 연금 어드바이저 / mirae_pj</h3>
+<h3>10. 연금 어드바이저 / mirae_pj</h3>
 <p><strong>기간</strong> 2026.08 - 2026.09</p>
-<p>연금 상담에서는 자연스러운 답변만으로 세액공제 계산과 상품 정보의 정확성을 보장할 수 없었습니다. 계산과 상품 비교는 전용 모듈에서 처리하고, 검색한 근거와 계산 결과를 HyperCLOVA X의 답변 생성에 전달했습니다. 생성 후에도 수치와 인용을 원문과 대조하도록 검증 단계를 분리했습니다.</p>
+<h4>설계 선택과 이유</h4>
+<p>세액공제 계산까지 LLM의 문장 생성에 맡기면 수치와 근거를 따로 확인하기 어려웠습니다. 계산식으로 처리할 부분은 전용 모듈로 분리하고, LLM은 검색한 자료와 계산 결과를 설명하도록 역할을 나눴습니다. 출처가 붙어 있다는 이유만으로 신뢰하지 않도록 생성 뒤에도 수치와 인용을 원문과 대조했습니다.</p>
 <hr>
 <h4>주요 결과</h4>
 <ul><li><strong>질문 유형에 맞춘 검색과 답변 생성</strong><br>연금 제도, 세금, 상품 관련 질문을 구분하고 필요한 자료를 검색해 HyperCLOVA X의 답변 생성에 연결했습니다.</li><li><strong>계산과 상품 비교를 별도 기능으로 구현</strong><br>세액공제 계산과 상품 비교를 전용 모듈에서 처리하고, 계산 결과를 답변에 반영하도록 구성했습니다.</li><li><strong>답변의 수치와 인용 검증</strong><br>생성된 수치와 상품 정보, 인용을 원문과 대조하고, 검증에 실패한 인용은 수정하거나 확인되지 않은 내용을 답변에서 제외하도록 구현했습니다.</li></ul>
@@ -296,9 +314,11 @@
 
 <table align="left" width="400">
 <tr><td width="400" valign="top">
-<h3 id="project-11">11. TREC 2024 Product Search</h3>
+<a name="project-11"></a>
+<h3>11. TREC 2024 Product Search</h3>
 <p><strong>기간</strong> 2024 / JBNU 팀, 공동저자</p>
 <p><strong>TREC 참가 논문</strong><br>JBNU at TREC 2024 Product Search Track</p>
+<h4>연구 설계와 선택 이유</h4>
 <p>사용자의 의도에 맞는 상품을 찾기 위한 TREC 공동연구에 참여했습니다. 검색어 확장으로 관련 없는 상품도 높은 순위에 오르는 문제를 다루기 위해 SPLADE++의 가중치 계산을 바꾸는 방법을 연구했습니다. 상품 설명이 모델의 입력 길이를 넘는 문제에는 T5 요약을 인덱싱에 활용했습니다.</p>
 <hr>
 <h4>주요 결과</h4>
@@ -310,9 +330,11 @@
 
 <table align="left" width="400">
 <tr><td width="400" valign="top">
-<h3 id="project-12">12. TREC 2025 Product Search &amp; Recommendations</h3>
+<a name="project-12"></a>
+<h3>12. TREC 2025 Product Search &amp; Recommendations</h3>
 <p><strong>기간</strong> 2025 / JBNU 팀, 공동제1저자</p>
 <p><strong>TREC 참가 논문</strong><br>JBNU at TREC 2025 Product Search and Recommendations Track</p>
+<h4>연구 설계와 선택 이유</h4>
 <p>목적이 담긴 검색어는 단어 일치만으로 필요한 상품을 찾기 어려워, LLM으로 검색 의도를 Lucene 검색식으로 바꾸는 방법을 연구했습니다. 추천에서는 후보 검색과 대체재 및 보완재 분류를 분리해, 관련 점수가 높아도 용도가 맞지 않는 상품의 순위를 조정했습니다. 공동제1저자로 TREC 참가 논문을 작성했습니다.</p>
 <h4>실험에서 확인한 점</h4>
 <p>텍스트 질의 재구성 실험의 NDCG는 0.2911, 이미지 정보를 더한 실험은 0.2517이었습니다. 정보를 더한 구성이 더 좋은 결과로 이어지는지 별도로 비교하며 설계와 평가를 함께 진행했습니다.</p>
@@ -329,7 +351,7 @@
 <p><a href="#projects">프로젝트 목차 ↑</a></p>
 
 
-<a id="school-projects"></a>
+<a name="school-projects"></a>
 
 ### 4.4 Campus Projects
 
@@ -337,8 +359,9 @@
 
 <table align="left" width="400">
 <tr><td width="400" valign="top">
+<a name="project-13"></a>
 <a href="https://github.com/orqan137/K-Policy-LLM"><img src="./assets/kpolicy-card-v3.png" alt="K-Policy-LLM / 연구 노트를 읽는 범고래" width="100%"></a>
-<h3 id="project-13">13. K-Policy-LLM</h3>
+<h3>13. K-Policy-LLM</h3>
 <p><strong>기간</strong> 2026.04 - 2026.06 / 교내 프로젝트</p>
 <p>한국어 정치와 정책, 법률 문서를 다루는 언어모델을 만들기 위해 Llama 계열 모델의 학습과 평가 과정을 직접 구성했습니다. 데이터 준비부터 사전학습과 후속 학습까지 진행하고 단계별 변화를 비교했습니다.</p>
 <h4>학습과 평가에서 확인한 점</h4>
@@ -355,7 +378,7 @@
 <p><a href="#projects">프로젝트 목차 ↑</a></p>
 
 
-<a id="course-projects"></a>
+<a name="course-projects"></a>
 
 ### 4.5 Course Assignments
 
@@ -367,10 +390,12 @@
 
 <table align="left" width="400">
 <tr><td width="400" valign="top">
+<a name="project-14"></a>
 <a href="./assets/aws-class-architecture.png"><img src="./assets/aws-class-architecture.png" alt="AWS 공시 서비스 아키텍처 원본: EventBridge, Lambda, Bedrock, Translate, DynamoDB, SQS, SNS와 S3, CloudFront 구성" width="100%"></a>
-<h3 id="project-14">14. AWS 기반 미국 공시 및 뉴스 요약 서비스</h3>
+<h3>14. AWS 기반 미국 공시 및 뉴스 요약 서비스</h3>
 <p><strong>기간</strong> 2024.12 / 클라우드컴퓨팅 수업 과제</p>
-<p>미국 기업의 공시와 뉴스를 한국어로 확인하는 서비스를 팀으로 개발했습니다. 비용을 고려해 EventBridge와 Lambda로 정해진 시간에 자료를 수집하고, Bedrock의 요약과 Translate의 번역을 연결했습니다. 새 공시를 저장한 뒤 알림으로 전달하도록 수집, 처리, 저장과 알림의 역할을 나눠 구성했습니다.</p>
+<h4>설계 선택과 이유</h4>
+<p>새 공시를 정해진 시간에 수집하는 작업이어서 서버를 계속 운영하기보다 예약 실행하는 서버리스 구성을 선택했습니다. EventBridge로 실행 시점을 정하고 Lambda가 수집과 전처리를 맡도록 구성했습니다. 한국어로 내용을 확인할 수 있도록 Bedrock 요약과 Translate 번역을 연결하고, 저장과 알림도 별도 역할로 나눴습니다.</p>
 <hr>
 <h4>주요 결과</h4>
 <ul><li><strong>자료 수집부터 한국어 요약까지 자동화</strong><br>EventBridge와 Lambda로 자료를 주기적으로 수집하고, Bedrock의 요약과 Translate의 번역 기능을 연결했습니다.</li><li><strong>수집 결과 저장과 알림 처리 구현</strong><br>처리 결과를 S3와 DynamoDB에 저장하고 SQS와 SNS를 활용해 새 공시 알림을 처리하도록 구성했습니다.</li></ul>
@@ -381,7 +406,8 @@
 
 <table align="left" width="400">
 <tr><td width="400" valign="top">
-<h3 id="project-15">15. 조건별 장소 검색 웹서비스</h3>
+<a name="project-15"></a>
+<h3>15. 조건별 장소 검색 웹서비스</h3>
 <p><strong>기간</strong> 2024년 1학기 / 데이터베이스 수업 과제</p>
 <p>인원과 위치, 가격, 이용 시간에 맞는 장소를 찾는 웹서비스를 팀 프로젝트로 개발했습니다. 음식점과 카페 등 장소 정보를 검색 조건에 맞춰 조회할 수 있도록 화면과 데이터베이스를 연결했습니다.</p>
 <hr>
@@ -396,7 +422,8 @@
 
 <table align="left" width="400">
 <tr><td width="400" valign="top">
-<h3 id="project-16">16. 웹서비스설계 과제</h3>
+<a name="project-16"></a>
+<h3>16. 웹서비스설계 과제</h3>
 <p><strong>기간</strong> 2024.11 - 2024.12 / 수업 과제</p>
 <p>React 화면 구현 과제에서 시작해 후속 과제에서 로그인과 배포 기능까지 구현했습니다. 별도 서버 과제에서는 API와 데이터베이스, 문서화를 다루며 화면에서 요청을 보내고 서버가 처리하는 구조를 함께 익혔습니다.</p>
 <hr>
@@ -412,7 +439,7 @@
 <p><a href="#projects">프로젝트 목차 ↑</a></p>
 
 
-<a id="community-websites"></a>
+<a name="community-websites"></a>
 
 ### 4.6 Community Websites
 
@@ -421,8 +448,9 @@
 
 <table align="left" width="400">
 <tr><td width="400" valign="top">
+<a name="project-17"></a>
 <a href="https://coala.jbnu.ac.kr/"><img src="./assets/coala-website-v12.png" alt="COALA 홈페이지의 메뉴, 소개 배너와 콘텐츠 영역 실제 캡처" width="100%"></a>
-<h3 id="project-17">17. COALA 홈페이지</h3>
+<h3>17. COALA 홈페이지</h3>
 <p><strong>기간</strong> 활동 기간 2024.03 - 2025.08 / 동아리 회장, 웹사이트 개발</p>
 <p>동아리 홈페이지 개발 중 구현한 기능과 운영 정보를 메인에 많이 보여주려는 의견이 있었습니다. 회원들이 자주 찾는 공지와 자료, 게시글이 뒤로 밀릴 수 있다고 보고, 접속한 뒤 필요한 정보를 찾는 순서에 맞춰 화면 구성을 조정했습니다.</p>
 <h4>경험과 판단</h4>
@@ -437,8 +465,9 @@
 
 <table align="left" width="400">
 <tr><td width="400" valign="top">
+<a name="project-18"></a>
 <a href="https://jbig.co.kr/"><img src="./assets/jbig-website-v12.png" alt="JBIG 홈페이지의 메뉴, 동아리 소개와 활동 영역 실제 캡처" width="100%"></a>
-<h3 id="project-18">18. JBIG CAFE</h3>
+<h3>18. JBIG CAFE</h3>
 <p><strong>기간</strong> 활동 기간 2023.03 - 2024.08 / 동아리 임원, 웹사이트 개발</p>
 <p>AI 동아리의 공지와 학습 자료를 공유하고, 스터디와 프로젝트 참여자를 모집하는 커뮤니티 웹사이트 개발에 참여했습니다.</p>
 <hr>
@@ -453,7 +482,7 @@
 
 <p><a href="#projects">프로젝트 목차 ↑</a></p>
 
-<a id="community"></a>
+<a name="community"></a>
 
 ## 🐾 05. Community
 
@@ -483,7 +512,7 @@
 
 <p><a href="#contents">전체 목차 ↑</a></p>
 
-<a id="awards"></a>
+<a name="awards"></a>
 
 ## ⭐ 06. Awards
 
