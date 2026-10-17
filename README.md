@@ -65,9 +65,7 @@
 <a href="#work-projects">3.1 Work Projects</a><br>
 <a href="#apps-projects">3.2 Apps</a><br>
 <a href="#ai-challenges">3.3 AI Challenges</a><br>
-<a href="#school-projects">3.4 Campus Projects</a><br>
-<a href="#course-projects">3.5 Course Assignments</a><br>
-<a href="#community-websites">3.6 Community Websites</a></p>
+<a href="#school-projects">3.4 Campus Projects / 교내 프로젝트</a></p>
 
 
 <a name="work-projects"></a>
@@ -370,16 +368,24 @@
 
 <a name="school-projects"></a>
 
-### 3.4 Campus Projects
+### 3.4 Campus Projects / 교내 프로젝트
 
-<p><a href="#project-13">13. K-Policy-LLM</a></p>
+<p><a href="#project-13">13. K-Policy-LLM</a><br>
+<a href="#project-14">14. AWS 기반 미국 공시 및 뉴스 요약 서비스</a><br>
+<a href="#project-15">15. 조건별 장소 검색 웹서비스</a><br>
+<a href="#project-16">16. 웹서비스설계 과제</a><br>
+<a href="#project-17">17. Java 게임 개발</a><br>
+<a href="#project-18">18. COALA 홈페이지</a><br>
+<a href="#project-19">19. JBIG 홈페이지</a></p>
+
+<p>수업 과제와 동아리 홈페이지 개발 프로젝트입니다.<br>재학 중 사용한 GitHub: <a href="https://github.com/highcastle01">highcastle01 ↗</a></p>
 
 <table align="left" width="400">
 <tr><td width="400" valign="top">
 <a name="project-13"></a>
 <a href="https://github.com/orqan137/K-Policy-LLM"><img src="./assets/kpolicy-card-v3.png" alt="K-Policy-LLM / 연구 노트를 읽는 범고래" width="100%"></a>
 <h3>13. K-Policy-LLM</h3>
-<p><strong>기간</strong> 2026.04 - 2026.06 / 교내 프로젝트</p>
+<p><strong>기간</strong> 2026.04 - 2026.06 / 수업 과제</p>
 <p>한국어 정치와 정책, 법률 문서를 다루는 Llama 계열 언어모델의 학습과 평가를 직접 구성했습니다. SentencePiece 토크나이저와 학습 데이터를 준비해 사전학습을 진행하고, 도메인 지식과 응답 방식을 학습하는 후속 과정을 연결했습니다.</p>
 <p>도메인 지식 학습에는 CPT, 지시문에 답하는 방식에는 SFT, 응답 선호 학습에는 DPO를 적용했습니다. 각 단계가 실제 응답에 미치는 영향을 확인하려고 공개 한국어 벤치마크와 자체 진단 문항으로 단계별 결과를 비교했습니다.</p>
 <hr>
@@ -389,31 +395,6 @@
 <p><a href="#architecture-13">아키텍처 보기 ↓</a></p>
 </td></tr>
 </table>
-
-<br clear="all">
-
-<a name="architecture-13"></a>
-<details>
-<summary><strong>13. K-Policy-LLM / 아키텍처</strong></summary>
-
-
-<p><a href="./assets/kpolicy-training-evaluation.drawio.png"><img src="./assets/kpolicy-training-evaluation.drawio.png" alt="K-Policy-LLM 구성 요소와 처리 흐름" width="100%"></a></p>
-
-<p><a href="./assets/kpolicy-training-evaluation.drawio.png">도식 크게 보기 ↗</a> / <a href="#project-13">프로젝트 설명 ↑</a></p>
-</details>
-
-<p><a href="#projects">프로젝트 목차 ↑</a></p>
-
-
-<a name="course-projects"></a>
-
-### 3.5 Course Assignments
-
-<p><a href="#project-14">14. AWS 기반 미국 공시 및 뉴스 요약 서비스</a><br>
-<a href="#project-15">15. 조건별 장소 검색 웹서비스</a><br>
-<a href="#project-16">16. 웹서비스설계 과제</a></p>
-
-<p>재학 중 사용한 GitHub: <a href="https://github.com/highcastle01">highcastle01 ↗</a></p>
 
 <table align="left" width="400">
 <tr><td width="400" valign="top">
@@ -432,6 +413,8 @@
 </td></tr>
 </table>
 
+<br clear="all">
+
 <table align="left" width="400">
 <tr><td width="400" valign="top">
 <a name="project-15"></a>
@@ -446,8 +429,6 @@
 <p><a href="https://github.com/highcastle01/path_recom_db_pj">공개 저장소 ↗</a></p>
 </td></tr>
 </table>
-
-<br clear="all">
 
 <table align="left" width="400">
 <tr><td width="400" valign="top">
@@ -465,6 +446,64 @@
 </table>
 
 <br clear="all">
+
+<table align="left" width="400">
+<tr><td width="400" valign="top">
+<a name="project-17"></a>
+<h3>17. Java 게임 개발</h3>
+<p><strong>기간</strong> 2023년 1학기 / 객체지향프로그래밍 수업 과제</p>
+<p>객체지향프로그래밍 수업 과제로 Java를 사용해 게임을 구현했습니다.</p>
+<p><strong>사용 기술</strong><br><img src="./assets/tech/java.png" alt="java" height="24"></p>
+<p><a href="https://youtu.be/GCLQlJdoXWk">게임 시연 영상 ↗</a></p>
+</td></tr>
+</table>
+
+<table align="left" width="400">
+<tr><td width="400" valign="top">
+<a name="project-18"></a>
+<a href="https://coala.jbnu.ac.kr/"><img src="./assets/coala-website-v12.png" alt="COALA 홈페이지의 메뉴, 소개 배너와 콘텐츠 영역 실제 캡처" width="100%"></a>
+<h3>18. COALA 홈페이지</h3>
+<p><strong>활동 기간</strong> 2024.03 - 2025.08 / 동아리 회장, 웹사이트 개발</p>
+<p>개발 동아리 COALA의 홈페이지 개발에 참여해 게시판과 모집, 활동 관리 기능을 구현했습니다. 메인 화면에 개발 기능과 운영 정보를 많이 보여주기보다, 회원들이 자주 찾는 공지와 자료, 게시글에 먼저 접근할 수 있도록 화면 구성을 조정했습니다.</p>
+<p>React와 Spring Boot로 회원들이 동아리 소식과 학습 자료를 찾고 활동에 참여할 수 있는 웹사이트를 구성했습니다. 회장으로 스터디와 멘토링도 운영하며 홈페이지 개발과 동아리 활동을 함께 진행했습니다.</p>
+<hr>
+<h4>주요 결과</h4>
+<ul><li><strong>동아리 홈페이지 개발과 메인 화면 구성 조정</strong><br>게시판과 모집, 활동 관리 기능을 개발하고 공지와 자료에 우선 접근하도록 화면을 구성했습니다.</li><li><strong>개발 동아리 회장 활동</strong><br>스터디와 멘토링을 진행하며 동아리 학습 활동을 운영했습니다.</li></ul>
+<p><strong>사용 기술</strong><br><img src="./assets/tech/react.png" alt="react" height="24"> <img src="./assets/tech/ts.png" alt="ts" height="24"> <img src="./assets/tech/springboot.png" alt="springboot" height="24"> <img src="./assets/tech/postgres.png" alt="postgres" height="24"> <img src="./assets/tech/redis.png" alt="redis" height="24"></p>
+<p><a href="#architecture-18">아키텍처 보기 ↓</a></p>
+<p><a href="https://coala.jbnu.ac.kr/">coala.jbnu.ac.kr ↗</a><br><a href="https://github.com/JBNU-COALA/coala-web-fe">Frontend</a> / <a href="https://github.com/JBNU-COALA/coala-web-be-main">Backend</a> / <a href="https://github.com/JBNU-COALA">GitHub 조직</a></p>
+</td></tr>
+</table>
+
+<br clear="all">
+
+<table align="left" width="400">
+<tr><td width="400" valign="top">
+<a name="project-19"></a>
+<a href="https://jbig.co.kr/"><img src="./assets/jbig-website-v12.png" alt="JBIG 홈페이지의 메뉴, 동아리 소개와 활동 영역 실제 캡처" width="100%"></a>
+<h3>19. JBIG 홈페이지</h3>
+<p><strong>활동 기간</strong> 2023.03 - 2024.08 / 동아리 임원, 웹사이트 개발</p>
+<p>AI 동아리의 공지와 학습 자료를 공유하고, 스터디와 프로젝트 참여자를 모집하는 커뮤니티 웹사이트 개발에 참여했습니다.</p>
+<hr>
+<h4>주요 결과</h4>
+<ul><li><strong>동아리 커뮤니티 기능 개발</strong><br>React와 Django 기반 웹사이트에서 게시판과 댓글, 공지, 스터디 및 프로젝트 모집 기능을 개발했습니다.</li><li><strong>회원 인증과 운영 기능 구현</strong><br>회원 인증과 이메일 처리, 관리자 기능을 구성해 회원 활동과 게시물을 관리하도록 구현했습니다.</li></ul>
+<p><strong>사용 기술</strong><br><img src="./assets/tech/react.png" alt="react" height="24"> <img src="./assets/tech/ts.png" alt="ts" height="24"> <img src="./assets/tech/django.png" alt="django" height="24"> <img src="./assets/tech/python.png" alt="python" height="24"></p>
+<p><a href="#architecture-19">아키텍처 보기 ↓</a></p>
+<p><a href="https://jbig.co.kr/">jbig.co.kr ↗</a><br><a href="https://github.com/dev-JBIG/jbig_frontend">Frontend</a> / <a href="https://github.com/dev-JBIG/jbig_backend">Backend</a> / <a href="https://github.com/dev-JBIG">GitHub 조직</a></p>
+</td></tr>
+</table>
+
+<br clear="all">
+
+<a name="architecture-13"></a>
+<details>
+<summary><strong>13. K-Policy-LLM / 아키텍처</strong></summary>
+
+
+<p><a href="./assets/kpolicy-training-evaluation.drawio.png"><img src="./assets/kpolicy-training-evaluation.drawio.png" alt="K-Policy-LLM 구성 요소와 처리 흐름" width="100%"></a></p>
+
+<p><a href="./assets/kpolicy-training-evaluation.drawio.png">도식 크게 보기 ↗</a> / <a href="#project-13">프로젝트 설명 ↑</a></p>
+</details>
 
 <a name="architecture-14"></a>
 <details>
@@ -496,69 +535,24 @@
 <p><a href="./assets/wsd-separate-assignments.drawio.png">도식 크게 보기 ↗</a> / <a href="#project-16">프로젝트 설명 ↑</a></p>
 </details>
 
-<p><a href="#projects">프로젝트 목차 ↑</a></p>
-
-
-<a name="community-websites"></a>
-
-### 3.6 Community Websites
-
-<p><a href="#project-17">17. COALA 홈페이지</a><br>
-<a href="#project-18">18. JBIG CAFE</a></p>
-
-<table align="left" width="400">
-<tr><td width="400" valign="top">
-<a name="project-17"></a>
-<a href="https://coala.jbnu.ac.kr/"><img src="./assets/coala-website-v12.png" alt="COALA 홈페이지의 메뉴, 소개 배너와 콘텐츠 영역 실제 캡처" width="100%"></a>
-<h3>17. COALA 홈페이지</h3>
-<p><strong>활동 기간</strong> 2024.03 - 2025.08 / 동아리 회장, 웹사이트 개발</p>
-<p>개발 동아리 COALA의 홈페이지 개발에 참여해 게시판과 모집, 활동 관리 기능을 구현했습니다. 메인 화면에 개발 기능과 운영 정보를 많이 보여주기보다, 회원들이 자주 찾는 공지와 자료, 게시글에 먼저 접근할 수 있도록 화면 구성을 조정했습니다.</p>
-<p>React와 Spring Boot로 회원들이 동아리 소식과 학습 자료를 찾고 활동에 참여할 수 있는 웹사이트를 구성했습니다. 회장으로 스터디와 멘토링도 운영하며 홈페이지 개발과 동아리 활동을 함께 진행했습니다.</p>
-<hr>
-<h4>주요 결과</h4>
-<ul><li><strong>동아리 홈페이지 개발과 메인 화면 구성 조정</strong><br>게시판과 모집, 활동 관리 기능을 개발하고 공지와 자료에 우선 접근하도록 화면을 구성했습니다.</li><li><strong>개발 동아리 회장 활동</strong><br>스터디와 멘토링을 진행하며 동아리 학습 활동을 운영했습니다.</li></ul>
-<p><strong>사용 기술</strong><br><img src="./assets/tech/react.png" alt="react" height="24"> <img src="./assets/tech/ts.png" alt="ts" height="24"> <img src="./assets/tech/springboot.png" alt="springboot" height="24"> <img src="./assets/tech/postgres.png" alt="postgres" height="24"> <img src="./assets/tech/redis.png" alt="redis" height="24"></p>
-<p><a href="#architecture-17">아키텍처 보기 ↓</a></p>
-<p><a href="https://coala.jbnu.ac.kr/">coala.jbnu.ac.kr ↗</a><br><a href="https://github.com/JBNU-COALA/coala-web-fe">Frontend</a> / <a href="https://github.com/JBNU-COALA/coala-web-be-main">Backend</a> / <a href="https://github.com/JBNU-COALA">GitHub 조직</a></p>
-</td></tr>
-</table>
-
-<table align="left" width="400">
-<tr><td width="400" valign="top">
-<a name="project-18"></a>
-<a href="https://jbig.co.kr/"><img src="./assets/jbig-website-v12.png" alt="JBIG 홈페이지의 메뉴, 동아리 소개와 활동 영역 실제 캡처" width="100%"></a>
-<h3>18. JBIG CAFE</h3>
-<p><strong>활동 기간</strong> 2023.03 - 2024.08 / 동아리 임원, 웹사이트 개발</p>
-<p>AI 동아리의 공지와 학습 자료를 공유하고, 스터디와 프로젝트 참여자를 모집하는 커뮤니티 웹사이트 개발에 참여했습니다.</p>
-<hr>
-<h4>주요 결과</h4>
-<ul><li><strong>동아리 커뮤니티 기능 개발</strong><br>React와 Django 기반 웹사이트에서 게시판과 댓글, 공지, 스터디 및 프로젝트 모집 기능을 개발했습니다.</li><li><strong>회원 인증과 운영 기능 구현</strong><br>회원 인증과 이메일 처리, 관리자 기능을 구성해 회원 활동과 게시물을 관리하도록 구현했습니다.</li></ul>
-<p><strong>사용 기술</strong><br><img src="./assets/tech/react.png" alt="react" height="24"> <img src="./assets/tech/ts.png" alt="ts" height="24"> <img src="./assets/tech/django.png" alt="django" height="24"> <img src="./assets/tech/python.png" alt="python" height="24"></p>
-<p><a href="#architecture-18">아키텍처 보기 ↓</a></p>
-<p><a href="https://jbig.co.kr/">jbig.co.kr ↗</a><br><a href="https://github.com/dev-JBIG/jbig_frontend">Frontend</a> / <a href="https://github.com/dev-JBIG/jbig_backend">Backend</a> / <a href="https://github.com/dev-JBIG">GitHub 조직</a></p>
-</td></tr>
-</table>
-
-<br clear="all">
-
-<a name="architecture-17"></a>
+<a name="architecture-18"></a>
 <details>
-<summary><strong>17. COALA 홈페이지 / 아키텍처</strong></summary>
+<summary><strong>18. COALA 홈페이지 / 아키텍처</strong></summary>
 
 
 <p><a href="./assets/coala-community.drawio.png"><img src="./assets/coala-community.drawio.png" alt="COALA 홈페이지 구성 요소와 처리 흐름" width="100%"></a></p>
 
-<p><a href="./assets/coala-community.drawio.png">도식 크게 보기 ↗</a> / <a href="#project-17">프로젝트 설명 ↑</a></p>
+<p><a href="./assets/coala-community.drawio.png">도식 크게 보기 ↗</a> / <a href="#project-18">프로젝트 설명 ↑</a></p>
 </details>
 
-<a name="architecture-18"></a>
+<a name="architecture-19"></a>
 <details>
-<summary><strong>18. JBIG CAFE / 아키텍처</strong></summary>
+<summary><strong>19. JBIG 홈페이지 / 아키텍처</strong></summary>
 
 
-<p><a href="./assets/jbig-community.drawio.png"><img src="./assets/jbig-community.drawio.png" alt="JBIG CAFE 구성 요소와 처리 흐름" width="100%"></a></p>
+<p><a href="./assets/jbig-community.drawio.png"><img src="./assets/jbig-community.drawio.png" alt="JBIG 홈페이지 구성 요소와 처리 흐름" width="100%"></a></p>
 
-<p><a href="./assets/jbig-community.drawio.png">도식 크게 보기 ↗</a> / <a href="#project-18">프로젝트 설명 ↑</a></p>
+<p><a href="./assets/jbig-community.drawio.png">도식 크게 보기 ↗</a> / <a href="#project-19">프로젝트 설명 ↑</a></p>
 </details>
 
 <p><a href="#projects">프로젝트 목차 ↑</a></p>
