@@ -29,13 +29,13 @@
 <p><strong>소속 / 직위</strong> AI정보실 / 학생연구원</p>
 <p><strong>재직 기간</strong> 2025.09–현재</p>
 <p><strong>AI 서비스와 백엔드 개발, 온프레미스 인프라 구축 및 운영</strong></p>
-<p>데이터플랫폼과 연구자용 Agent 플랫폼을 개발하고, 이를 운영할 Kubernetes와 Ceph, LLM 추론 환경을 구축했습니다. 데이터플랫폼에는 자료 검색과 문서 초안 작성을 돕는 RAG를 연결했으며, Agent 플랫폼에서는 개인 작업환경과 공유 자산을 함께 관리하도록 설계했습니다. Agent 플랫폼과 연동해 사용자가 만든 웹을 자동 배포하고 공유하는 copai-vibe 서비스도 개발했습니다.</p>
+<p>데이터플랫폼과 연구자용 Agent 플랫폼을 개발하고, Kubernetes와 Ceph, LLM 추론 환경을 구축해 운영하고 있습니다. 서비스의 저장 오류와 응답 지연을 개선했으며, Agent로 만든 웹을 자동 배포하고 공유하는 copai-vibe 서비스도 개발했습니다.</p>
 
 <p><a href="#work-projects">업무 프로젝트 보기 ↓</a> / <a href="https://data.kfri.re.kr/">데이터플랫폼 ↗</a></p>
 <hr>
 
 <h4>주요 결과</h4>
-<ul><li><strong>RAG 문서 처리 10분 이상 → 약 4분</strong></li><li><strong>Agent 채팅 초기 처리 4.2초 → 0.14초</strong></li><li><strong>주문배송 배송장 매칭 조회 32.176초 → 1.862초</strong></li><li><strong>기존 컨테이너 서비스 전체 이관</strong> / Kubernetes 클러스터로 통합</li></ul>
+<ul><li><strong>RAG 문서 처리 10분 이상 → 약 4분</strong></li><li><strong>Agent 채팅 초기 처리 4.2초 → 0.14초</strong></li><li><strong>운송장 매칭 화면 초기 표시 32.176초 → 1.862초</strong></li><li><strong>운영 서비스 Kubernetes 이관 완료</strong></li></ul>
 </td></tr>
 </table>
 
@@ -87,11 +87,10 @@
 <a href="https://data.kfri.re.kr/"><img src="./assets/data-platform-card-v7.png" alt="식품데이터플랫폼 공개 홈페이지의 소개와 검색 영역 실제 캡처" width="100%"></a>
 <h3>01. 식품데이터플랫폼</h3>
 <p><strong>수행 경력</strong> 2025.09 - 현재</p>
-<p>연구자가 데이터관리계획을 작성하는 플랫폼의 화면과 API를 개선하고, 자료 검색과 문서 초안 작성을 돕는 RAG 기능을 개발했습니다. 연구자는 계획서를 작성할 때 관련 자료와 지침을 직접 찾아 초안을 정리해야 했습니다. 이 작업을 줄이면서 기존 작성 화면에서 검색과 초안 작성을 이어 갈 수 있도록 AI 기능을 연결했습니다.</p>
-<p>기존 React와 Spring Boot 서비스에 Python 기반 문서 처리와 검색을 연결하기 위해 FastAPI로 AI 서비스를 분리하고 LlamaIndex로 RAG를 구성했습니다. 외부 반출이 제한된 연구자료는 로컬 LLM으로 처리하고, 생성이 끝나기 전에도 진행 상황을 알 수 있도록 SSE로 중간 상태와 결과를 전달했습니다. 반복되는 LLM 호출을 줄여 문서 처리 시간을 10분 이상에서 약 4분으로 단축했으며, 연구자와 팀원들이 실제 작성 순서에 따라 기능을 함께 검수했습니다.</p>
+<p>데이터관리계획 작성 화면과 API를 개선하고, 연구자료 검색과 문서 초안 작성을 돕는 RAG를 연결했습니다.</p>
 <hr>
 <h4>주요 결과</h4>
-<ul><li><strong>문서 처리 시간 10분 이상 → 약 4분</strong><br>반복되는 LLM 호출을 줄여 문서 처리 시간을 단축했습니다.</li><li><strong>입력 화면 개선부터 문서 초안 작성까지 연결</strong><br>긴 입력 화면을 탭으로 바꾸고, 자료 검색과 초안 작성 기능을 기존 플랫폼에서 이용하도록 개발했습니다.</li></ul>
+<ul><li><strong>반복 저장 시 중복과 참조 오류 개선</strong><br>전체 삭제 후 재삽입하던 저장 방식을 변경 항목만 갱신하도록 바꾸고, 화면과 서버의 데이터 식별자를 동기화했습니다.</li><li><strong>RAG 문서 처리 10분 이상 → 약 4분</strong><br>처리 과정에서 반복되던 LLM 호출을 줄였습니다.</li></ul>
 <p><strong>사용 기술</strong><br><img src="./assets/tech/react.png" alt="react" height="24"> <img src="./assets/tech/springboot.png" alt="springboot" height="24"> <img src="./assets/tech/fastapi.png" alt="fastapi" height="24"> <img src="./assets/tech/llamaindex.png" alt="llamaindex" height="24"> <img src="./assets/tech/sse.png" alt="sse" height="24"></p>
 <p><a href="https://data.kfri.re.kr/">공개 웹사이트 ↗</a><br>업무 프로젝트 / 코드 비공개</p>
 </td></tr>
@@ -103,12 +102,10 @@
 <img src="./assets/copai-screen-redacted-v18.png" alt="사용자 제공 COPAI 화면: 대화와 파일 저장소, 식별정보와 심볼 비식별 처리" width="100%">
 <h3>02. COPAI / 연구자용 Agent 플랫폼</h3>
 <p><strong>수행 경력</strong> 2025.09 - 현재</p>
-<p>연구자가 개인 작업공간에서 AI Agent를 실행하고 설정과 Skills, 도구를 공유하는 플랫폼을 제안하고 직접 설계·개발했습니다. 외부 AI에는 기밀 연구자료를 올릴 수 없었고, 개인이 만든 활용법과 도구는 다른 연구자가 재사용하기 어려웠습니다. 연구자별 VM만 제공하는 초기안에서 나아가, 내부 모델을 이용하면서 개인 작업은 분리하고 활용 자산은 공유하는 플랫폼을 제안했습니다.</p>
-<p>계정과 작업환경은 중앙 플랫폼에서 관리하고, 개인 파일과 세션 및 Agent 실행은 사용자별 Gateway에서 처리하도록 나눴습니다. Agent를 교체할 때 중앙 서비스까지 수정하지 않도록 중간 제어 계층을 두었습니다. 운영 중에는 화면, Gateway, 모델 호출 기록을 대조해 지연 구간을 찾았고, 채팅 요청마다 반복하던 저장소 검사를 개선해 초기 처리 시간을 4.2초에서 0.14초로 줄였습니다.</p>
-<p>연구자가 Agent로 만든 웹을 다른 사용자에게 배포하고 공유할 수 있도록, 플랫폼과 연동하는 copai-vibe 서비스도 개발했습니다. 사용자가 만든 웹을 Kubernetes 환경에 자동 배포하고 공유하도록 구현했습니다.</p>
+<p>개인 작업공간을 분리하면서 설정과 Skills, 도구를 공유하는 연구자용 Agent 플랫폼을 제안하고 개발했습니다. 만든 웹을 자동 배포하고 공유하는 copai-vibe 서비스도 연결했습니다.</p>
 <hr>
 <h4>주요 결과</h4>
-<ul><li><strong>플랫폼 제안부터 실행환경과 공유 기능까지 직접 개발</strong><br>기관 계정 연동, 개인 작업환경 관리, 설정과 도구 공유, 모델 호출과 사용량 조회를 구현했습니다.</li><li><strong>copai-vibe 웹 자동 배포 및 공유 서비스 개발</strong><br>Kubernetes 환경에서 Agent 플랫폼과 연동해 사용자가 만든 웹을 자동 배포하고 공유하도록 구현했습니다.</li><li><strong>채팅 초기 처리 시간 4.2초 → 0.14초</strong><br>채팅 요청마다 반복하던 저장소 검사 방식을 개선해 초기 처리 시간을 줄였습니다.</li></ul>
+<ul><li><strong>채팅 초기 처리 4.2초 → 0.14초</strong><br>요청마다 반복하던 저장소 검사를 개선하고, 계정과 권한 변경은 다음 요청에도 반영되도록 유지했습니다.</li><li><strong>응답이 끊긴 작업의 복구 처리</strong><br>서버가 작업을 수락했는지 확인한 뒤 복구하도록 바꿔, 불확실한 요청을 재전송할 때 생기는 중복 실행을 피했습니다.</li></ul>
 <p><strong>사용 기술</strong><br><img src="./assets/tech/nestjs.png" alt="nestjs" height="24"> <img src="./assets/tech/fastify.png" alt="fastify" height="24"> <img src="./assets/tech/vllm.png" alt="vllm" height="24"> <img src="./assets/tech/litellm.png" alt="litellm" height="24"> <img src="./assets/tech/ldap.png" alt="ldap" height="24"></p>
 <p>기관 로그인 필요 / 코드 비공개</p>
 </td></tr>
@@ -122,12 +119,10 @@
 <img src="./assets/jeju-card-v7.png" alt="주문배송 업무를 돕는 범고래로 그린 제주TP 프로젝트 소개 카드" width="100%">
 <h3>03. 제주TP 연계 주문배송 관리</h3>
 <p><strong>기간</strong> 2026.04 - 2026.10</p>
-<p>주문 접수부터 배송과 취소, 재고 관리까지 처리하는 웹서비스를 개발하고 운송장 매칭 화면의 조회 구조를 개선했습니다. 배송 업무에서는 연관 주문을 함께 대조해 합배송 여부와 확인이 필요한 주문을 판단해야 했습니다. 사용자는 전체 주문을 페이지 전환 없이 스크롤하며 확인하기를 원했습니다.</p>
-<p>기존에는 전체 데이터를 브라우저로 보낸 뒤 필터링해 처음 화면을 보는 데도 오래 기다려야 했습니다. 화면에 표시할 주문만 먼저 읽으면 합배송 판단에 필요한 연관 주문이 빠질 수 있어, 서버에서 연관 주문과 확인 필요 여부를 먼저 판정한 뒤 검색과 필터, 정렬을 적용했습니다. 화면에는 판정이 끝난 데이터를 구간별로 전송해 전체 목록을 이어 볼 수 있게 했습니다.</p>
-<p>OpenSearch 집계에 필요한 묶음 키도 조회할 때마다 계산하지 않고 저장할 때 생성하도록 옮겼습니다. 집계값에 오차가 생긴 근사 집계는 제외하고 정확 집계를 유지했습니다. 업무 판정과 집계 정확성을 지키면서 운송장 매칭 화면의 초기 표시 시간을 32.176초에서 1.862초로 줄였습니다.</p>
+<p>주문 접수와 배송, 취소, 재고를 관리하는 웹서비스를 개발하고 카카오 Kanana 기반 AI 처리를 연결했습니다.</p>
 <hr>
 <h4>주요 결과</h4>
-<ul><li><strong>운송장 매칭 화면 초기 표시 32.176초 → 1.862초</strong><br>서버 조회와 OpenSearch 집계, 화면 전송을 개선해 초기 화면 표시 시간을 줄였습니다.</li><li><strong>업무 판정을 보존한 서버 처리 구조로 변경</strong><br>필터링 전 연관 주문을 구성하고, 조회 결과의 ID와 중복, 누락을 확인했습니다.</li><li><strong>제한된 장비에서 로컬 AI 기능 제공</strong><br>서비스 설치 장비의 자원을 고려해 카카오 Kanana 모델을 배포하고 연결했습니다.</li></ul>
+<ul><li><strong>운송장 매칭 화면 초기 표시 32.176초 → 1.862초</strong><br>연관 주문을 함께 확인하는 업무 방식을 유지하면서 서버 조회와 집계, 화면 전송을 개선했습니다.</li><li><strong>제한된 장비에서 배송메시지 처리</strong><br>날짜와 발송인처럼 규칙으로 확정할 수 있는 항목은 먼저 처리하고, 불확실한 항목에만 Kanana를 적용했습니다.</li></ul>
 <p><strong>사용 기술</strong><br><img src="./assets/tech/react.png" alt="react" height="24"> <img src="./assets/tech/fastapi.png" alt="fastapi" height="24"> <img src="./assets/tech/opensearch.png" alt="opensearch" height="24"> <img src="./assets/tech/kanana.png" alt="kanana" height="24"></p>
 <p>업무 프로젝트 / 코드 비공개</p>
 </td></tr>
@@ -139,11 +134,10 @@
 <img src="./assets/docker-to-kubernetes.drawio.png" alt="Docker에서 Kubernetes로 서비스를 이관한 구성을 실제 기술 로고로 표시" width="100%">
 <h3>04. Kubernetes 클러스터 구축 및 서비스 이관</h3>
 <p><strong>수행 경력</strong> 2025.09 - 현재</p>
-<p>서버별 Docker 컨테이너 운영 환경을 Kubernetes로 전환하고, 기존 컨테이너 서비스를 모두 이관했습니다. Portainer와 CLI로 서버마다 컨테이너를 관리하면 서비스의 실행 위치와 자원 할당도 개별 서버 단위로 다뤄야 했습니다. 서버 자원을 통합해 관리하고 Agent와 검색 등 내부 서비스를 특정 서버에 고정하지 않고 배치하려고 Kubernetes 전환을 제안했습니다.</p>
-<p>Kubespray로 클러스터를 구축한 뒤 기존 데이터와 API, 복귀 경로를 보존하며 서비스를 옮기고 DB 복원과 실제 모델 추론을 확인했습니다. 코드 변경과 실제 배포 상태를 연결하려고 GitLab Runner의 이미지 빌드와 Argo CD의 배포 동기화를 구성했습니다. 직원들이 직접 서비스를 개발·배포할 환경을 마련하고 Prometheus와 Grafana로 운영 상태와 자원 사용량을 확인하도록 연결했습니다.</p>
+<p>서버마다 Docker 컨테이너를 관리하던 환경을 Kubernetes로 전환하고 운영 서비스를 모두 이관했습니다.</p>
 <hr>
 <h4>주요 결과</h4>
-<ul><li><strong>기존 컨테이너 서비스 전체 이관</strong><br>컨테이너로 운영하던 서비스를 Kubernetes 클러스터로 모두 이관했습니다.</li><li><strong>개발과 배포, 운영 확인을 연결</strong><br>직원들이 서비스를 개발하고 배포할 환경을 마련하고 Prometheus와 Grafana로 운영 지표를 확인하도록 구성했습니다.</li></ul>
+<ul><li><strong>기존 데이터와 서비스 연결을 보존한 이관</strong><br>DB 복원과 실제 모델 추론, HTTP 응답을 확인하며 서비스를 전환했습니다.</li><li><strong>배포로 인한 사용자 작업 중단 방지</strong><br>이미지 배포와 개인 실행 환경 교체를 분리해, 진행 중인 작업이 끝난 뒤 실행 환경을 교체하도록 구성했습니다.</li></ul>
 <p><strong>사용 기술</strong><br><img src="./assets/tech/docker.png" alt="docker" height="24"> <img src="./assets/tech/kubernetes.png" alt="kubernetes" height="24"> <img src="./assets/tech/kubespray.png" alt="kubespray" height="24"> <img src="./assets/tech/gitlab.png" alt="gitlab" height="24"> <img src="./assets/tech/argo.png" alt="argo" height="24"> <img src="./assets/tech/prometheus.png" alt="prometheus" height="24"> <img src="./assets/tech/grafana.png" alt="grafana" height="24"></p>
 <p>업무 프로젝트 / 코드 비공개</p>
 </td></tr>
@@ -157,12 +151,10 @@
 <img src="./assets/hadoop-to-ceph.drawio.png" alt="Hadoop에서 Ceph로 저장 구조를 전환하고 CephFS, RBD와 RGW를 구성한 경험" width="100%">
 <h3>05. Ceph 분산 스토리지 구축 및 데이터 이관</h3>
 <p><strong>수행 경력</strong> 2025.09 - 현재</p>
-<p>Ceph 분산 스토리지를 구축하고 Kubernetes에 연결해 서비스별 데이터 이관을 진행했습니다. 서비스를 특정 서버에 고정하지 않고 실행하려면, 실행 서버가 바뀌어도 기존 파일과 DB를 계속 사용할 저장소가 필요했습니다. 파일 중심의 Hadoop 구성에서 블록·파일·객체 저장소를 함께 제공할 수 있는 Ceph로 전환을 제안했습니다.</p>
-<p>개인 파일과 SQLite, 세션을 같은 시점으로 복원할 수 있도록 개인 작업공간에는 RBD를 선택했습니다. Gateway와 Agent가 같은 Pod에 있어 공용 파일 저장소가 필요하지 않았습니다. 공동 접근 자료는 CephFS, 모델 원본은 RGW로 구분하고 기존 모델 로딩 경로와 로컬 캐시는 유지하도록 설계했습니다.</p>
-<p>저장소 이관과 앱 변경을 동시에 하면 오류 원인을 구분하기 어려워, 기존 파일 경로와 DB 연결을 유지하며 저장소를 전환했습니다. DB 쓰기를 멈추고 일관된 상태로 옮긴 뒤 데이터 내용과 읽기·쓰기, 복구 동작을 대조해 전환한 서비스의 동작을 검증했습니다.</p>
+<p>실행 서버가 달라져도 기존 파일과 DB를 사용할 수 있도록 Ceph를 구축하고 Kubernetes에 연결했습니다.</p>
 <hr>
 <h4>주요 결과</h4>
-<ul><li><strong>서비스 접근 방식에 맞춘 저장소 설계와 연결</strong><br>RBD, CephFS, RGW의 역할을 구분하고 Ceph CSI로 Kubernetes 저장소와 연결했습니다.</li><li><strong>기존 연결을 유지한 서비스 이관과 검증</strong><br>전환한 서비스의 파일과 DB 내용을 대조하고 읽기, 쓰기와 응답을 확인했습니다.</li></ul>
+<ul><li><strong>서비스별 저장 방식 분리</strong><br>개인 작업공간, 공동 파일, 모델 원본의 접근 방식에 맞춰 RBD와 CephFS, RGW를 구분했습니다.</li><li><strong>데이터 이관 중 쓰기 충돌 방지</strong><br>기존 서비스의 쓰기를 중단하고 마지막 동기화를 마친 뒤 전환해, 기존 저장소와 새 저장소에 동시에 기록되지 않도록 했습니다.</li></ul>
 <p><strong>사용 기술</strong><br><img src="./assets/tech/ceph.png" alt="ceph" height="24"> <img src="./assets/tech/cephcsi.png" alt="cephcsi" height="24"> <img src="./assets/tech/cephfs.png" alt="cephfs" height="24"> <img src="./assets/tech/rbd.png" alt="rbd" height="24"> <img src="./assets/tech/rgw.png" alt="rgw" height="24"> <img src="./assets/tech/kubernetes.png" alt="kubernetes" height="24"></p>
 <p>업무 프로젝트 / 코드 비공개</p>
 </td></tr>
@@ -174,11 +166,10 @@
 <img src="./assets/llm-inference-service.drawio.png" alt="LiteLLM에서 vLLM으로 모델 호출을 연결하고 Solar Open 2와 Gemma 4 31B를 서빙하는 구성" width="100%">
 <h3>06. vLLM 기반 LLM 추론 서비스</h3>
 <p><strong>수행 경력</strong> 2025.09 - 현재</p>
-<p>내부 서비스가 연구자료를 외부에 보내지 않고 LLM을 이용할 수 있도록 로컬 추론 서비스를 구축했습니다. Agent가 계획과 도구 실행, 검증을 반복하며 추론 요청을 이어 가므로 동시 요청 처리와 GPU 메모리 관리가 필요했습니다. 여러 요청을 묶어 처리하는 continuous batching과 KV 캐시 관리를 제공하는 vLLM을 선택해 Solar Open 2와 Gemma 4 31B를 배포했습니다.</p>
-<p>각 서비스가 추론 서버에 직접 연결하면 모델 호출 설정과 사용량 확인을 따로 관리해야 하므로 LiteLLM을 공통 호출 지점으로 뒀습니다. 모델별 요청과 토큰 지표는 Prometheus와 Grafana에 연결했습니다. 내부 서비스가 같은 호출 방식으로 모델을 이용하고, 운영자가 모델 사용 현황과 호출 로그를 함께 확인할 수 있도록 구성했습니다.</p>
+<p>vLLM으로 로컬 LLM 추론 서비스를 구축하고 LiteLLM으로 모델 호출과 사용량 관측을 통합했습니다.</p>
 <hr>
 <h4>주요 결과</h4>
-<ul><li><strong>내부 서비스가 이용할 수 있는 LLM 추론 서비스 구축</strong><br>로컬 모델 배포와 병렬 추론, 공통 호출 연동을 구성했습니다.</li><li><strong>모델 호출과 사용량을 함께 확인하는 운영 구성</strong><br>모델별 요청과 토큰 사용 지표를 수집하고 시각화했습니다.</li></ul>
+<ul><li><strong>긴 입력으로 인한 후속 요청 대기 개선</strong><br>Gemma의 KV 캐시 예약 설정을 조정해 긴 입력이 뒤따르는 요청을 막는 문제에 대응했습니다.</li><li><strong>작업 길이를 고려한 모델 배치 비교</strong><br>입출력 길이별 응답 지연과 처리량을 비교하고, 실행 설정 차이를 구분해 운영 설정을 검토했습니다.</li></ul>
 <p><strong>사용 기술</strong><br><img src="./assets/tech/litellm.png" alt="litellm" height="24"> <img src="./assets/tech/vllm.png" alt="vllm" height="24"> <img src="./assets/tech/solaropen2.png" alt="solaropen2" height="24"> <img src="./assets/tech/gemma4.png" alt="gemma4" height="24"> <img src="./assets/tech/prometheus.png" alt="prometheus" height="24"> <img src="./assets/tech/grafana.png" alt="grafana" height="24"></p>
 <p>업무 프로젝트 / 코드 비공개</p>
 </td></tr>
