@@ -199,6 +199,7 @@
 <h4>주요 결과</h4>
 <ul><li><strong>앱 출시 및 공모전 최종 발표</strong><br>PM과 백엔드 개발을 맡아 앱을 출시하고 최종 발표까지 진행했습니다.</li><li><strong>외부 AI 호출 실패에 대응하는 대체 경로 구현</strong><br>Gemini 호출 실패 시 로컬 Qwen 모델을 활용하도록 구성했습니다.</li></ul>
 <p><strong>사용 기술</strong><br><img src="./assets/tech/reactnative.png" alt="reactnative" height="24"> <img src="./assets/tech/springboot.png" alt="springboot" height="24"> <img src="./assets/tech/mysql.png" alt="mysql" height="24"> <img src="./assets/tech/redis.png" alt="redis" height="24"> <img src="./assets/tech/gemini.png" alt="gemini" height="24"> <img src="./assets/tech/vllm.png" alt="vllm" height="24"></p>
+<p><a href="#architecture-07">아키텍처 보기 ↓</a></p>
 </td></tr>
 </table>
 
@@ -214,10 +215,31 @@
 <h4>주요 결과</h4>
 <ul><li><strong>여행 일정 추천 앱 개발 및 출시</strong><br>성향 설문과 관광, 날씨, 혼잡도 정보를 연결해 일정과 대안을 추천하는 백엔드와 AI 서비스를 개발했습니다.</li><li><strong>최신 일정과 사용자 승인에 따른 변경 반영</strong><br>승인 시 일정 버전을 확인하고 변경 뒤 이동경로를 다시 계산하도록 구현했습니다.</li></ul>
 <p><strong>사용 기술</strong><br><img src="./assets/tech/java.png" alt="java" height="24"> <img src="./assets/tech/springboot.png" alt="springboot" height="24"> <img src="./assets/tech/springai.png" alt="springai" height="24"> <img src="./assets/tech/postgres.png" alt="postgres" height="24"> <img src="./assets/tech/tourapi.png" alt="tourapi" height="24"></p>
+<p><a href="#architecture-08">아키텍처 보기 ↓</a></p>
 </td></tr>
 </table>
 
 <br clear="all">
+
+<a name="architecture-07"></a>
+<details>
+<summary><strong>07. Replant / 아키텍처</strong></summary>
+
+
+<p><a href="./assets/replant-service.drawio.png"><img src="./assets/replant-service.drawio.png" alt="Replant 구성 요소와 처리 흐름" width="100%"></a></p>
+
+<p><a href="./assets/replant-service.drawio.png">도식 크게 보기 ↗</a> / <a href="#project-07">프로젝트 설명 ↑</a></p>
+</details>
+
+<a name="architecture-08"></a>
+<details>
+<summary><strong>08. 가야디 / Gayadi / 아키텍처</strong></summary>
+
+
+<p><a href="./assets/gayadi-trip-and-ai.drawio.png"><img src="./assets/gayadi-trip-and-ai.drawio.png" alt="가야디 / Gayadi 구성 요소와 처리 흐름" width="100%"></a></p>
+
+<p><a href="./assets/gayadi-trip-and-ai.drawio.png">도식 크게 보기 ↗</a> / <a href="#project-08">프로젝트 설명 ↑</a></p>
+</details>
 
 <p><a href="#projects">프로젝트 목차 ↑</a></p>
 
@@ -243,6 +265,7 @@
 <h4>주요 결과</h4>
 <ul><li><strong>실행 계획 Agent와 Android 앱 구현</strong><br>Python Agent와 SafeShare 앱을 개발하고 확인한 공유 조건을 다음 세션에서도 활용하도록 구성했습니다.</li><li><strong>수만 건의 자체 변형 입력 테스트</strong><br>자체 테스트에서 예외와 출력 형식 위반이 발생하지 않는 것을 확인했습니다.</li></ul>
 <p><strong>사용 기술</strong><br><img src="./assets/tech/python.png" alt="python" height="24"> <img src="./assets/tech/kotlin.png" alt="kotlin" height="24"> <img src="./assets/tech/android.png" alt="android" height="24"></p>
+<p><a href="#architecture-09">아키텍처 보기 ↓</a></p>
 <p><a href="https://github.com/orqan137/scpc2026">공개 저장소 ↗</a> / <a href="./assets/scpc-safeshare-architecture.png">아키텍처 크게 보기 ↗</a></p>
 </td></tr>
 </table>
@@ -259,6 +282,7 @@
 <h4>주요 결과</h4>
 <ul><li><strong>검색과 계산을 연결한 연금 상담 파이프라인 구현</strong><br>질문 분류, 근거 검색, 세액공제 계산과 상품 비교를 답변 생성에 연결했습니다.</li><li><strong>답변 생성 후 수치와 인용 검증</strong><br>검증에 실패한 인용을 보완하고 확인되지 않은 내용을 답변에서 제외하도록 구현했습니다.</li></ul>
 <p><strong>사용 기술</strong><br><img src="./assets/tech/python.png" alt="python" height="24"> <img src="./assets/tech/fastapi.png" alt="fastapi" height="24"> <img src="./assets/tech/docker.png" alt="docker" height="24"> <img src="./assets/tech/hyperclovax.png" alt="hyperclovax" height="24"></p>
+<p><a href="#architecture-10">아키텍처 보기 ↓</a></p>
 <p><a href="https://github.com/orqan137/mirae_pj">공개 저장소 ↗</a> / <a href="./assets/mirae-pension-architecture.png">아키텍처 크게 보기 ↗</a></p>
 </td></tr>
 </table>
@@ -277,6 +301,7 @@
 <h4>주요 결과</h4>
 <ul><li><strong>상품 검색에 맞춘 검색 모델 개선 연구</strong><br>공동연구에서 SPLADE++의 활성화 함수를 GELU로 변경해 음수 가중치를 반영하고, 관련성이 낮은 상품의 순위를 조정하는 방법을 실험했습니다.</li><li><strong>상품 요약과 검색 결과 결합 비교</strong><br>T5로 상품 설명을 요약해 인덱싱하고 TAS-B, ColBERTv2의 검색 결과를 비교했습니다. 단일 모델과 검색 결과 결합 방식을 포함해 팀에서 12개 실험 결과를 제출했습니다.</li><li><strong>팀 제출 결과 NDCG 0.7595 / MAP 0.5805</strong><br>논문에 보고된 jbnu05의 평가 결과입니다. 상품 요약과 검색 모델 결합에 따른 결과를 비교하고, 공동저자로 TREC 2024 참가 논문을 작성했습니다.</li></ul>
 <p><strong>사용 기술</strong><br><img src="./assets/tech/python.png" alt="python" height="24"> <kbd>SPLADE++</kbd> <kbd>T5</kbd> <kbd>ColBERTv2</kbd> <kbd>TAS-B</kbd></p>
+<p><a href="#architecture-11">아키텍처 보기 ↓</a></p>
 <p><a href="https://trec.nist.gov/pubs/trec33/papers/jbnu.product.pdf">TREC 2024 참가 논문 ↗</a></p>
 </td></tr>
 </table>
@@ -293,11 +318,52 @@
 <h4>주요 결과</h4>
 <ul><li><strong>검색 의도를 반영한 검색어 재구성 연구</strong><br>LLM으로 검색어를 Lucene 형식으로 재구성하고, Qwen2.5-VL로 이미지의 시각 정보를 반영하는 방법을 비교했습니다. 팀 검색 실험 jbnu-s02의 NDCG는 0.2911로, 논문에 제시된 참가 결과 중앙값 0.2832를 상회했습니다.</li><li><strong>상품 관계 분류를 활용한 추천 순위 조정</strong><br>ColBERTv2와 SPLADE로 후보 상품을 검색한 뒤, Qwen3-14B 또는 ModernBERT로 대체재, 보완재, 무관 상품을 분류해 순위를 다시 정하는 구조를 연구했습니다.</li><li><strong>팀 추천 결과와 모델별 차이 검증</strong><br>보완재 추천 jbnu-r01은 NDCG@10 0.1864, 대체재 추천 jbnu-r02는 0.4927을 기록했습니다. 관계 유형과 평가 지표별로 LLM과 BERT 기반 분류 결과를 비교했습니다.</li></ul>
 <p><strong>사용 기술</strong><br><img src="./assets/tech/python.png" alt="python" height="24"> <kbd>Pyserini</kbd> <kbd>ColBERTv2</kbd> <img src="./assets/tech/qwen.png" alt="Qwen" height="24"> <kbd>ModernBERT</kbd></p>
+<p><a href="#architecture-12">아키텍처 보기 ↓</a></p>
 <p><a href="https://trec.nist.gov/pubs/trec34/papers/JBNU.product.pdf">TREC 2025 참가 논문 ↗</a></p>
 </td></tr>
 </table>
 
 <br clear="all">
+
+<a name="architecture-09"></a>
+<details>
+<summary><strong>09. SCPC 2026 AI Challenge / 아키텍처</strong></summary>
+
+
+<p><a href="./assets/scpc-two-rounds.drawio.png"><img src="./assets/scpc-two-rounds.drawio.png" alt="SCPC 2026 AI Challenge 구성 요소와 처리 흐름" width="100%"></a></p>
+
+<p><a href="./assets/scpc-two-rounds.drawio.png">도식 크게 보기 ↗</a> / <a href="#project-09">프로젝트 설명 ↑</a></p>
+</details>
+
+<a name="architecture-10"></a>
+<details>
+<summary><strong>10. 연금 어드바이저 / mirae_pj / 아키텍처</strong></summary>
+
+
+<p><a href="./assets/pension-evidence-and-tools.drawio.png"><img src="./assets/pension-evidence-and-tools.drawio.png" alt="연금 어드바이저 / mirae_pj 구성 요소와 처리 흐름" width="100%"></a></p>
+
+<p><a href="./assets/pension-evidence-and-tools.drawio.png">도식 크게 보기 ↗</a> / <a href="#project-10">프로젝트 설명 ↑</a></p>
+</details>
+
+<a name="architecture-11"></a>
+<details>
+<summary><strong>11. TREC 2024 Product Search / 아키텍처</strong></summary>
+
+
+<p><a href="./assets/trec2024-retrieval.drawio.png"><img src="./assets/trec2024-retrieval.drawio.png" alt="TREC 2024 Product Search 구성 요소와 처리 흐름" width="100%"></a></p>
+
+<p><a href="./assets/trec2024-retrieval.drawio.png">도식 크게 보기 ↗</a> / <a href="#project-11">프로젝트 설명 ↑</a></p>
+</details>
+
+<a name="architecture-12"></a>
+<details>
+<summary><strong>12. TREC 2025 Product Search &amp; Recommendations / 아키텍처</strong></summary>
+
+
+<p><a href="./assets/trec2025-intent-relations.drawio.png"><img src="./assets/trec2025-intent-relations.drawio.png" alt="TREC 2025 Product Search &amp; Recommendations 구성 요소와 처리 흐름" width="100%"></a></p>
+
+<p><a href="./assets/trec2025-intent-relations.drawio.png">도식 크게 보기 ↗</a> / <a href="#project-12">프로젝트 설명 ↑</a></p>
+</details>
 
 <p><a href="#projects">프로젝트 목차 ↑</a></p>
 
@@ -320,10 +386,21 @@
 <h4>주요 결과</h4>
 <ul><li><strong>언어모델 학습 과정 구성 및 수행</strong><br>데이터 준비와 토크나이저 구성, 사전학습부터 CPT, SFT, DPO까지 진행했습니다.</li><li><strong>학습 단계별 평가와 응답 비교</strong><br>공개 한국어 벤치마크와 자체 진단 문항으로 결과를 비교했습니다.</li></ul>
 <p><strong>사용 기술</strong><br><img src="./assets/tech/python.png" alt="python" height="24"> <img src="./assets/tech/llama.png" alt="llama" height="24"></p>
+<p><a href="#architecture-13">아키텍처 보기 ↓</a></p>
 </td></tr>
 </table>
 
 <br clear="all">
+
+<a name="architecture-13"></a>
+<details>
+<summary><strong>13. K-Policy-LLM / 아키텍처</strong></summary>
+
+
+<p><a href="./assets/kpolicy-training-evaluation.drawio.png"><img src="./assets/kpolicy-training-evaluation.drawio.png" alt="K-Policy-LLM 구성 요소와 처리 흐름" width="100%"></a></p>
+
+<p><a href="./assets/kpolicy-training-evaluation.drawio.png">도식 크게 보기 ↗</a> / <a href="#project-13">프로젝트 설명 ↑</a></p>
+</details>
 
 <p><a href="#projects">프로젝트 목차 ↑</a></p>
 
@@ -350,6 +427,7 @@
 <h4>주요 결과</h4>
 <ul><li><strong>자료 수집부터 한국어 요약까지 자동화</strong><br>EventBridge와 Lambda로 자료를 주기적으로 수집하고, Bedrock의 요약과 Translate의 번역 기능을 연결했습니다.</li><li><strong>수집 결과 저장과 알림 처리 구현</strong><br>처리 결과를 S3와 DynamoDB에 저장하고 SQS와 SNS를 활용해 새 공시 알림을 처리하도록 구성했습니다.</li></ul>
 <p><strong>사용 기술</strong><br><img src="./assets/tech/aws.png" alt="aws" height="24"> <img src="./assets/tech/react.png" alt="react" height="24"></p>
+<p><a href="#architecture-14">아키텍처 보기 ↓</a></p>
 <p><a href="./assets/aws-class-architecture.png">아키텍처 크게 보기 ↗</a> / <a href="https://youtu.be/vj_fyFRyBtQ">프로젝트 시연 영상 ↗</a></p>
 </td></tr>
 </table>
@@ -364,6 +442,7 @@
 <h4>주요 결과</h4>
 <ul><li><strong>조건별 장소 탐색 기능 구현</strong><br>Next.js와 nestJS로 검색 화면과 API를 구성해 사용자가 입력한 조건에 맞는 장소 정보를 제공했습니다.</li><li><strong>서비스 데이터 구조 설계 및 연동</strong><br>MySQL과 TypeORM으로 장소, 회원, 게시글, 평가 데이터를 관리하고 조회 기능에 연결했습니다.</li></ul>
 <p><strong>사용 기술</strong><br><img src="./assets/tech/nextjs.png" alt="nextjs" height="24"> <img src="./assets/tech/ts.png" alt="ts" height="24"> <img src="./assets/tech/nestjs.png" alt="nestjs" height="24"> <img src="./assets/tech/mysql.png" alt="mysql" height="24"></p>
+<p><a href="#architecture-15">아키텍처 보기 ↓</a></p>
 <p><a href="https://github.com/highcastle01/path_recom_db_pj">공개 저장소 ↗</a></p>
 </td></tr>
 </table>
@@ -380,11 +459,42 @@
 <h4>주요 결과</h4>
 <ul><li><strong>영화 탐색 화면과 로그인 기능 구현</strong><br>React와 TypeScript로 영화 탐색 화면을 만들고, 후속 과제에서 카카오 로그인을 구현했습니다.</li><li><strong>API 개발과 문서화</strong><br>별도 API 과제에서 Express와 MySQL을 활용해 서버를 개발하고 Swagger로 API 문서를 작성했습니다.</li><li><strong>프론트엔드 배포 자동화</strong><br>GitHub Actions와 GitHub Pages를 연결해 코드 변경 시 배포가 실행되도록 구성했습니다.</li></ul>
 <p><strong>사용 기술</strong><br><img src="./assets/tech/react.png" alt="react" height="24"> <img src="./assets/tech/ts.png" alt="ts" height="24"> <img src="./assets/tech/express.png" alt="express" height="24"> <img src="./assets/tech/mysql.png" alt="mysql" height="24"> <img src="./assets/tech/githubactions.png" alt="githubactions" height="24"></p>
+<p><a href="#architecture-16">아키텍처 보기 ↓</a></p>
 <p><a href="https://github.com/highcastle01/wsd-assignment-02">영화 탐색 화면 ↗</a> / <a href="https://github.com/highcastle01/WSD-Assignment-03">API 과제 ↗</a> / <a href="https://github.com/highcastle01/WSD-Assignment-04">카카오 로그인 ↗</a></p>
 </td></tr>
 </table>
 
 <br clear="all">
+
+<a name="architecture-14"></a>
+<details>
+<summary><strong>14. AWS 기반 미국 공시 및 뉴스 요약 서비스 / 아키텍처</strong></summary>
+
+
+<p><a href="./assets/aws-disclosure-pipeline.drawio.png"><img src="./assets/aws-disclosure-pipeline.drawio.png" alt="AWS 기반 미국 공시 및 뉴스 요약 서비스 구성 요소와 처리 흐름" width="100%"></a></p>
+
+<p><a href="./assets/aws-disclosure-pipeline.drawio.png">도식 크게 보기 ↗</a> / <a href="#project-14">프로젝트 설명 ↑</a></p>
+</details>
+
+<a name="architecture-15"></a>
+<details>
+<summary><strong>15. 조건별 장소 검색 웹서비스 / 아키텍처</strong></summary>
+
+
+<p><a href="./assets/places-web-database.drawio.png"><img src="./assets/places-web-database.drawio.png" alt="조건별 장소 검색 웹서비스 구성 요소와 처리 흐름" width="100%"></a></p>
+
+<p><a href="./assets/places-web-database.drawio.png">도식 크게 보기 ↗</a> / <a href="#project-15">프로젝트 설명 ↑</a></p>
+</details>
+
+<a name="architecture-16"></a>
+<details>
+<summary><strong>16. 웹서비스설계 과제 / 아키텍처</strong></summary>
+
+
+<p><a href="./assets/wsd-separate-assignments.drawio.png"><img src="./assets/wsd-separate-assignments.drawio.png" alt="웹서비스설계 과제 구성 요소와 처리 흐름" width="100%"></a></p>
+
+<p><a href="./assets/wsd-separate-assignments.drawio.png">도식 크게 보기 ↗</a> / <a href="#project-16">프로젝트 설명 ↑</a></p>
+</details>
 
 <p><a href="#projects">프로젝트 목차 ↑</a></p>
 
@@ -408,6 +518,7 @@
 <h4>주요 결과</h4>
 <ul><li><strong>동아리 홈페이지 개발과 메인 화면 구성 조정</strong><br>게시판과 모집, 활동 관리 기능을 개발하고 공지와 자료에 우선 접근하도록 화면을 구성했습니다.</li><li><strong>개발 동아리 회장 활동</strong><br>스터디와 멘토링을 진행하며 동아리 학습 활동을 운영했습니다.</li></ul>
 <p><strong>사용 기술</strong><br><img src="./assets/tech/react.png" alt="react" height="24"> <img src="./assets/tech/ts.png" alt="ts" height="24"> <img src="./assets/tech/springboot.png" alt="springboot" height="24"> <img src="./assets/tech/postgres.png" alt="postgres" height="24"> <img src="./assets/tech/redis.png" alt="redis" height="24"></p>
+<p><a href="#architecture-17">아키텍처 보기 ↓</a></p>
 <p><a href="https://coala.jbnu.ac.kr/">coala.jbnu.ac.kr ↗</a><br><a href="https://github.com/JBNU-COALA/coala-web-fe">Frontend</a> / <a href="https://github.com/JBNU-COALA/coala-web-be-main">Backend</a> / <a href="https://github.com/JBNU-COALA">GitHub 조직</a></p>
 </td></tr>
 </table>
@@ -423,11 +534,32 @@
 <h4>주요 결과</h4>
 <ul><li><strong>동아리 커뮤니티 기능 개발</strong><br>React와 Django 기반 웹사이트에서 게시판과 댓글, 공지, 스터디 및 프로젝트 모집 기능을 개발했습니다.</li><li><strong>회원 인증과 운영 기능 구현</strong><br>회원 인증과 이메일 처리, 관리자 기능을 구성해 회원 활동과 게시물을 관리하도록 구현했습니다.</li></ul>
 <p><strong>사용 기술</strong><br><img src="./assets/tech/react.png" alt="react" height="24"> <img src="./assets/tech/ts.png" alt="ts" height="24"> <img src="./assets/tech/django.png" alt="django" height="24"> <img src="./assets/tech/python.png" alt="python" height="24"></p>
+<p><a href="#architecture-18">아키텍처 보기 ↓</a></p>
 <p><a href="https://jbig.co.kr/">jbig.co.kr ↗</a><br><a href="https://github.com/dev-JBIG/jbig_frontend">Frontend</a> / <a href="https://github.com/dev-JBIG/jbig_backend">Backend</a> / <a href="https://github.com/dev-JBIG">GitHub 조직</a></p>
 </td></tr>
 </table>
 
 <br clear="all">
+
+<a name="architecture-17"></a>
+<details>
+<summary><strong>17. COALA 홈페이지 / 아키텍처</strong></summary>
+
+
+<p><a href="./assets/coala-community.drawio.png"><img src="./assets/coala-community.drawio.png" alt="COALA 홈페이지 구성 요소와 처리 흐름" width="100%"></a></p>
+
+<p><a href="./assets/coala-community.drawio.png">도식 크게 보기 ↗</a> / <a href="#project-17">프로젝트 설명 ↑</a></p>
+</details>
+
+<a name="architecture-18"></a>
+<details>
+<summary><strong>18. JBIG CAFE / 아키텍처</strong></summary>
+
+
+<p><a href="./assets/jbig-community.drawio.png"><img src="./assets/jbig-community.drawio.png" alt="JBIG CAFE 구성 요소와 처리 흐름" width="100%"></a></p>
+
+<p><a href="./assets/jbig-community.drawio.png">도식 크게 보기 ↗</a> / <a href="#project-18">프로젝트 설명 ↑</a></p>
+</details>
 
 <p><a href="#projects">프로젝트 목차 ↑</a></p>
 
