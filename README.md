@@ -82,7 +82,7 @@
 <table align="left" width="400">
 <tr><td width="400" valign="top">
 <a name="project-01"></a>
-<a href="https://data.kfri.re.kr/"><img src="./assets/data-platform-card-v7.png" alt="식품데이터플랫폼 공개 홈페이지의 소개와 검색 영역 실제 캡처" width="100%"></a>
+<a href="https://data.kfri.re.kr/"><img src="./assets/data-platform-screen-20261017.png" alt="식품데이터플랫폼 공개 홈페이지의 소개와 검색 영역 실제 캡처" width="100%"></a>
 <h3>01. 식품데이터플랫폼</h3>
 <p><strong>수행 경력</strong> 2025.09 - 현재</p>
 <p>연구자가 계획서를 작성하고 이전 자료를 참고할 수 있도록 데이터관리계획 화면과 API를 개선하고, 연구자료 검색과 문서 초안 작성을 돕는 RAG를 연결했습니다.</p>
