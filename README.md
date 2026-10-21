@@ -29,13 +29,13 @@
 <p><strong>소속 / 직위</strong> AI정보실 / 학생연구원</p>
 <p><strong>재직 기간</strong> 2025.09–현재</p>
 <p><strong>AI 서비스와 백엔드 개발, 온프레미스 인프라 구축 및 운영</strong></p>
-<p>데이터플랫폼과 연구자용 Agent 플랫폼을 개발하고, Kubernetes와 Ceph, LLM 추론 환경을 구축해 운영하고 있습니다. 서비스의 저장 오류와 응답 지연을 개선했으며, Agent로 만든 웹을 자동 배포하고 공유하는 copai-vibe 서비스도 개발했습니다.</p>
+<p>자료 반출 제약에 맞춰 로컬 LLM 기반 AI 서버를 설계하고 데이터플랫폼에 연결했습니다. 연구자용 Agent 플랫폼과 Kubernetes 전환을 직접 제안해 개발과 구축을 맡았습니다. 서비스의 응답 지연을 개선하고 웹 자동 배포 및 공유 서비스도 직접 개발했습니다.</p>
 
 <p><a href="#work-projects">업무 프로젝트 보기 ↓</a> / <a href="https://data.kfri.re.kr/">데이터플랫폼 ↗</a></p>
 <hr>
 
 <h4>주요 결과</h4>
-<ul><li><strong>RAG 문서 처리 10분 이상 → 약 4분</strong></li><li><strong>Agent 채팅 초기 처리 4.2초 → 0.14초</strong></li><li><strong>운송장 매칭 화면 초기 표시 32.176초 → 1.862초</strong></li><li><strong>운영 서비스 Kubernetes 이관 완료</strong></li></ul>
+<ul><li><strong>RAG 문서 처리 평균 3분 이하</strong></li><li><strong>Agent 요청 준비 4.2초 → 0.14초</strong></li><li><strong>운송장 매칭 화면 초기 표시 32.176초 → 1.862초</strong></li><li><strong>기존 컨테이너 서비스 Kubernetes 이관 완료</strong></li></ul>
 </td></tr>
 </table>
 
@@ -85,10 +85,10 @@
 <a href="https://data.kfri.re.kr/"><img src="./assets/data-platform-screen-20261017.png" alt="식품데이터플랫폼 공개 홈페이지의 소개와 검색 영역 실제 캡처" width="100%"></a>
 <h3>01. 식품데이터플랫폼</h3>
 <p><strong>수행 경력</strong> 2025.09 - 현재</p>
-<p>연구자가 계획서를 작성하고 이전 자료를 참고할 수 있도록 데이터관리계획 화면과 API를 개선하고, 연구자료 검색과 문서 초안 작성을 돕는 RAG를 연결했습니다.</p>
+<p>연구자의 자료 검색과 데이터관리계획 초안 작성을 돕는 AI 서버를 직접 설계하고 기존 데이터플랫폼에 연결했습니다. 자료 반출 제약에 맞춰 원내 로컬 LLM을 선택했으며 FastAPI와 LlamaIndex로 검색과 초안 생성 기능을 구현했습니다.</p>
 <hr>
 <h4>주요 결과</h4>
-<ul><li><strong>반복 저장 시 중복과 참조 오류 개선</strong><br>전체 재삽입으로 데이터 식별자가 바뀌는 문제를 막으려고 변경 항목만 갱신하고, 서버가 발급한 식별자를 화면과 동기화했습니다.</li><li><strong>RAG 문서 처리 10분 이상 → 약 4분</strong><br>처리 과정에서 반복되던 LLM 호출을 줄였습니다.</li></ul>
+<ul><li><strong>작성 화면과 AI 진행 상태 개선</strong><br>반복 스크롤이 필요했던 작성 화면을 탭 구조로 바꾸고 서비스 API를 개발했습니다. 검색과 도구 호출 상태는 SSE로 전달하고 연결 종료와 API 예외를 처리했습니다.</li><li><strong>RAG 문서 처리 평균 3분 이하</strong><br>처리 과정에서 반복되던 LLM 호출을 줄여 품질을 유지하면서 평균 처리 시간을 3분 이하로 단축했습니다.</li></ul>
 <p><strong>사용 기술</strong><br><img src="./assets/tech/react.png" alt="react" height="24"> <img src="./assets/tech/springboot.png" alt="springboot" height="24"> <img src="./assets/tech/fastapi.png" alt="fastapi" height="24"> <img src="./assets/tech/llamaindex.png" alt="llamaindex" height="24"> <img src="./assets/tech/sse.png" alt="sse" height="24"></p>
 <p><a href="https://data.kfri.re.kr/">공개 웹사이트 ↗</a><br>업무 프로젝트 / 코드 비공개</p>
 </td></tr>
@@ -100,10 +100,11 @@
 <img src="./assets/copai-screen-redacted-v18.png" alt="사용자 제공 COPAI 화면: 대화와 파일 저장소, 식별정보와 심볼 비식별 처리" width="100%">
 <h3>02. COPAI / 연구자용 Agent 플랫폼</h3>
 <p><strong>수행 경력</strong> 2025.09 - 현재</p>
-<p>개인 파일을 분리하면서 검증한 설정과 Skills, 도구는 함께 활용할 수 있도록 연구자용 Agent 플랫폼을 제안하고 개발했습니다. 만든 웹을 다른 사용자도 이용할 수 있도록 copai-vibe 자동 배포·공유 서비스를 연결했습니다.</p>
+<p>기밀자료를 내부에서 처리하고 검증된 AI 활용법과 도구를 함께 쓸 수 있도록 연구자용 Agent 플랫폼을 제안하고 직접 설계했습니다. 개인별 VM 제공만으로는 활용법이 흩어진다고 판단해 개인 실행환경과 공유 자산을 함께 관리하도록 구성했습니다.</p>
+<p>플랫폼과 Agent 사이에 요청 전달과 통제를 맡는 중간 제어 계층을 두어 Agent를 교체할 수 있도록 설계했습니다. Agent로 만든 웹서비스를 배포하고 공유하는 Vibe 서비스도 직접 개발했습니다.</p>
 <hr>
 <h4>주요 결과</h4>
-<ul><li><strong>채팅 초기 처리 4.2초 → 0.14초</strong><br>요청마다 반복하던 저장소 검사를 개선하고, 계정과 권한 변경은 다음 요청에도 반영되도록 유지했습니다.</li><li><strong>응답이 끊긴 작업의 복구 처리</strong><br>서버가 작업을 수락했는지 확인한 뒤 복구하도록 바꿔, 불확실한 요청을 재전송할 때 생기는 중복 실행을 피했습니다.</li></ul>
+<ul><li><strong>요청 준비 시간 4.2초 → 0.14초</strong><br>저장소 전체 검사로 요청이 지연돼 최신의 정확한 검사 결과를 재사용하고 용량 보호 검사는 별도로 수행하도록 바꿨습니다. 요청별 권한 확인과 파일 쓰기 시 정확한 검사는 유지했습니다. 수치는 특정 인스턴스에서 요청 접수부터 정보 준비까지 측정한 시간입니다.</li><li><strong>재연결 시 중복 실행 요청 방지</strong><br>연결이 끊겼을 때 서버의 요청 수락 상태를 먼저 확인하도록 바꿔 동일한 실행 요청이 중복 전송되지 않도록 했습니다.</li></ul>
 <p><strong>사용 기술</strong><br><img src="./assets/tech/nestjs.png" alt="nestjs" height="24"> <img src="./assets/tech/fastify.png" alt="fastify" height="24"> <img src="./assets/tech/vllm.png" alt="vllm" height="24"> <img src="./assets/tech/litellm.png" alt="litellm" height="24"> <img src="./assets/tech/ldap.png" alt="ldap" height="24"></p>
 <p>기관 로그인 필요 / 코드 비공개</p>
 </td></tr>
@@ -117,11 +118,10 @@
 <img src="./assets/jeju-card-v7.png" alt="주문배송 업무를 돕는 범고래로 그린 제주TP 프로젝트 소개 카드" width="100%">
 <h3>03. 제주TP 연계 주문배송 관리</h3>
 <p><strong>기간</strong> 2026.04 - 2026.10</p>
-<p>주문 접수와 배송, 취소, 재고를 관리하는 웹서비스를 개발했습니다. 연관 주문을 대조하는 업무 방식은 유지하면서 조회를 개선하고, 배송메시지 처리에는 카카오 Kanana를 연결했습니다.</p>
-<p>업체 직원분들이 요청한 세세한 필터 조건을 하나씩 듣고 실제 조회 기능으로 옮기는 과정이 특히 까다로웠습니다. 합배송 여부와 확인 대상을 구분하는 업무 규칙을 지키면서 필터와 화면 동작을 구현했습니다.</p>
+<p>직원들이 요청한 세밀한 필터 조건을 반영해 주문 접수와 배송 및 재고 관리 웹서비스를 직접 개발했습니다. 필터 때문에 합배송에 필요한 주문이 빠지지 않도록 연관 주문 구성과 합배송 판정을 마친 뒤 화면 필터를 적용했습니다.</p>
 <hr>
 <h4>주요 결과</h4>
-<ul><li><strong>운송장 매칭 화면 초기 표시 32.176초 → 1.862초</strong><br>전체 목록을 넘기던 방식을 서버에서 연관 주문을 판정한 뒤 필요한 구간을 전달하도록 바꿔, 업무 판정을 유지하며 대기를 줄였습니다.</li><li><strong>제한된 장비에서 배송메시지 처리</strong><br>날짜와 발송인처럼 규칙으로 확정할 수 있는 항목은 먼저 처리하고, 불확실한 항목에만 Kanana를 적용했습니다.</li></ul>
+<ul><li><strong>운송장 매칭 화면 초기 표시 32.176초 → 1.862초</strong><br>전체 목록을 스크롤로 확인하는 요구를 지키면서 필요한 구간부터 점진적으로 조회하도록 바꿨습니다. 전체 목록을 순회하며 중복과 누락 및 정렬 순서를 검증했습니다.</li><li><strong>정확 집계 6.815초 → 3.214초</strong><br>오차가 생긴 근사 집계는 제외했습니다. 조회할 때마다 계산하던 묶음 키를 저장 시 계산하도록 바꿔 정확 집계 시간을 줄였습니다.</li><li><strong>규칙과 AI를 나눈 배송메시지 처리</strong><br>날짜와 발송인 등 확정할 수 있는 항목은 규칙으로 처리했습니다. 불확실한 내용은 Kanana로 추론한 뒤 사람이 검수하도록 구성했습니다.</li></ul>
 <p><strong>사용 기술</strong><br><img src="./assets/tech/react.png" alt="react" height="24"> <img src="./assets/tech/fastapi.png" alt="fastapi" height="24"> <img src="./assets/tech/opensearch.png" alt="opensearch" height="24"> <img src="./assets/tech/kanana.png" alt="kanana" height="24"></p>
 <p>업무 프로젝트 / 코드 비공개</p>
 </td></tr>
@@ -133,10 +133,10 @@
 <img src="./assets/docker-to-kubernetes.drawio.png" alt="Docker에서 Kubernetes로 서비스를 이관한 구성을 실제 기술 로고로 표시" width="100%">
 <h3>04. Kubernetes 클러스터 구축 및 서비스 이관</h3>
 <p><strong>수행 경력</strong> 2025.09 - 현재</p>
-<p>서버별로 실행 위치와 자원 할당을 관리하던 부담을 줄이고 서버 자원을 함께 활용하려고, Docker 운영 환경을 Kubernetes로 전환하고 운영 서비스를 모두 이관했습니다.</p>
+<p>서버 자원을 통합 관리하고 서비스 배치를 개선하기 위해 Kubernetes 전환을 직접 제안했습니다. Kubespray로 클러스터를 구축하고 기존 컨테이너 서비스를 모두 이관했습니다.</p>
 <hr>
 <h4>주요 결과</h4>
-<ul><li><strong>기존 데이터와 서비스 연결을 보존한 이관</strong><br>DB 복원과 실제 모델 추론, HTTP 응답을 확인하며 서비스를 전환했습니다.</li><li><strong>배포로 인한 사용자 작업 중단 방지</strong><br>이미지 배포와 개인 실행 환경 교체를 분리해, 진행 중인 작업이 끝난 뒤 실행 환경을 교체하도록 구성했습니다.</li></ul>
+<ul><li><strong>사용자 작업을 보존하는 배포 구성</strong><br>GitLab CI와 Argo CD로 검증한 이미지를 배포하도록 연결했습니다. 이미지 배포와 개인 실행환경 교체를 분리해 진행 중인 작업이 끝난 뒤 실행환경을 교체하도록 구성했습니다.</li><li><strong>상태 확인 실패에 따른 반복 재시작 해결</strong><br>상태 확인 요청이 인증에서 차단되는 원인을 찾아 해당 경로만 인증 예외로 분리했습니다. 상태 확인의 정상 응답과 일반 API의 인증 유지를 검증했습니다.</li><li><strong>운영 절차 문서화와 공유</strong><br>다른 사람이 운영 작업을 따라 할 수 있도록 Headlamp 사용법과 CLI 명령어를 포함한 작업 순서와 확인 방법을 문서로 정리해 공유했습니다.</li></ul>
 <p><strong>사용 기술</strong><br><img src="./assets/tech/docker.png" alt="docker" height="24"> <img src="./assets/tech/kubernetes.png" alt="kubernetes" height="24"> <img src="./assets/tech/kubespray.png" alt="kubespray" height="24"> <img src="./assets/tech/gitlab.png" alt="gitlab" height="24"> <img src="./assets/tech/argo.png" alt="argo" height="24"> <img src="./assets/tech/prometheus.png" alt="prometheus" height="24"> <img src="./assets/tech/grafana.png" alt="grafana" height="24"></p>
 <p>업무 프로젝트 / 코드 비공개</p>
 </td></tr>
@@ -150,10 +150,10 @@
 <img src="./assets/hadoop-to-ceph.drawio.png" alt="Hadoop에서 Ceph로 저장 구조를 전환하고 CephFS, RBD와 RGW를 구성한 경험" width="100%">
 <h3>05. Ceph 분산 스토리지 구축 및 데이터 이관</h3>
 <p><strong>수행 경력</strong> 2025.09 - 현재</p>
-<p>서비스가 다른 서버에서 실행돼도 기존 파일과 DB를 계속 쓸 수 있도록 Ceph를 구축하고 Kubernetes에 연결했습니다. 서비스별 접근 방식에 따라 저장소를 나누고 데이터를 이관했습니다.</p>
+<p>Hadoop 기반 저장 환경을 Ceph로 전환하고 Kubernetes 서비스의 저장소를 구성했습니다.</p>
 <hr>
 <h4>주요 결과</h4>
-<ul><li><strong>서비스별 저장 방식 분리</strong><br>개인 상태 보존은 RBD로 설계하고, 공동 파일에는 CephFS를, 모델 원본 보관에는 RGW를 적용해 용도를 구분했습니다.</li><li><strong>데이터 이관 중 쓰기 충돌 방지</strong><br>기존 서비스의 쓰기를 중단하고 마지막 동기화를 마친 뒤 전환해, 기존 저장소와 새 저장소에 동시에 기록되지 않도록 했습니다.</li></ul>
+<ul><li><strong>서비스 구조에 맞춘 저장소 구축과 이관</strong><br>Ceph 분산 스토리지를 구축하고 서비스별 내부 아키텍처에 맞춰 RBD와 CephFS 및 RGW 이관 계획을 세우고 데이터를 이관했습니다.</li></ul>
 <p><strong>사용 기술</strong><br><img src="./assets/tech/ceph.png" alt="ceph" height="24"> <img src="./assets/tech/cephcsi.png" alt="cephcsi" height="24"> <img src="./assets/tech/cephfs.png" alt="cephfs" height="24"> <img src="./assets/tech/rbd.png" alt="rbd" height="24"> <img src="./assets/tech/rgw.png" alt="rgw" height="24"> <img src="./assets/tech/kubernetes.png" alt="kubernetes" height="24"></p>
 <p>업무 프로젝트 / 코드 비공개</p>
 </td></tr>
@@ -165,10 +165,10 @@
 <img src="./assets/llm-inference-service.drawio.png" alt="LiteLLM에서 vLLM으로 모델 호출을 연결하고 Solar Open 2와 Gemma 4 31B를 서빙하는 구성" width="100%">
 <h3>06. vLLM 기반 LLM 추론 서비스</h3>
 <p><strong>수행 경력</strong> 2025.09 - 현재</p>
-<p>내부 자료를 외부에 보내지 않고 AI를 사용할 수 있도록 vLLM 추론 서비스를 구축했습니다. 서비스마다 다른 모델 호출 설정을 따로 관리하지 않도록 LiteLLM으로 호출 경로와 사용량 관측을 통합했습니다.</p>
+<p>내부 자료를 외부에 보내지 않고 AI를 활용할 수 있도록 vLLM 추론 서비스를 구축하고 LiteLLM 공통 API로 모델 호출을 통합했습니다. Solar Open 2와 Gemma 4 31B IT 및 GPT-OSS 120B를 서빙했습니다.</p>
 <hr>
 <h4>주요 결과</h4>
-<ul><li><strong>긴 입력으로 인한 후속 요청 대기 개선</strong><br>Gemma의 KV 캐시 예약 설정을 조정해 긴 입력이 뒤따르는 요청을 막는 문제에 대응했습니다.</li><li><strong>작업 길이를 고려한 모델 배치 비교</strong><br>입출력 길이별 응답 지연과 처리량을 비교하고, 실행 설정 차이를 구분해 운영 설정을 검토했습니다.</li></ul>
+<ul><li><strong>긴 입력으로 인한 후속 요청 대기 분석</strong><br>긴 입력이 뒤따르는 요청을 막는 원인을 분석해 서빙 설정을 조정하고 입력과 출력 길이별 지연을 비교했습니다.</li><li><strong>실패가 발생한 계층 구분</strong><br>Prometheus와 Grafana 지표를 로그와 대조해 플랫폼과 서버 간 호출 및 모델 추론 중 어느 계층에서 실패했는지 구분했습니다.</li></ul>
 <p><strong>사용 기술</strong><br><img src="./assets/tech/litellm.png" alt="litellm" height="24"> <img src="./assets/tech/vllm.png" alt="vllm" height="24"> <img src="./assets/tech/solaropen2.png" alt="solaropen2" height="24"> <img src="./assets/tech/gemma4.png" alt="gemma4" height="24"> <img src="./assets/tech/prometheus.png" alt="prometheus" height="24"> <img src="./assets/tech/grafana.png" alt="grafana" height="24"></p>
 <p>업무 프로젝트 / 코드 비공개</p>
 </td></tr>
@@ -192,11 +192,11 @@
 <p align="center"><a href="https://github.com/Replant-Application"><img src="https://github.com/user-attachments/assets/c42ed7ff-245c-41e6-8036-30f2a1b63dba" alt="Replant 조직의 실제 서비스 배너" width="100%"></a></p>
 <h3>07. Replant</h3>
 <p><strong>기간</strong> 2025.09 - 2026.02 / PM, 백엔드 개발</p>
-<p>사회적 고립을 겪는 사용자의 일상 회복을 돕는 앱에서 PM과 백엔드 개발을 맡았습니다. 팀 내에서 게임과 라이프케어 중 어느 쪽을 중심에 둘지 의견이 갈렸고, 일상 회복을 중심에 두고 미션과 감정 기록에 캐릭터 성장 요소를 연결했습니다.</p>
-<p>캐릭터와 대화하는 기능이 외부 AI의 호출 실패로 끊기지 않도록 Gemini를 우선 사용하고 로컬 Qwen을 대체 경로로 뒀습니다. Spring AI에서 두 호출 경로를 연결하고 Qwen은 vLLM으로 서빙했습니다. 출시 뒤에는 사용자와 직접 대화하는 일의 필요성도 느껴, 후속 앱 가야디에서 직접 홍보하며 개선 의견을 들었습니다.</p>
+<p>사회적 고립을 겪는 사용자의 일상 회복을 돕는 앱에서 PM과 백엔드 개발을 맡았습니다. 게임과 라이프케어 중 서비스 방향을 논의할 때 라이프케어를 지지했습니다. 팀과 합의해 일상 회복을 중심에 두고 미션과 감정 기록에 캐릭터 성장 요소를 연결했습니다.</p>
+<p>캐릭터와 대화하는 기능이 외부 AI 호출 실패로 끊기지 않도록 Gemini 2.0 Flash를 우선 사용하고 로컬 Qwen2.5-7B를 대체 경로로 뒀습니다. Spring AI로 두 호출 경로를 연결하고 Qwen은 vLLM으로 서빙했습니다. 출시 뒤에는 사용자와 직접 대화하는 일의 필요성도 느껴 후속 앱 가야디에서 직접 홍보하며 개선 의견을 들었습니다.</p>
 <hr>
 <h4>주요 결과</h4>
-<ul><li><strong>앱 출시 및 공모전 최종 발표</strong><br>PM과 백엔드 개발을 맡아 앱을 출시하고 최종 발표까지 진행했습니다.</li><li><strong>외부 AI 호출 실패에 대응하는 대체 경로 구현</strong><br>Gemini 호출 실패 시 로컬 Qwen 모델을 활용하도록 구성했습니다.</li></ul>
+<ul><li><strong>앱 출시 및 배리어프리 공모전 최종 발표</strong><br>PM과 백엔드 개발을 맡아 앱을 출시하고 공모전 최종 발표까지 진행했습니다.</li><li><strong>외부 AI 호출 실패에 대응하는 대체 경로 구현</strong><br>Gemini 호출에 실패하면 로컬 Qwen 모델로 전환하도록 구성했습니다.</li></ul>
 <p><strong>사용 기술</strong><br><img src="./assets/tech/reactnative.png" alt="reactnative" height="24"> <img src="./assets/tech/springboot.png" alt="springboot" height="24"> <img src="./assets/tech/mysql.png" alt="mysql" height="24"> <img src="./assets/tech/redis.png" alt="redis" height="24"> <img src="./assets/tech/gemini.png" alt="gemini" height="24"> <img src="./assets/tech/vllm.png" alt="vllm" height="24"></p>
 <p><a href="#architecture-07">아키텍처 보기 ↓</a></p>
 </td></tr>
@@ -208,11 +208,11 @@
 <p align="center"><a href="https://github.com/TEAM-DOONOW"><img src="https://avatars.githubusercontent.com/u/305256572?v=4" alt="가야디 조직의 실제 여행 캐릭터" height="135" width="135"></a></p>
 <h3>08. 가야디 / Gayadi</h3>
 <p><strong>기간</strong> 2026.08 - 2026.09 / 백엔드, AI 서비스 개발</p>
-<p>일행의 성향과 관광지 정보를 바탕으로 여행 일정을 추천하고, 날씨와 혼잡도 변화에 따라 대안을 제안하는 앱을 개발했습니다. Spring Boot의 일정 API에 관광·상황 정보와 Spring AI 기반 추천을 연결해, 후보를 제안하는 과정과 실제 일정을 수정하는 과정을 나눴습니다.</p>
+<p>일행의 성향과 관광지 정보를 바탕으로 여행 일정을 추천하고, 날씨와 혼잡도 변화에 따라 대안을 제안하는 앱을 개발했습니다. Spring Boot의 일정 API에 관광 정보와 상황 정보 및 Spring AI 기반 추천을 연결해 후보를 제안하는 과정과 실제 일정을 수정하는 과정을 나눴습니다.</p>
 <p>AI가 변경안을 만드는 동안 일행이 일정을 수정하면 이전 상태를 바탕으로 한 제안이 최신 일정을 덮어쓸 수 있었습니다. 변경안에 일정 버전을 기록하고 승인 시 현재 버전과 대조했습니다. 버전이 맞을 때만 반영한 뒤 이동경로를 다시 계산하도록 구현했습니다.</p>
 <hr>
 <h4>주요 결과</h4>
-<ul><li><strong>여행 일정 추천 앱 개발 및 출시</strong><br>성향 설문과 관광, 날씨, 혼잡도 정보를 연결해 일정과 대안을 추천하는 백엔드와 AI 서비스를 개발했습니다.</li><li><strong>최신 일정과 사용자 승인에 따른 변경 반영</strong><br>승인 시 일정 버전을 확인하고 변경 뒤 이동경로를 다시 계산하도록 구현했습니다.</li></ul>
+<ul><li><strong>여행 일정 추천 앱 개발 및 출시</strong><br>성향 설문과 관광, 날씨, 혼잡도 정보를 연결해 일정과 대안을 추천하는 백엔드와 AI 서비스를 개발했습니다.</li><li><strong>오래된 AI 제안의 최신 일정 덮어쓰기 방지</strong><br>사용자가 변경안을 승인할 때 일정 버전을 확인하고 일치하는 경우에만 반영했습니다. 반영 뒤에는 이동경로를 다시 계산하도록 구현했습니다.</li></ul>
 <p><strong>사용 기술</strong><br><img src="./assets/tech/java.png" alt="java" height="24"> <img src="./assets/tech/springboot.png" alt="springboot" height="24"> <img src="./assets/tech/springai.png" alt="springai" height="24"> <img src="./assets/tech/postgres.png" alt="postgres" height="24"> <img src="./assets/tech/tourapi.png" alt="tourapi" height="24"></p>
 <p><a href="#architecture-08">아키텍처 보기 ↓</a></p>
 </td></tr>
@@ -275,11 +275,11 @@
 <a href="./assets/mirae-pension-architecture.png"><img src="./assets/mirae-pension-architecture.png" alt="mirae_pj 연금 상담 Agent의 공개 아키텍처" width="100%"></a>
 <h3>10. 연금 어드바이저 / mirae_pj</h3>
 <p><strong>기간</strong> 2026.08 - 2026.09</p>
-<p>연금 제도와 세금, 상품 관련 질문에 근거 자료와 계산 결과를 함께 제공하는 AI 상담 서비스를 개발했습니다. 세액공제 계산과 상품 비교까지 LLM에 맡기면 수치와 근거를 검증하기 어려워, 질문 유형에 따라 검색·계산·비교를 수행하는 모듈과 답변을 생성하는 모델의 역할을 나눴습니다.</p>
-<p>전용 모듈이 계산과 상품 비교를 처리하고 HyperCLOVA X가 검색 자료와 처리 결과를 설명하도록 연결했습니다. 생성된 답변은 별도 검증 단계에서 수치와 상품 정보, 인용을 원문과 대조하고 검증에 실패한 인용은 수정하거나 확인되지 않은 문장을 제외하도록 구성했습니다.</p>
+<p>연금 제도와 세금 및 상품 관련 질문에 근거 자료와 계산 결과를 제공하는 AI 상담 서비스를 단독 개발해 출품했습니다. 모델이 수치를 임의로 생성하지 않도록 계산과 상품 비교는 FastAPI 도구 모듈로 분리하고 HyperCLOVA X에는 근거와 계산 결과를 전달해 설명을 생성하도록 했습니다.</p>
+<p>생성한 답변의 수치와 상품 정보 및 인용을 원문과 대조했습니다. 검증에 실패하면 근거를 다시 수집해 검사하고 확인된 내용만 발췌하거나 답변 범위를 줄이도록 구성했습니다.</p>
 <hr>
 <h4>주요 결과</h4>
-<ul><li><strong>검색과 계산을 연결한 연금 상담 파이프라인 구현</strong><br>질문 분류, 근거 검색, 세액공제 계산과 상품 비교를 답변 생성에 연결했습니다.</li><li><strong>답변 생성 후 수치와 인용 검증</strong><br>검증에 실패한 인용을 보완하고 확인되지 않은 내용을 답변에서 제외하도록 구현했습니다.</li></ul>
+<ul><li><strong>계산과 상품 비교를 답변 생성에서 분리</strong><br>질문에 맞는 근거 검색과 계산 및 상품 비교 결과를 모델에 전달하는 상담 파이프라인을 구현했습니다.</li><li><strong>답변 검증 실패 시 후속 처리 구현</strong><br>수치와 인용을 재검사한 뒤 확인된 근거 안에서 답변하도록 처리했습니다.</li></ul>
 <p><strong>사용 기술</strong><br><img src="./assets/tech/python.png" alt="python" height="24"> <img src="./assets/tech/fastapi.png" alt="fastapi" height="24"> <img src="./assets/tech/docker.png" alt="docker" height="24"> <img src="./assets/tech/hyperclovax.png" alt="hyperclovax" height="24"></p>
 <p><a href="#architecture-10">아키텍처 보기 ↓</a></p>
 <p><a href="https://github.com/orqan137/mirae_pj">공개 저장소 ↗</a> / <a href="./assets/mirae-pension-architecture.png">아키텍처 크게 보기 ↗</a></p>
@@ -311,11 +311,11 @@
 <h3>12. TREC 2025 Product Search &amp; Recommendations</h3>
 <p><strong>기간</strong> 2025 / JBNU 팀, 공동제1저자</p>
 <p><strong>TREC 참가 논문</strong><br>JBNU at TREC 2025 Product Search and Recommendations Track</p>
-<p>검색 의도에 맞는 상품을 찾고 대체재와 보완재를 추천하는 TREC 공동연구에 참여해, 공동제1저자로 참가 논문을 작성했습니다. 목적이 담긴 검색어를 단어 일치만으로 처리하는 한계를 보완하려고 LLM이 검색 의도를 Lucene 검색식으로 바꾸는 방법을 연구했습니다. 추천에서는 후보 검색과 상품 관계 분류를 분리해 대체재와 보완재에 맞춰 순위를 조정했습니다.</p>
-<p>팀 연구에서 Qwen3-14B는 지시문 준수를 고려해 선택하고 추론 비용을 줄이기 위해 AWQ를 적용했습니다. ModernBERT 분류와도 비교했으며, 텍스트 질의 재구성과 이미지 정보를 활용한 확장도 각각 평가했습니다. 팀 검색 실험 jbnu-s02의 NDCG는 0.2911로, 논문에 제시된 참가 결과 중앙값 0.2832를 상회했습니다.</p>
+<p>검색 의도에 맞는 상품을 찾고 대체재와 보완재를 추천하는 TREC 공동연구에 참여해 공동제1저자로 참가 논문을 작성했습니다. 목적이 담긴 검색어를 단어 일치만으로 처리하는 한계를 보완하려고 LLM이 검색 의도를 Lucene 검색식으로 바꾸는 방법을 연구했습니다. 추천에서는 후보 검색과 상품 관계 분류를 분리해 대체재와 보완재에 맞춰 순위를 조정했습니다.</p>
+<p>추천 실험에서는 지시문 준수를 고려해 Qwen3-14B를 선택하고 추론 비용을 줄이기 위해 AWQ를 적용했습니다. ModernBERT를 이용한 상품 관계 분류와도 비교했습니다. 검색 실험에서는 텍스트 질의 재구성과 이미지 정보를 활용한 확장을 각각 평가했습니다.</p>
 <hr>
 <h4>주요 결과</h4>
-<ul><li><strong>검색 의도를 반영한 검색어 재구성 연구</strong><br>LLM으로 검색어를 Lucene 형식으로 재구성하고, Qwen2.5-VL로 이미지의 시각 정보를 반영하는 방법을 비교했습니다. 팀 검색 실험 jbnu-s02의 NDCG는 0.2911로, 논문에 제시된 참가 결과 중앙값 0.2832를 상회했습니다.</li><li><strong>상품 관계 분류를 활용한 추천 순위 조정</strong><br>ColBERTv2와 SPLADE로 후보 상품을 검색한 뒤, Qwen3-14B 또는 ModernBERT로 대체재, 보완재, 무관 상품을 분류해 순위를 다시 정하는 구조를 연구했습니다.</li><li><strong>팀 추천 결과와 모델별 차이 검증</strong><br>보완재 추천 jbnu-r01은 NDCG@10 0.1864, 대체재 추천 jbnu-r02는 0.4927을 기록했습니다. 관계 유형과 평가 지표별로 LLM과 BERT 기반 분류 결과를 비교했습니다.</li></ul>
+<ul><li><strong>검색 의도를 반영한 검색어 재구성 연구</strong><br>LLM으로 검색어를 Lucene 형식으로 재구성하는 방법과 Qwen2.5-VL로 이미지 정보를 반영하는 방법을 비교했습니다. 팀이 제출한 검색 실험 중 jbnu-s02의 NDCG는 0.2911로 참가 결과 중앙값 0.2832를 상회했습니다.</li><li><strong>상품 관계 분류를 활용한 추천 순위 조정</strong><br>ColBERTv2와 SPLADE로 후보 상품을 검색한 뒤 Qwen3-14B 또는 ModernBERT로 대체재, 보완재, 무관 상품을 분류해 순위를 다시 정하는 구조를 연구했습니다.</li><li><strong>팀 추천 결과와 모델별 차이 검증</strong><br>보완재 추천 jbnu-r01은 NDCG@10 0.1864, 대체재 추천 jbnu-r02는 0.4927을 기록했습니다. 관계 유형과 평가 지표별로 LLM과 BERT 기반 분류 결과를 비교했습니다.</li></ul>
 <p><strong>사용 기술</strong><br><img src="./assets/tech/python.png" alt="python" height="24"> <kbd>Pyserini</kbd> <kbd>ColBERTv2</kbd> <img src="./assets/tech/qwen.png" alt="Qwen" height="24"> <kbd>ModernBERT</kbd></p>
 <p><a href="#architecture-12">아키텍처 보기 ↓</a></p>
 <p><a href="https://trec.nist.gov/pubs/trec34/papers/JBNU.product.pdf">TREC 2025 참가 논문 ↗</a></p>
@@ -387,11 +387,11 @@
 <a href="https://github.com/orqan137/K-Policy-LLM"><img src="./assets/kpolicy-card-v3.png" alt="K-Policy-LLM / 연구 노트를 읽는 범고래" width="100%"></a>
 <h3>13. K-Policy-LLM</h3>
 <p><strong>기간</strong> 2026.04 - 2026.06 / 수업 과제</p>
-<p>수업 과제로 한국어 정치와 정책, 법률 자료를 설명하는 언어모델의 학습·평가 과정을 구성했습니다. 한국어 자료에 맞춘 토큰화부터 살펴보려고 SentencePiece BPE 토크나이저와 데이터팩을 준비하고, Llama 계열 모델을 처음부터 학습하는 실험에 연결했습니다.</p>
-<p>문서를 이어 쓰는 학습만으로는 질문에 답하는 방식과 선호하는 응답까지 다루기 어려워 학습 목적을 나눴습니다. CPT로 도메인 지식을 보완하고 SFT로 지시문 응답, DPO로 응답 선호를 학습했습니다. 단계마다 공개 한국어 벤치마크와 자체 진단 문항을 적용해 무엇이 달라지는지 비교했습니다.</p>
+<p>한국어 정치와 정책 및 법률 자료를 다루는 언어모델을 수업 과제로 직접 구성하고 학습했습니다. 한국어 중심 80K 토크나이저와 약 1.221B 파라미터의 Llama 계열 모델 구조를 구성하고 자료의 토큰화와 데이터 패킹을 구현했습니다.</p>
+<p>사전학습 체크포인트를 같은 평가 기준으로 비교해 15B 토큰 학습 시점을 선택했습니다. 이후 CPT로 도메인 지식을 보완하고 SFT로 지시문 응답을 학습한 뒤 DPO로 응답 선호를 반영했습니다.</p>
 <hr>
 <h4>주요 결과</h4>
-<ul><li><strong>언어모델 학습 과정 구성 및 수행</strong><br>데이터 준비와 토크나이저 구성, 사전학습부터 CPT, SFT, DPO까지 진행했습니다.</li><li><strong>학습 단계별 평가와 응답 비교</strong><br>공개 한국어 벤치마크와 자체 진단 문항으로 결과를 비교했습니다.</li></ul>
+<ul><li><strong>모델 구성부터 단계별 학습까지 수행</strong><br>데이터와 토크나이저 및 모델 구조를 직접 구성하고 사전학습과 후속 학습을 진행했습니다.</li><li><strong>공개 벤치마크와 자체 진단으로 변화 비교</strong><br>공개 한국어 벤치마크와 자체 진단 803문항으로 단계별 변화를 비교했습니다. 학습과 평가를 수행한 수업 과제이며 서비스에 배포한 모델은 아닙니다.</li></ul>
 <p><strong>사용 기술</strong><br><img src="./assets/tech/python.png" alt="python" height="24"> <img src="./assets/tech/llama.png" alt="llama" height="24"></p>
 <p><a href="#architecture-13">아키텍처 보기 ↓</a></p>
 </td></tr>
@@ -422,7 +422,7 @@
 <h3>15. 조건별 장소 검색 웹서비스</h3>
 <p><strong>기간</strong> 2024년 1학기 / 데이터베이스 수업 과제</p>
 <p>인원과 위치, 예산, 이용 시간에 맞는 장소를 찾는 웹서비스를 팀으로 개발했습니다. 목록을 하나씩 확인하는 대신 여러 조건으로 후보를 좁힐 수 있도록 Next.js 화면의 검색 조건을 nestJS API에 전달하고, TypeORM에서 입력된 조건에 맞춰 MySQL 조회 조건을 조합했습니다.</p>
-<p>장소 정보에 회원의 평가를 연결하려고 장소와 회원, 평가를 관계형 데이터로 구성했습니다. 검색 결과에서 장소 상세와 평가를 이어 볼 수 있도록 화면과 API를 연결하며, 입력 조건을 실제 DB 조회로 옮기는 과정을 구현했습니다.</p>
+<p>장소 정보에 회원의 평가를 연결하려고 장소와 회원, 평가를 관계형 데이터로 구성했습니다. 검색 결과에서 장소 상세와 평가를 이어 볼 수 있도록 화면과 API를 연결하고 입력 조건을 실제 DB 조회로 옮기는 과정을 구현했습니다.</p>
 <hr>
 <h4>주요 결과</h4>
 <ul><li><strong>조건별 장소 탐색 기능 구현</strong><br>Next.js와 nestJS로 검색 화면과 API를 구성해 사용자가 입력한 조건에 맞는 장소 정보를 제공했습니다.</li><li><strong>서비스 데이터 구조 설계 및 연동</strong><br>MySQL과 TypeORM으로 장소, 회원, 게시글, 평가 데이터를 관리하고 조회 기능에 연결했습니다.</li></ul>
@@ -485,8 +485,8 @@
 <a name="project-19"></a>
 <a href="https://jbig.co.kr/"><img src="./assets/jbig-website-v12.png" alt="JBIG 홈페이지의 메뉴, 동아리 소개와 활동 영역 실제 캡처" width="100%"></a>
 <h3>19. JBIG 홈페이지</h3>
-<p><strong>활동 기간</strong> 2023.03 - 2024.08 / 동아리 임원, 웹사이트 개발</p>
-<p>AI 동아리 JBIG의 자료 공유와 스터디·프로젝트 모집을 위한 홈페이지 개발에 참여했습니다. 공지를 읽는 데서 끝나지 않고 회원이 글을 쓰고 모집에 참여할 수 있도록, React 화면에 Django REST Framework의 회원·게시판·모집 API를 연결했습니다.</p>
+<p><strong>활동 기간</strong> 2023.03 - 2024.08 / 동아리 임원 및 부원, 웹사이트 개발 참여</p>
+<p>AI 동아리 JBIG의 자료 공유와 스터디 및 프로젝트 모집을 위한 홈페이지 개발에 참여했습니다. 회원이 글을 쓰고 모집에 참여할 수 있도록 React 화면에 Django REST Framework의 회원과 게시판 및 모집 API를 연결했습니다.</p>
 <p>자료를 읽는 회원과 게시물을 관리하는 운영진의 권한을 구분하려고 회원 인증을 API 처리에 연결했습니다. 회원과 게시글, 지원 기록을 Django ORM으로 연결해 누가 글을 쓰고 모집에 지원했는지 관리하도록 구성했습니다.</p>
 <hr>
 <h4>주요 결과</h4>
@@ -607,7 +607,7 @@
 <tr><td width="400" valign="top">
 <img src="https://avatars.githubusercontent.com/u/218366912?v=4" alt="JBIG GitHub 조직 로고" width="64" height="64">
 <h3>JBIG</h3>
-<p><strong>인공지능 동아리 임원 및 회원</strong><br>2023.03–2024.08</p>
+<p><strong>인공지능 동아리 임원 및 부원</strong><br>2023.03–2024.08</p>
 <hr>
 <h4>주요 활동</h4>
 <p>임원으로 동아리 활동과 스터디 운영에 참여했습니다. 회원들이 학습 자료와 활동을 공유할 수 있도록 커뮤니티 웹사이트를 개발했습니다.</p>
