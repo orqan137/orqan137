@@ -35,7 +35,7 @@
 <hr>
 
 <h4>주요 결과</h4>
-<ul><li><strong>RAG 문서 처리 평균 3분 이하</strong></li><li><strong>Agent 요청 준비 4.2초 → 0.14초</strong></li><li><strong>운송장 매칭 화면 초기 표시 32.176초 → 1.862초</strong></li><li><strong>기존 컨테이너 서비스 Kubernetes 이관 완료</strong></li></ul>
+<ul><li><strong>RAG 문서 처리 10분 → 평균 3분 이하</strong></li><li><strong>Agent 요청 준비 4.2초 → 0.14초</strong></li><li><strong>운송장 매칭 화면 초기 표시 32.176초 → 1.862초</strong></li><li><strong>기존 컨테이너 서비스 Kubernetes 이관 완료</strong></li></ul>
 </td></tr>
 </table>
 
@@ -88,7 +88,7 @@
 <p>연구자의 자료 검색과 데이터관리계획 초안 작성을 돕는 AI 서버를 직접 설계하고 기존 데이터플랫폼에 연결했습니다. 자료 반출 제약에 맞춰 원내 로컬 LLM을 선택했으며 FastAPI와 LlamaIndex로 검색과 초안 생성 기능을 구현했습니다.</p>
 <hr>
 <h4>주요 결과</h4>
-<ul><li><strong>작성 화면과 AI 진행 상태 개선</strong><br>반복 스크롤이 필요했던 작성 화면을 탭 구조로 바꾸고 서비스 API를 개발했습니다. 검색과 도구 호출 상태는 SSE로 전달하고 연결 종료와 API 예외를 처리했습니다.</li><li><strong>RAG 문서 처리 평균 3분 이하</strong><br>처리 과정에서 반복되던 LLM 호출을 줄여 품질을 유지하면서 평균 처리 시간을 3분 이하로 단축했습니다.</li></ul>
+<ul><li><strong>작성 화면과 AI 진행 상태 개선</strong><br>반복 스크롤이 필요했던 작성 화면을 탭 구조로 바꾸고 서비스 API를 개발했습니다. 검색과 도구 호출 상태는 SSE로 전달하고 연결 종료와 API 예외를 처리했습니다.</li><li><strong>RAG 문서 처리 10분 → 평균 3분 이하</strong><br>반복 LLM 호출을 줄여 RAG 문서 처리 시간을 10분에서 평균 3분 이하로 단축하고 품질 유지</li></ul>
 <p><strong>사용 기술</strong><br><img src="./assets/tech/react.png" alt="react" height="24"> <img src="./assets/tech/springboot.png" alt="springboot" height="24"> <img src="./assets/tech/fastapi.png" alt="fastapi" height="24"> <img src="./assets/tech/llamaindex.png" alt="llamaindex" height="24"> <img src="./assets/tech/sse.png" alt="sse" height="24"></p>
 <p><a href="https://data.kfri.re.kr/">공개 웹사이트 ↗</a><br>업무 프로젝트 / 코드 비공개</p>
 </td></tr>
@@ -104,7 +104,7 @@
 <p>플랫폼과 Agent 사이에 요청 전달과 통제를 맡는 중간 제어 계층을 두어 Agent를 교체할 수 있도록 설계했습니다. Agent로 만든 웹서비스를 배포하고 공유하는 Vibe 서비스도 직접 개발했습니다.</p>
 <hr>
 <h4>주요 결과</h4>
-<ul><li><strong>요청 준비 시간 4.2초 → 0.14초</strong><br>저장소 전체 검사로 요청이 지연돼 최신의 정확한 검사 결과를 재사용하고 용량 보호 검사는 별도로 수행하도록 바꿨습니다. 요청별 권한 확인과 파일 쓰기 시 정확한 검사는 유지했습니다. 수치는 특정 인스턴스에서 요청 접수부터 정보 준비까지 측정한 시간입니다.</li><li><strong>재연결 시 중복 실행 요청 방지</strong><br>연결이 끊겼을 때 서버의 요청 수락 상태를 먼저 확인하도록 바꿔 동일한 실행 요청이 중복 전송되지 않도록 했습니다.</li></ul>
+<ul><li><strong>요청 준비 시간 4.2초 → 0.14초</strong><br><p>채팅 준비와 주기적 감시마다 작업공간 전체에 du가 중복 실행되는 I/O 병목을 확인. 개인 Gateway의 공유 provider인 FilesService에 진행 중인 스캔 Promise와 검사 결과를 보관해 여러 요청이 같은 스캔 작업과 결과를 공유하도록 구현</p><p>용량 검사 시 일반 메시지는 미리 정확히 측정한 작업공간 사용량을 재사용하고 파일 쓰기 요청은 실시간으로 사용량을 다시 검사하도록 변경. 모든 요청의 권한 확인은 그대로 유지</p><p>특정 인스턴스의 동일 환경에서 요청 접수부터 정보 준비까지 걸리는 시간을 4.2초에서 0.14초로 단축</p></li><li><strong>재연결 시 중복 실행 요청 방지</strong><br>연결이 끊겼을 때 서버의 요청 수락 상태를 먼저 확인하도록 바꿔 동일한 실행 요청이 중복 전송되지 않도록 했습니다.</li></ul>
 <p><strong>사용 기술</strong><br><img src="./assets/tech/nestjs.png" alt="nestjs" height="24"> <img src="./assets/tech/fastify.png" alt="fastify" height="24"> <img src="./assets/tech/vllm.png" alt="vllm" height="24"> <img src="./assets/tech/litellm.png" alt="litellm" height="24"> <img src="./assets/tech/ldap.png" alt="ldap" height="24"></p>
 <p>기관 로그인 필요 / 코드 비공개</p>
 </td></tr>
@@ -121,7 +121,7 @@
 <p>직원들이 요청한 세밀한 필터 조건을 반영해 주문 접수와 배송 및 재고 관리 웹서비스를 직접 개발했습니다. 필터 때문에 합배송에 필요한 주문이 빠지지 않도록 연관 주문 구성과 합배송 판정을 마친 뒤 화면 필터를 적용했습니다.</p>
 <hr>
 <h4>주요 결과</h4>
-<ul><li><strong>운송장 매칭 화면 초기 표시 32.176초 → 1.862초</strong><br>전체 목록을 스크롤로 확인하는 요구를 지키면서 필요한 구간부터 점진적으로 조회하도록 바꿨습니다. 전체 목록을 순회하며 중복과 누락 및 정렬 순서를 검증했습니다.</li><li><strong>정확 집계 6.815초 → 3.214초</strong><br>오차가 생긴 근사 집계는 제외했습니다. 조회할 때마다 계산하던 묶음 키를 저장 시 계산하도록 바꿔 정확 집계 시간을 줄였습니다.</li><li><strong>규칙과 AI를 나눈 배송메시지 처리</strong><br>날짜와 발송인 등 확정할 수 있는 항목은 규칙으로 처리했습니다. 불확실한 내용은 Kanana로 추론한 뒤 사람이 검수하도록 구성했습니다.</li></ul>
+<ul><li><strong>운송장 매칭 화면 초기 표시 32.176초 → 1.862초</strong><br>전체 목록을 스크롤로 확인하는 요구를 지키면서 필요한 구간부터 점진적으로 조회하도록 바꿨습니다. 전체 목록을 순회하며 중복과 누락 및 정렬 순서를 검증했습니다.</li><li><strong>정확 집계 6.815초 → 3.214초</strong><br>오차가 관측된 근사 집계를 기각하고, 조회마다 Painless 스크립트로 묶음 기준 키를 반복 계산하는 대신 저장 시점에 파생 keyword 키를 미리 생성해 doc_values로 조회하도록 전환. 기존 문서 백필 전후의 데이터 일치를 검증하고 정확 집계 시간을 6.815초에서 3.214초로 단축</li><li><strong>규칙과 AI를 나눈 배송메시지 처리</strong><br>날짜와 발송인 등 확정할 수 있는 항목은 규칙으로 처리했습니다. 불확실한 내용은 Kanana로 추론한 뒤 사람이 검수하도록 구성했습니다.</li></ul>
 <p><strong>사용 기술</strong><br><img src="./assets/tech/react.png" alt="react" height="24"> <img src="./assets/tech/fastapi.png" alt="fastapi" height="24"> <img src="./assets/tech/opensearch.png" alt="opensearch" height="24"> <img src="./assets/tech/kanana.png" alt="kanana" height="24"></p>
 <p>업무 프로젝트 / 코드 비공개</p>
 </td></tr>
@@ -136,7 +136,7 @@
 <p>서버 자원을 통합 관리하고 서비스 배치를 개선하기 위해 Kubernetes 전환을 직접 제안했습니다. Kubespray로 클러스터를 구축하고 기존 컨테이너 서비스를 모두 이관했습니다.</p>
 <hr>
 <h4>주요 결과</h4>
-<ul><li><strong>사용자 작업을 보존하는 배포 구성</strong><br>GitLab CI와 Argo CD로 검증한 이미지를 배포하도록 연결했습니다. 이미지 배포와 개인 실행환경 교체를 분리해 진행 중인 작업이 끝난 뒤 실행환경을 교체하도록 구성했습니다.</li><li><strong>상태 확인 실패에 따른 반복 재시작 해결</strong><br>상태 확인 요청이 인증에서 차단되는 원인을 찾아 해당 경로만 인증 예외로 분리했습니다. 상태 확인의 정상 응답과 일반 API의 인증 유지를 검증했습니다.</li><li><strong>운영 절차 문서화와 공유</strong><br>다른 사람이 운영 작업을 따라 할 수 있도록 Headlamp 사용법과 CLI 명령어를 포함한 작업 순서와 확인 방법을 문서로 정리해 공유했습니다.</li></ul>
+<ul><li><strong>사용자 작업을 보존하는 배포 구성</strong><br><p>무상태 서비스는 RollingUpdate로, 동시 쓰기가 제한된 RBD 단일 워크로드는 Recreate로 배포 전략을 구분. 사용 중인 런타임은 교체를 보류해 작업 보호</p><p>GitLab CI에서 검증한 이미지 digest를 운영 승격까지 그대로 유지. 변경된 컴포넌트 매니페스트만 갱신해 Argo CD로 배포 정합성 확보</p></li><li><strong>상태 확인 실패에 따른 반복 재시작 해결</strong><br>상태 확인 요청이 인증에서 차단되는 원인을 찾아 해당 경로만 인증 예외로 분리했습니다. 상태 확인의 정상 응답과 일반 API의 인증 유지를 검증했습니다.</li><li><strong>운영 절차 문서화와 공유</strong><br>다른 사람이 운영 작업을 따라 할 수 있도록 Headlamp 사용법과 CLI 명령어를 포함한 작업 순서와 확인 방법을 문서로 정리해 공유했습니다.</li></ul>
 <p><strong>사용 기술</strong><br><img src="./assets/tech/docker.png" alt="docker" height="24"> <img src="./assets/tech/kubernetes.png" alt="kubernetes" height="24"> <img src="./assets/tech/kubespray.png" alt="kubespray" height="24"> <img src="./assets/tech/gitlab.png" alt="gitlab" height="24"> <img src="./assets/tech/argo.png" alt="argo" height="24"> <img src="./assets/tech/prometheus.png" alt="prometheus" height="24"> <img src="./assets/tech/grafana.png" alt="grafana" height="24"></p>
 <p>업무 프로젝트 / 코드 비공개</p>
 </td></tr>
@@ -162,13 +162,13 @@
 <table align="left" width="400">
 <tr><td width="400" valign="top">
 <a name="project-06"></a>
-<img src="./assets/llm-inference-service.drawio.png" alt="LiteLLM에서 vLLM으로 모델 호출을 연결하고 Solar Open 2와 Gemma 4 31B를 서빙하는 구성" width="100%">
+<img src="./assets/llm-inference-service.drawio.png" alt="LiteLLM에서 vLLM으로 모델 호출을 연결하고 Solar Open 2와 Gemma 4 31B IT 및 GPT-OSS 120B를 서빙하는 구성" width="100%">
 <h3>06. vLLM 기반 LLM 추론 서비스</h3>
 <p><strong>수행 경력</strong> 2025.09 - 현재</p>
 <p>내부 자료를 외부에 보내지 않고 AI를 활용할 수 있도록 vLLM 추론 서비스를 구축하고 LiteLLM 공통 API로 모델 호출을 통합했습니다. Solar Open 2와 Gemma 4 31B IT 및 GPT-OSS 120B를 서빙했습니다.</p>
 <hr>
 <h4>주요 결과</h4>
-<ul><li><strong>긴 입력으로 인한 후속 요청 대기 분석</strong><br>긴 입력이 뒤따르는 요청을 막는 원인을 분석해 서빙 설정을 조정하고 입력과 출력 길이별 지연을 비교했습니다.</li><li><strong>실패가 발생한 계층 구분</strong><br>Prometheus와 Grafana 지표를 로그와 대조해 플랫폼과 서버 간 호출 및 모델 추론 중 어느 계층에서 실패했는지 구분했습니다.</li></ul>
+<ul><li><strong>긴 입력으로 인한 후속 요청 대기 분석</strong><br><p>긴 요청 뒤의 짧은 요청까지 함께 대기하는 원인이 허용 컨텍스트 설정과 실제 KV 수용량의 차이, 전체 입력을 미리 예약하는 정책에 있음을 분석. 입력 예약 옵션을 조정해 장문과 단문이 섞인 동시 요청의 처리를 확인하고 대기열 해소</p><p>이와 별도로 GPT-OSS 120B의 실제 출력 길이를 반영해 처리량과 첫 토큰 지연을 비교하고, 처리량이 높아도 응답 시작이 항상 빠르지는 않음을 확인</p></li><li><strong>실패가 발생한 계층 구분</strong><br>Prometheus와 Grafana 지표를 로그와 대조해 플랫폼과 서버 간 호출 및 모델 추론 중 어느 계층에서 실패했는지 구분했습니다.</li></ul>
 <p><strong>사용 기술</strong><br><img src="./assets/tech/litellm.png" alt="litellm" height="24"> <img src="./assets/tech/vllm.png" alt="vllm" height="24"> <img src="./assets/tech/solaropen2.png" alt="solaropen2" height="24"> <img src="./assets/tech/gemma4.png" alt="gemma4" height="24"> <img src="./assets/tech/prometheus.png" alt="prometheus" height="24"> <img src="./assets/tech/grafana.png" alt="grafana" height="24"></p>
 <p>업무 프로젝트 / 코드 비공개</p>
 </td></tr>
@@ -276,10 +276,10 @@
 <h3>10. 연금 어드바이저 / mirae_pj</h3>
 <p><strong>기간</strong> 2026.08 - 2026.09</p>
 <p>연금 제도와 세금 및 상품 관련 질문에 근거 자료와 계산 결과를 제공하는 AI 상담 서비스를 단독 개발해 출품했습니다. 모델이 수치를 임의로 생성하지 않도록 계산과 상품 비교는 FastAPI 도구 모듈로 분리하고 HyperCLOVA X에는 근거와 계산 결과를 전달해 설명을 생성하도록 했습니다.</p>
-<p>생성한 답변의 수치와 상품 정보 및 인용을 원문과 대조했습니다. 검증에 실패하면 근거를 다시 수집해 검사하고 확인된 내용만 발췌하거나 답변 범위를 줄이도록 구성했습니다.</p>
+<p>생성한 답변의 수치와 상품 정보 및 인용을 원문과 대조했습니다.</p>
 <hr>
 <h4>주요 결과</h4>
-<ul><li><strong>계산과 상품 비교를 답변 생성에서 분리</strong><br>질문에 맞는 근거 검색과 계산 및 상품 비교 결과를 모델에 전달하는 상담 파이프라인을 구현했습니다.</li><li><strong>답변 검증 실패 시 후속 처리 구현</strong><br>수치와 인용을 재검사한 뒤 확인된 근거 안에서 답변하도록 처리했습니다.</li></ul>
+<ul><li><strong>계산과 상품 비교를 답변 생성에서 분리</strong><br>질문에 맞는 근거 검색과 계산 및 상품 비교 결과를 모델에 전달하는 상담 파이프라인을 구현했습니다.</li><li><strong>답변 검증 실패 시 후속 처리 구현</strong><br>검증 실패 시 근거와 인용을 보완해 재검사하고 통과하지 못하면 확인된 자료만 발췌하거나 답변 범위 축소</li></ul>
 <p><strong>사용 기술</strong><br><img src="./assets/tech/python.png" alt="python" height="24"> <img src="./assets/tech/fastapi.png" alt="fastapi" height="24"> <img src="./assets/tech/docker.png" alt="docker" height="24"> <img src="./assets/tech/hyperclovax.png" alt="hyperclovax" height="24"></p>
 <p><a href="#architecture-10">아키텍처 보기 ↓</a></p>
 <p><a href="https://github.com/orqan137/mirae_pj">공개 저장소 ↗</a> / <a href="./assets/mirae-pension-architecture.png">아키텍처 크게 보기 ↗</a></p>
@@ -402,8 +402,8 @@
 <a name="project-14"></a>
 <a href="./assets/aws-class-architecture.png"><img src="./assets/aws-class-architecture.png" alt="AWS 공시 서비스 아키텍처 원본: EventBridge, Lambda, Bedrock, Translate, DynamoDB, SQS, SNS와 S3, CloudFront 구성" width="100%"></a>
 <h3>14. AWS 기반 미국 공시 및 뉴스 요약 서비스</h3>
-<p><strong>기간</strong> 2024.12 / 클라우드컴퓨팅 수업 과제</p>
-<p>미국 기업의 공시와 뉴스를 한국어로 확인하는 서비스를 팀으로 개발했습니다. 새 공시를 정해진 시간에 수집하는 작업이어서 상시 서버를 운영하기보다 EventBridge와 Lambda로 예약 실행하는 서버리스 구성을 선택했습니다.</p>
+<p><strong>기간</strong> 2024.12 / 클라우드컴퓨팅 수업 개인 프로젝트</p>
+<p>미국 기업의 공시와 뉴스를 한국어로 확인하는 서비스를 개인 프로젝트로 개발했습니다. 새 공시를 정해진 시간에 수집하는 작업이어서 상시 서버를 운영하기보다 EventBridge와 Lambda로 예약 실행하는 서버리스 구성을 선택했습니다.</p>
 <p>원문과 한국어 요약을 함께 확인할 수 있도록 S3에 원문을, DynamoDB에 처리 결과를 저장했습니다. Bedrock 요약과 Translate 번역을 연결하고, 새 공시는 SQS와 SNS로 알려 웹 조회와 알림 처리를 나눴습니다.</p>
 <hr>
 <h4>주요 결과</h4>
@@ -441,7 +441,7 @@
 <p>백엔드 과제에서는 채용 공고와 기업 정보, 지원과 리뷰를 Express와 MySQL로 관리했습니다. 요청 조건과 응답 형식을 확인할 수 있도록 Swagger 문서를 작성했고, 프론트엔드는 GitHub Actions의 검사와 빌드를 거쳐 Pages에 배포하도록 연결했습니다.</p>
 <hr>
 <h4>주요 결과</h4>
-<ul><li><strong>영화 탐색 화면과 로그인 기능 구현</strong><br>React와 TypeScript로 영화 탐색 화면을 만들고, 후속 과제에서 카카오 로그인을 구현했습니다.</li><li><strong>API 개발과 문서화</strong><br>별도 API 과제에서 Express와 MySQL을 활용해 서버를 개발하고 Swagger로 API 문서를 작성했습니다.</li><li><strong>프론트엔드 배포 자동화</strong><br>GitHub Actions와 GitHub Pages를 연결해 코드 변경 시 배포가 실행되도록 구성했습니다.</li></ul>
+<ul><li><strong>영화 탐색 화면과 로그인 기능 구현</strong><br>React와 TypeScript로 영화 탐색 화면을 만들고, 후속 과제에서 카카오 로그인을 구현했습니다.</li><li><strong>API 개발과 문서화</strong><br>별도 API 과제에서 Express와 MySQL을 활용해 서버를 개발하고 Swagger로 API 문서를 작성했습니다.</li><li><strong>프론트엔드 배포 자동화</strong><br>GitHub Actions로 검사와 빌드를 거쳐 프론트엔드를 Pages에 자동 배포하도록 구성</li></ul>
 <p><strong>사용 기술</strong><br><img src="./assets/tech/react.png" alt="react" height="24"> <img src="./assets/tech/ts.png" alt="ts" height="24"> <img src="./assets/tech/express.png" alt="express" height="24"> <img src="./assets/tech/mysql.png" alt="mysql" height="24"> <img src="./assets/tech/githubactions.png" alt="githubactions" height="24"></p>
 <p><a href="#architecture-16">아키텍처 보기 ↓</a></p>
 <p><a href="https://github.com/highcastle01/wsd-assignment-02">영화 탐색 화면 ↗</a> / <a href="https://github.com/highcastle01/WSD-Assignment-03">API 과제 ↗</a> / <a href="https://github.com/highcastle01/WSD-Assignment-04">카카오 로그인 ↗</a></p>
