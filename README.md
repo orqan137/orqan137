@@ -230,6 +230,7 @@
 <p>위&#8288;장 광&#8288;고 문&#8288;맥&#8288;을 판&#8288;별&#8288;하&#8288;는 분&#8288;류 모&#8288;델&#8288;의 학&#8288;습&#8288;과 평&#8288;가&#8288;를 수&#8288;행&#8288;해 탐&#8288;지 엔&#8288;진&#8288;에 연&#8288;결&#8288;했&#8288;습&#8288;니&#8288;다.</p>
 <p><strong>사&#8288;용&nbsp;기&#8288;술</strong><br><img src="./assets/tech/python.png" alt="Python" height="24"> <img src="https://img.shields.io/badge/Playwright-2EAD33?style=flat&logo=playwright&logoColor=white" alt="Playwright" height="24"> <img src="https://img.shields.io/badge/PaddleOCR-0062CC?style=flat&logo=paddlepaddle&logoColor=white" alt="PaddleOCR" height="24"></p>
 <p><a href="https://github.com/orqan137/chickadee_studio">GitHub ↗</a> / <a href="https://github.com/orqan137/chickadee_studio/releases/latest">Windows 다&#8288;운&#8288;로&#8288;드 ↗</a><br><a href="https://github.com/orqan137/chickadee_studio/blob/main/docs/architecture.md">아&#8288;키&#8288;텍&#8288;처 보&#8288;기 ↗</a> / <a href="https://github.com/orqan137/chickadee_studio/blob/main/docs/quickstart-windows.md">사&#8288;용&#8288;설&#8288;명&#8288;서 ↗</a></p>
+<p><a href="#architecture-09">09.1 처리 파이프라인 ↓</a></p>
 </td></tr>
 </table>
 
@@ -257,6 +258,14 @@
 
 <p><a href="#projects">프&#8288;로&#8288;젝&#8288;트 목&#8288;차 ↑</a></p>
 
+
+<a name="architecture-09"></a>
+<details open>
+<summary><strong>09.1 Chickadee Studio / 처리 파이프라인</strong></summary>
+
+<p><a href="./assets/chickadee-pipeline.drawio.png"><img src="./assets/chickadee-pipeline.drawio.png" alt="Chickadee Studio 웹 수집, 본문 직접 분석과 이미지 OCR 분기, 탐지 및 근거 저장 파이프라인" width="100%"></a></p>
+<p><a href="./assets/chickadee-pipeline.drawio.png">도식 크게 보기 ↗</a> / <a href="#project-09">프로젝트 설명 ↑</a></p>
+</details>
 
 <a name="ai-challenges"></a>
 
