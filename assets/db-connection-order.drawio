@@ -1,0 +1,106 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="동시 생성 시 DB 접속 순서 개선" id="db-diagram">
+    <mxGraphModel adaptiveColors="auto" grid="0" page="0" background="#FFFFFF">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="before" value="" style="rounded=0;fillColor=#FAFCFE;strokeColor=#B77A56;strokeWidth=1.6;dashed=1;dashPattern=7 5;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="30" y="20" width="970" height="300" />
+        </mxCell>
+        <mxCell id="before-icon" value="" style="shape=image;imageAspect=1;html=1;fillColor=none;strokeColor=none;image=data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2248%22%20height%3D%2248%22%20viewBox%3D%220%200%2032%2032%22%3E%3Ccircle%20cx%3D%2216%22%20cy%3D%2216%22%20r%3D%2216%22%20fill%3D%22%23507B9E%22%2F%3E%3Cg%20transform%3D%22translate%284%204%29%22%20fill%3D%22none%22%20stroke%3D%22white%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M5%206H19M5%2012H15M5%2018H11M18%2015L21%2018L18%2021%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E;" vertex="1" parent="before">
+          <mxGeometry as="geometry" x="16" y="13" width="33" height="33" />
+        </mxCell>
+        <mxCell id="before-title" value="변경 전" style="text;html=1;whiteSpace=wrap;fontFamily=Pretendard;fontSize=21;fontStyle=1;fontColor=#B77A56;align=left;verticalAlign=middle;spacing=0;" vertex="1" parent="before">
+          <mxGeometry as="geometry" x="61" y="12" width="890" height="36" />
+        </mxCell>
+        <mxCell id="after" value="" style="rounded=0;fillColor=#FAFCFE;strokeColor=#2D8B82;strokeWidth=1.6;dashed=1;dashPattern=7 5;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="30" y="370" width="970" height="220" />
+        </mxCell>
+        <mxCell id="after-icon" value="" style="shape=image;imageAspect=1;html=1;fillColor=none;strokeColor=none;image=data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2248%22%20height%3D%2248%22%20viewBox%3D%220%200%2032%2032%22%3E%3Ccircle%20cx%3D%2216%22%20cy%3D%2216%22%20r%3D%2216%22%20fill%3D%22%23507B9E%22%2F%3E%3Cg%20transform%3D%22translate%284%204%29%22%20fill%3D%22none%22%20stroke%3D%22white%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M5%2012L10%2017L20%206%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E;" vertex="1" parent="after">
+          <mxGeometry as="geometry" x="16" y="13" width="33" height="33" />
+        </mxCell>
+        <mxCell id="after-title" value="변경 후" style="text;html=1;whiteSpace=wrap;fontFamily=Pretendard;fontSize=21;fontStyle=1;fontColor=#2D8B82;align=left;verticalAlign=middle;spacing=0;" vertex="1" parent="after">
+          <mxGeometry as="geometry" x="61" y="12" width="890" height="36" />
+        </mxCell>
+        <mxCell id="wait" value="" style="rounded=1;arcSize=8;html=1;fillColor=#FFF5DF;strokeColor=#C7D8E5;strokeWidth=1.8;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="50" y="200" width="260" height="90" />
+        </mxCell>
+        <mxCell id="wait-icon" value="" style="shape=image;imageAspect=1;html=1;fillColor=none;strokeColor=none;image=data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2248%22%20height%3D%2248%22%20viewBox%3D%220%200%2032%2032%22%3E%3Ccircle%20cx%3D%2216%22%20cy%3D%2216%22%20r%3D%2216%22%20fill%3D%22%23507B9E%22%2F%3E%3Cg%20transform%3D%22translate%284%204%29%22%20fill%3D%22none%22%20stroke%3D%22white%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M5%206H19M5%2012H15M5%2018H11M18%2015L21%2018L18%2021%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E;" vertex="1" parent="wait">
+          <mxGeometry as="geometry" x="14" y="25.0" width="40" height="40" />
+        </mxCell>
+        <mxCell id="wait-text" value="기다리는 생성 요청&lt;br&gt;대기 중 DB 접속 차지" style="text;html=1;whiteSpace=wrap;fontFamily=Pretendard;fontSize=19;fontStyle=1;fontColor=#173F49;align=left;verticalAlign=middle;spacing=0;" vertex="1" parent="wait">
+          <mxGeometry as="geometry" x="67" y="8" width="182" height="74" />
+        </mxCell>
+        <mxCell id="active" value="" style="rounded=1;arcSize=8;html=1;fillColor=#F4F8FC;strokeColor=#C7D8E5;strokeWidth=1.8;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="385" y="200" width="260" height="90" />
+        </mxCell>
+        <mxCell id="active-icon" value="" style="shape=image;imageAspect=1;html=1;fillColor=none;strokeColor=none;image=data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2248%22%20height%3D%2248%22%20viewBox%3D%220%200%2032%2032%22%3E%3Ccircle%20cx%3D%2216%22%20cy%3D%2216%22%20r%3D%2216%22%20fill%3D%22%23507B9E%22%2F%3E%3Cg%20transform%3D%22translate%284%204%29%22%20fill%3D%22none%22%20stroke%3D%22white%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M9%207L4%2012L9%2017M15%207L20%2012L15%2017M13%205L11%2019%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E;" vertex="1" parent="active">
+          <mxGeometry as="geometry" x="14" y="25.0" width="40" height="40" />
+        </mxCell>
+        <mxCell id="active-text" value="처리 중 생성 요청&lt;br&gt;추가 DB 접속 필요" style="text;html=1;whiteSpace=wrap;fontFamily=Pretendard;fontSize=19;fontStyle=1;fontColor=#173F49;align=left;verticalAlign=middle;spacing=0;" vertex="1" parent="active">
+          <mxGeometry as="geometry" x="67" y="8" width="182" height="74" />
+        </mxCell>
+        <mxCell id="db-before" value="" style="rounded=1;arcSize=8;html=1;fillColor=#FFF0EC;strokeColor=#C7D8E5;strokeWidth=1.8;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="720" y="200" width="260" height="90" />
+        </mxCell>
+        <mxCell id="db-before-icon" value="" style="shape=image;imageAspect=1;html=1;fillColor=none;strokeColor=none;image=data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2248%22%20height%3D%2248%22%20viewBox%3D%220%200%2032%2032%22%3E%3Ccircle%20cx%3D%2216%22%20cy%3D%2216%22%20r%3D%2216%22%20fill%3D%22%23507B9E%22%2F%3E%3Cg%20transform%3D%22translate%284%204%29%22%20fill%3D%22none%22%20stroke%3D%22white%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M4%206C4%201%2020%201%2020%206C20%2011%204%2011%204%206ZM4%206V18C4%2023%2020%2023%2020%2018V6M4%2012C4%2017%2020%2017%2020%2012%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E;" vertex="1" parent="db-before">
+          <mxGeometry as="geometry" x="14" y="25.0" width="40" height="40" />
+        </mxCell>
+        <mxCell id="db-before-text" value="한정된 DB 접속&lt;br&gt;대기 요청이 모두 점유" style="text;html=1;whiteSpace=wrap;fontFamily=Pretendard;fontSize=19;fontStyle=1;fontColor=#173F49;align=left;verticalAlign=middle;spacing=0;" vertex="1" parent="db-before">
+          <mxGeometry as="geometry" x="67" y="8" width="182" height="74" />
+        </mxCell>
+        <mxCell id="occupied" value="DB 접속 미리 차지" source="wait" target="db-before" parent="1" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;arcSize=10;html=1;strokeWidth=2.5;strokeColor=#85A3B3;endArrow=block;endFill=1;endSize=8;fontFamily=Pretendard;fontSize=16;fontColor=#52758B;labelBackgroundColor=#FFFFFF;exitX=0.5;exitY=0;entryX=0.5;entryY=0;">
+          <mxGeometry as="geometry" relative="1" x="0">
+            <mxPoint as="offset" x="0" y="-14" />
+            <Array as="points">
+              <mxPoint x="180" y="130" />
+              <mxPoint x="850" y="130" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="blocked" value="접속 부족으로 실패" source="active" target="db-before" parent="1" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;arcSize=10;html=1;strokeWidth=2.5;strokeColor=#C67663;endArrow=block;endFill=1;endSize=8;fontFamily=Pretendard;fontSize=16;fontColor=#52758B;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1" x="0">
+            <mxPoint as="offset" x="0" y="-54" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="queue" value="" style="rounded=1;arcSize=8;html=1;fillColor=#F4F8FC;strokeColor=#C7D8E5;strokeWidth=1.8;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="50" y="470" width="260" height="90" />
+        </mxCell>
+        <mxCell id="queue-icon" value="" style="shape=image;imageAspect=1;html=1;fillColor=none;strokeColor=none;image=data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2248%22%20height%3D%2248%22%20viewBox%3D%220%200%2032%2032%22%3E%3Ccircle%20cx%3D%2216%22%20cy%3D%2216%22%20r%3D%2216%22%20fill%3D%22%23507B9E%22%2F%3E%3Cg%20transform%3D%22translate%284%204%29%22%20fill%3D%22none%22%20stroke%3D%22white%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M5%206H19M5%2012H15M5%2018H11M18%2015L21%2018L18%2021%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E;" vertex="1" parent="queue">
+          <mxGeometry as="geometry" x="14" y="25.0" width="40" height="40" />
+        </mxCell>
+        <mxCell id="queue-text" value="기다리는 생성 요청&lt;br&gt;DB 접속 없이 순서 대기" style="text;html=1;whiteSpace=wrap;fontFamily=Pretendard;fontSize=19;fontStyle=1;fontColor=#173F49;align=left;verticalAlign=middle;spacing=0;" vertex="1" parent="queue">
+          <mxGeometry as="geometry" x="67" y="8" width="182" height="74" />
+        </mxCell>
+        <mxCell id="active-after" value="" style="rounded=1;arcSize=8;html=1;fillColor=#F4F8FC;strokeColor=#C7D8E5;strokeWidth=1.8;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="385" y="470" width="260" height="90" />
+        </mxCell>
+        <mxCell id="active-after-icon" value="" style="shape=image;imageAspect=1;html=1;fillColor=none;strokeColor=none;image=data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2248%22%20height%3D%2248%22%20viewBox%3D%220%200%2032%2032%22%3E%3Ccircle%20cx%3D%2216%22%20cy%3D%2216%22%20r%3D%2216%22%20fill%3D%22%23507B9E%22%2F%3E%3Cg%20transform%3D%22translate%284%204%29%22%20fill%3D%22none%22%20stroke%3D%22white%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M9%207L4%2012L9%2017M15%207L20%2012L15%2017M13%205L11%2019%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E;" vertex="1" parent="active-after">
+          <mxGeometry as="geometry" x="14" y="25.0" width="40" height="40" />
+        </mxCell>
+        <mxCell id="active-after-text" value="처리 중 생성 요청&lt;br&gt;차례가 될 때만 접속" style="text;html=1;whiteSpace=wrap;fontFamily=Pretendard;fontSize=19;fontStyle=1;fontColor=#173F49;align=left;verticalAlign=middle;spacing=0;" vertex="1" parent="active-after">
+          <mxGeometry as="geometry" x="67" y="8" width="182" height="74" />
+        </mxCell>
+        <mxCell id="db-after" value="" style="rounded=1;arcSize=8;html=1;fillColor=#EDF6F3;strokeColor=#C7D8E5;strokeWidth=1.8;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="720" y="470" width="260" height="90" />
+        </mxCell>
+        <mxCell id="db-after-icon" value="" style="shape=image;imageAspect=1;html=1;fillColor=none;strokeColor=none;image=data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2248%22%20height%3D%2248%22%20viewBox%3D%220%200%2032%2032%22%3E%3Ccircle%20cx%3D%2216%22%20cy%3D%2216%22%20r%3D%2216%22%20fill%3D%22%23507B9E%22%2F%3E%3Cg%20transform%3D%22translate%284%204%29%22%20fill%3D%22none%22%20stroke%3D%22white%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M4%206C4%201%2020%201%2020%206C20%2011%204%2011%204%206ZM4%206V18C4%2023%2020%2023%2020%2018V6M4%2012C4%2017%2020%2017%2020%2012%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E;" vertex="1" parent="db-after">
+          <mxGeometry as="geometry" x="14" y="25.0" width="40" height="40" />
+        </mxCell>
+        <mxCell id="db-after-text" value="DB 접속 및 저장&lt;br&gt;저장 후 즉시 접속 반납" style="text;html=1;whiteSpace=wrap;fontFamily=Pretendard;fontSize=19;fontStyle=1;fontColor=#173F49;align=left;verticalAlign=middle;spacing=0;" vertex="1" parent="db-after">
+          <mxGeometry as="geometry" x="67" y="8" width="182" height="74" />
+        </mxCell>
+        <mxCell id="turn" value="" source="queue" target="active-after" parent="1" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;arcSize=10;html=1;strokeWidth=2.5;strokeColor=#85A3B3;endArrow=block;endFill=1;endSize=8;fontFamily=Pretendard;fontSize=16;fontColor=#52758B;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1" x="0">
+            <mxPoint as="offset" x="0" y="-54" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="access" value="차례대로 접속 및 반납" source="active-after" target="db-after" parent="1" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;arcSize=10;html=1;strokeWidth=2.5;strokeColor=#85A3B3;endArrow=block;endFill=1;endSize=8;fontFamily=Pretendard;fontSize=16;fontColor=#52758B;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1" x="0">
+            <mxPoint as="offset" x="0" y="-54" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
